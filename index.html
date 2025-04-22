@@ -3,59 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <title>Your Name - Resume</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f4f4f4;
-    }
-    .container {
-      background: white;
-      padding: 30px;
-      max-width: 800px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #333;
-    }
-    .section {
-      margin-top: 20px;
-    }
+    body { background-color: #f8f9fa; }
+    .resume-section { margin-bottom: 2rem; }
   </style>
 </head>
 <body>
-  <div class="container">
+
+<div class="container mt-5 mb-5 p-4 bg-white shadow rounded">
+  <div class="d-flex justify-content-between align-items-center">
     <h1>Your Name</h1>
-    <p>Email: your.email@example.com | LinkedIn: linkedin.com/in/yourprofile</p>
-
-    <div class="section">
-      <h2>Objective</h2>
-      <p>A motivated [your role] seeking opportunities to apply skills in [field].</p>
-    </div>
-
-    <div class="section">
-      <h2>Education</h2>
-      <p><strong>University Name</strong> - B.S. in Computer Science<br>
-      Graduated: 202X</p>
-    </div>
-
-    <div class="section">
-      <h2>Experience</h2>
-      <p><strong>Company Name</strong> - Software Engineer Intern<br>
-      Duration: May 202X – Aug 202X<br>
-      - Developed feature X using Y.<br>
-      - Improved Z by 30%.</p>
-    </div>
-
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>Languages: Python, Java, C++</li>
-        <li>Web: HTML, CSS, JavaScript</li>
-        <li>Tools: Git, Docker, AWS</li>
-      </ul>
+    <div>
+      <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank" class="btn btn-outline-primary btn-sm">LinkedIn</a>
+      <a href="resume.pdf" download class="btn btn-outline-secondary btn-sm">Download PDF</a>
     </div>
   </div>
+  <p>Email: your.email@example.com | GitHub: github.com/yourusername</p>
+
+  <hr>
+
+  <div class="resume-section">
+    <h2>🎯 Objective</h2>
+    <p>Motivated software engineer eager to apply skills in backend development and cloud technologies.</p>
+  </div>
+
+  <div class="resume-section">
+    <h2>🎓 Education</h2>
+    <p><strong>University Name</strong> – B.S. in Computer Science (202X)</p>
+  </div>
+
+  <div class="resume-section">
+    <h2>💼 Experience</h2>
+    <ul>
+      <li><strong>Software Intern</strong> – ABC Corp (May 202X – Aug 202X)</li>
+      <li>Implemented REST APIs in Python Flask and improved performance by 30%.</li>
+    </ul>
+  </div>
+
+  <div class="resume-section">
+    <h2>🛠️ Skills</h2>
+    <ul class="list-inline">
+      <li class="list-inline-item badge bg-secondary">Python</li>
+      <li class="list-inline-item badge bg-secondary">JavaScript</li>
+      <li class="list-inline-item badge bg-secondary">SQL</li>
+      <li class="list-inline-item badge bg-secondary">AWS</li>
+      <li class="list-inline-item badge bg-secondary">Git</li>
+    </ul>
+  </div>
+
+  <div class="resume-section">
+    <h2>🚀 Projects</h2>
+    <ul>
+      <li><strong>Portfolio Website</strong> – Personal portfolio using React and GitHub Pages. <a href="#">[Live Demo]</a></li>
+      <li><strong>Task Tracker</strong> – Full-stack app using Node.js and MongoDB.</li>
+    </ul>
+  </div>
+
+  <div class="resume-section">
+    <h2>📜 Certifications</h2>
+    <ul>
+      <li>Google Data Analytics Professional Certificate – Coursera</li>
+      <li>AWS Certified Cloud Practitioner</li>
+    </ul>
+  </div>
+</div>
+
 </body>
 </html>
