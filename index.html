@@ -1,160 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Navya Neelamegam - Resume</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
-  <style>
-    body { background-color: #f8f9fa; }
-    .resume-section { margin-bottom: 2rem; }
-  </style>
-</head>
-<body>
+import React from "react";
+import {
+  Container,
+  Card,
+  CardContent,
+  Button,
+} from "@/components/ui";
 
-<div class="container mt-5 mb-5 p-4 bg-white shadow rounded">
-  <div class="d-flex justify-content-between align-items-center">
-    <h1>Navya Neelamegam</h1>
-    <div>
-      <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank" class="btn btn-outline-primary btn-sm">LinkedIn</a>
-      <a href="Resume.pdf" download class="btn btn-outline-secondary btn-sm">Download PDF</a>
+export default function Resume() {
+  return (
+    <div className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white py-8 px-4">
+      <Container className="max-w-4xl bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+          <h1 className="text-3xl font-bold mb-4 md:mb-0">Navya Neelamegam</h1>
+          <div className="space-x-2">
+            <Button variant="outline" asChild>
+              <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank">LinkedIn</a>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href="Resume.pdf" download>Download PDF</a>
+            </Button>
+          </div>
+        </div>
+        <p className="mt-2 text-sm">
+          Email: navya_ipm24@iift.edu | navya.neelamegam24@iimb.ac.in |
+          navyaneel3107@gmail.com | GitHub: github.com/navyaneel
+        </p>
+
+        <hr className="my-6" />
+
+        {/* About */}
+        <Section title="🎯 About">
+          <p>
+            At the intersection of academia and practical application, my journey unfolds
+            at IIFT Kakinada and IIM Bangalore, where I'm currently pursuing degrees in
+            International Business/Business Analytics and Digital Business and Entrepreneurship respectively.
+          </p>
+          <p>
+            As a 180 DC Member at 180 Degrees Consulting IIFT Kakinada, I leverage analytics to
+            strengthen non-profits like Pay Your Tuition. As a Zonal Representative at IIM Bangalore,
+            I co-led NOVA, the institute's inaugural online talent showcase. My stint at CLA exposed me
+            to accounting and teamwork, shaping my inclusive business mindset.
+          </p>
+        </Section>
+
+        {/* Education */}
+        <Section title="🎓 Education">
+          <p><strong>IIFT</strong> – BBA (2027), MBA (2029)</p>
+          <p><strong>IIM Bangalore</strong> – BBA (2027)</p>
+        </Section>
+
+        {/* Experience */}
+        <Section title="💼 Professional Experience">
+          {experience.map((item, idx) => (
+            <Role key={idx} {...item} />
+          ))}
+        </Section>
+
+        {/* Positions of Responsibility */}
+        <Section title="💼 Position of Responsibility">
+          {positions.map((item, idx) => (
+            <Role key={idx} {...item} />
+          ))}
+        </Section>
+
+        {/* Achievements */}
+        <Section title="🏆 Other Achievements">
+          {achievements.map((item, idx) => (
+            <Role key={idx} {...item} />
+          ))}
+        </Section>
+
+        {/* Skills */}
+        <Section title="🛠️ Skills">
+          <div className="flex flex-wrap gap-2">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="bg-gray-300 dark:bg-gray-700 text-sm px-3 py-1 rounded-full"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </Section>
+
+        {/* Languages */}
+        <Section title="🚀 Languages">
+          <ul className="list-disc list-inside">
+            {languages.map((lang) => (
+              <li key={lang.name}><strong>{lang.name}</strong> – {lang.level}</li>
+            ))}
+          </ul>
+        </Section>
+
+        {/* Certifications */}
+        <Section title="📜 Certifications">
+          <ul className="list-disc list-inside">
+            <li>Generative AI for Everyone – DeepLearning.AI (Feb 2025)</li>
+          </ul>
+        </Section>
+      </Container>
     </div>
-  </div>
-  <p>Email: navya_ipm24@iift.edu | navya.neelamegam24@iimb.ac.in | navyaneel3107@gmail.com| GitHub: github.com/navyaneel</p>
+  );
+}
 
-  <hr>
+function Section({ title, children }) {
+  return (
+    <div className="mb-6">
+      <h2 className="text-xl font-semibold mb-2">{title}</h2>
+      {children}
+    </div>
+  );
+}
 
-  <div class="resume-section">
-    <h2>🎯 About</h2>
-    <p>At the intersection of academia and practical application, my journey unfolds at IIFT Kakinada and IIM Bangalore, where I'm currently pursuing degrees in International Business/Business Analytics and Digital Business and Entrepreneurship respectively. My role as a 180 DC Member at 180 Degrees Consulting IIFT Kakinada involves leveraging business analytics to strengthen the impact of non-profits like Pay Your Tuition, focusing on donor engagement and relations.</p>
-    <p>As a Zonal Representative at IIM Bangalore, we champion the fusion of digital entrepreneurship and student welfare, facilitating communication and orchestrating NOVA, the institute's inaugural online talent showcase. My summer stint at CLA exposed me to the intricacies of accounting, enhancing my teamwork acumen and instilling a passion for creating a more inclusive and forward-thinking business environment.</p>
-  </div>
+function Role({ title, organization, dates, bullets }) {
+  return (
+    <div className="mb-4">
+      <p className="font-semibold">{organization} - {title} ({dates})</p>
+      <ul className="list-disc list-inside ml-4">
+        {bullets.map((b, i) => (
+          <li key={i}>{b}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-  <div class="resume-section">
-    <h2>🎓 Education</h2>
-    <p><strong>Indian Institute of Foreign Trade</strong> – BBA in Business Analytics (2027), MBA in International Business (2029)</p>
-    <p><strong>Indian Institute of Management, Bangalore </strong> – BBA in Digital Business and Entrepreneurship (2027)</p>
-  </div>
+const experience = [
+  {
+    organization: "Deepflock.ai",
+    title: "Student Intern",
+    dates: "Feb 2025 – Present",
+    bullets: [
+      "Researched AI agent applications in fintech, focusing on startups and market trends.",
+      "Contributing to a project for Champions Bank, where findings will be implemented."
+    ]
+  },
+  {
+    organization: "IIM Bangalore BBA DBE",
+    title: "Media Strategist/Content writer",
+    dates: "Feb 2025 – Present",
+    bullets: [
+      "Created strategic content to enhance online presence and audience engagement.",
+      "Developed and managed media plans tailored to the BBA DBE program’s objectives.",
+      "Collaborated with the outreach team to ensure consistent brand messaging."
+    ]
+  },
+  // Add remaining roles in similar format
+];
 
-  <div class="resume-section">
-    <h2>💼 Professional Experience</h2>
-    <p><strong>Deepflock.ai - Student Intern (Feb 2025 – Present)</strong></p>
-    <ul>      
-      <li>Researched AI agent applications in fintech, focusing on startups and market trends.</li>
-      <li>Researched AI agent applications in fintech, focusing on startups and market trends.</li>
-      <li>Contributing to a project for Champions Bank, where findings will be implemented.</li>
-    </ul>
-    <p><strong>IIM Bangalore BBA DBE - Media Strategist/Content writer (Feb 2025 – Present) </strong></p>
-    <ul>      
-      <li>Created strategic content to enhance online presence and audience engagement.</li>
-      <li>Developed and managed media plans tailored to the BBA DBE program’s objectives.</li>
-      <li>Collaborated with the outreach team to ensure consistent brand messaging.</li>
-    </ul>
-    <p><strong>GAEE - Research Associate (Feb 2025 – Present) </strong></p>
-    <ul>      
-      <li>Wrote articles on renewable energy and global tourism’s economic impact.</li>
-      <li>Led interviews with experts across finance, economics, and research.</li>
-      <li>Supported global economic education for underprivileged students.</li>
-    </ul>
-    <p><strong>180 Degree Consulting - Consultant (Oct 2024 – Present) </strong></p>
-    <ul>      
-      <li>Designed donor growth and retention strategy for non-profit Pay Your Tuition.</li>
-      <li>Lead pitch deck development for Meteor Venture to support startup fundraising.</li>
-      <li>Conducted market research to enhance visibility and outreach for mission-driven organizations.</li>
-    </ul>
-    <p><strong>CLA (CliftonLarsonAllen) - Student Intern (Jun 2023 – Aug 2023) </strong></p>
-    <ul>      
-      <li>Gained hands-on experience in professional accounting across five service lines.</li>
-      <li>Built foundational skills through real-world case studies and team collaboration.</li>
-      <li>Observed integration of accounting with broader professional services.</li>
-    </ul>
-    <p><strong>Working Women's Forum - Student Intern (Jul 2022 – Aug 2022) </strong></p>
-    <ul>      
-      <li>Participated in gender issue training sessions and field visits across community zones.</li>
-      <li>Engaged with members through meetings and discussions to understand grassroots challenges.</li>
-      <li>Contributed case studies, reports, and articles to support the organization’s mission.</li>
-    </ul>
-    <p><strong>CVS Pharmacy - Retail Store Associate (Mar 2023 – May 2023) </strong></p>
-    <ul>      
-      <li>Managed customer engagement, cash handling, and inventory upkeep.</li>
-      <li>Delivered excellent service to ensure a smooth and positive shopping experience.</li>
-      <li>Maintained store organization and product availability.</li>
-    </ul>
-  </div>
-  
-  <div class="resume-section">
-    <h2>💼 Position of Responsibility</h2>
-    <p><strong>IIM Bangalore BBA DBE - Zonal Representative (Dec 2024 – Present)</strong></p>
-    <ul>      
-      <li>Represent 100+ students, supporting communication, inclusion, and peer engagement.</li>
-      <li>Address student concerns and liaise with faculty for smooth information flow.</li>
-      <li>Co-led NOVA, the program’s first online cultural event.</li>
-    </ul>
-    <p><strong>Ashland High School Culinary Club - Founder/Vice President (Jul 2022 – Jul 2023)</strong></p>
-    <ul>      
-      <li>Led a team of 20 members, organizing weekly meetings and culinary events.</li>
-      <li>Fostered an inclusive space to explore global cuisines and food cultures.</li>
-      <li>Coordinated with stakeholders to support club activities and growth.</li>
-    </ul>
-    <p><strong>Ashland High School Cultural Club - Historian/Club Officer (Jul 2022 – Jul 2023)</strong></p>
-    <ul>      
-      <li>Organized events promoting diversity and inclusion; tracked outcomes and suggested improvements.</li>
-      <li>Supported team members and contributed to a positive club environment.</li>
-      <li>Represented the club at the Connections Conference, showcasing global cultures and their significance.</li>
-    </ul>
-    <p><strong>A.R.E.A (Ashland Residents for Equity and Action) - Lead Social Media Intern (Jul 2022 – Jul 2023)</strong></p>
-    <ul>      
-      <li>Managed social media to promote POC-owned businesses and community inclusion.</li>
-      <li>Boosted engagement by 25% through strategic content and outreach.</li>
-      <li>Supported event planning, highlighting local culture and empowering minority communities.</li>
-    </ul>
-  </div>
+const positions = [
+  {
+    organization: "IIM Bangalore BBA DBE",
+    title: "Zonal Representative",
+    dates: "Dec 2024 – Present",
+    bullets: [
+      "Represent 100+ students, supporting communication, inclusion, and peer engagement.",
+      "Address student concerns and liaise with faculty for smooth information flow.",
+      "Co-led NOVA, the program’s first online cultural event."
+    ]
+  },
+  // Add remaining roles in similar format
+];
 
-    <div class="resume-section">
-    <h2>💼 Other Achivements</h2>
-    <p><strong>John and Abigail Adams Scholarship</strong></p>
-    <ul>      
-      <li>Received a maximum amount of $1575 per year for college tuition fees as a form of scholarship after writingthe MCAS exam 2022 conducted by the government of Massachusetts.</li>
-    </ul>
-    <p><strong>HPAIR (The Harvard College Project for Asian & International Relations)</strong></p>
-    <ul>      
-      <li>Selected to attend a 3-day offline conference at Harvard connecting students from all around the world withbusiness leaders worldwide.</li>
-    </ul>
-    <p><strong>2nd Place in Enactus and IIC Village Immersion Competition</strong></p>
-    <ul>      
-      <li>Co-developed a funded, sustainable agri-aquaculture model to empower rural communities in AndhraPradesh through innovative use of hydroponics and crop waste.</li>
-    </ul>
-  </div>
+const achievements = [
+  {
+    organization: "John and Abigail Adams Scholarship",
+    title: "",
+    dates: "",
+    bullets: [
+      "Received a maximum amount of $1575 per year for college tuition fees as a form of scholarship."
+    ]
+  },
+  // Add remaining roles in similar format
+];
 
-  <div class="resume-section">
-    <h2>🛠️ Skills</h2>
-    <ul class="list-inline">
-      <li class="list-inline-item badge bg-secondary">Python</li>
-      <li class="list-inline-item badge bg-secondary">Excel</li>
-      <li class="list-inline-item badge bg-secondary">Tax Accounting</li>
-      <li class="list-inline-item badge bg-secondary">Corporate Etiquette</li>      
-    </ul>
-  </div>
+const skills = ["Python", "Excel", "Tax Accounting", "Corporate Etiquette"];
 
-  <div class="resume-section">
-    <h2>🚀 Languages</h2>
-    <ul>
-      <li><strong>English</strong> – Proficient</a></li>
-      <li><strong>Tamil  </strong> – Proficient</a></li> 
-      <li><strong>Telugu </strong> – Proficient</a></li>
-      <li><strong>Hindi  </strong> – Proficient</a></li> 
-      <li><strong>Spanish</strong> – Intermediate</a></li>
-      <li><strong>Germany</strong> – Intermediate</a></li> 
-    </ul>
-  </div>
-
-  <div class="resume-section">
-    <h2>📜 Certifications</h2>
-    <ul>
-      <li>Generative AI for Everyone – DeepLearning.AI - Issued Feb 2025</li>      
-    </ul>
-  </div>
-</div>
-
-</body>
-</html>
+const languages = [
+  { name: "English", level: "Proficient" },
+  { name: "Tamil", level: "Proficient" },
+  { name: "Telugu", level: "Proficient" },
+  { name: "Hindi", level: "Proficient" },
+  { name: "Spanish", level: "Intermediate" },
+  { name: "German", level: "Intermediate" },
+];
