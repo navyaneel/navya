@@ -469,10 +469,7 @@
         </ul>
     </div>
 </div>
-<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn btn-primary position-fixed" style="bottom: 20px; right: 20px; z-index: 1000;">
-    ↑ Top
-</button>
- <button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
+<button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
 <script>
     let btn = document.getElementById("backToTop");
     window.onscroll = () => { btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none"; };
