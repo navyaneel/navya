@@ -17,6 +17,7 @@
             line-height: 1.8;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
         .container {
             max-width: 1200px;
@@ -53,19 +54,16 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             transform-origin: top;
             position: relative;
+            cursor: pointer;
         }
         .page-fold:hover {
             transform: rotateX(-5deg) translateY(-5px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
         }
-        .page-fold:nth-child(odd) {
-            margin-left: 0;
-            margin-right: 5%;
-        }
-        .page-fold:nth-child(even) {
-            margin-right: 0;
-            margin-left: 5%;
-            top: 20px;
+        .page-fold {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
         }
         .d-flex {
             display: flex;
@@ -256,7 +254,7 @@
 <body>
 
 <div class="container mt-5 mb-5 p-4 bg-white shadow rounded">
-    <div class="page-fold">
+    <div class="page-fold" onclick="window.location.href='#section2'">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
                 <h1>Navya Neelamegam</h1>
@@ -272,19 +270,19 @@
         </div>
     </div>
 
-    <div class="page-fold">
+    <div id="section2" class="page-fold" onclick="window.location.href='#section3'">
         <h2 class="section-title"><i class="fas fa-user-circle"></i> About</h2>
         <p>At the intersection of academia and practical application, my journey unfolds at IIFT Kakinada and IIM Bangalore, where I'm currently pursuing degrees in International Business/Business Analytics and Digital Business and Entrepreneurship respectively. My role as a 180 DC Member at 180 Degrees Consulting IIFT Kakinada involves leveraging business analytics to strengthen the impact of non-profits like Pay Your Tuition, focusing on donor engagement and relations.</p>
         <p>As a Zonal Representative at IIM Bangalore, we champion the fusion of digital entrepreneurship and student welfare, facilitating communication and orchestrating NOVA, the institute's inaugural online talent showcase. My summer stint at CLA exposed me to the intricacies of accounting, enhancing my teamwork acumen and instilling a passion for creating a more inclusive and forward-thinking business environment.</p>
     </div>
 
-    <div class="page-fold">
+    <div id="section3" class="page-fold" onclick="window.location.href='#section4'">
         <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
         <p><strong>Indian Institute of Foreign Trade</strong> – BBA in Business Analytics (2027), MBA in International Business (2029)</p>
         <p><strong>Indian Institute of Management, Bangalore</strong> – BBA in Digital Business and Entrepreneurship (2027)</p>
     </div>
 
-    <div class="page-fold">
+    <div id="section4" class="page-fold" onclick="window.location.href='#section5'">
         <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
         <div class="work-experience-item">
             <h3>Deepflock.ai - Student Intern</h3>
@@ -356,7 +354,7 @@
         </div>
     </div>
 
-    <div class="page-fold">
+    <div id="section5" class="page-fold" onclick="window.location.href='#section6'">
         <h2 class="section-title"><i class="fas fa-trophy"></i> Position of Responsibility</h2>
         <div class="responsibility-item">
             <h3>IIM Bangalore BBA DBE - Zonal Representative</h3>
@@ -398,7 +396,7 @@
         </div>
     </div>
 
-    <div class="page-fold">
+    <div id="section6" class="page-fold" onclick="window.location.href='#section7'">
         <h2 class="section-title"><i class="fas fa-award"></i> Other Achievements</h2>
         <p><strong>John and Abigail Adams Scholarship</strong></p>
         <ul>
@@ -414,7 +412,7 @@
         </ul>
     </div>
 
-    <div class="page-fold">
+    <div id="section7" class="page-fold" onclick="window.location.href='#section8'">
         <h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
         <ul class="list-inline">
             <li class="list-inline-item badge bg-secondary"><i class="fas fa-code me-2"></i> Python</li>
@@ -424,7 +422,7 @@
         </ul>
     </div>
 
-    <div class="page-fold">
+    <div id="section8" class="page-fold">
         <h2 class="section-title"><i class="fas fa-globe"></i> Languages</h2>
         <ul>
             <li class="language-item"><strong>English</strong> – Proficient</li>
