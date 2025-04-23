@@ -39,6 +39,7 @@
             background-image: linear-gradient(to right, #007bff, #084298);
             -webkit-background-clip: text;
             color: transparent;
+            page-break-after: always;
         }
         h2 {
             font-size: 2.5rem;
@@ -49,6 +50,7 @@
             color: #111;
             font-weight: 800;
             letter-spacing: -0.03em;
+            page-break-after: always;
         }
         .d-flex {
             display: flex;
@@ -103,6 +105,10 @@
         }
         .resume-section {
             margin-bottom: 5rem;
+            page-break-after: always;
+        }
+        .resume-section:last-child {
+            page-break-after: auto;
         }
         ul {
             padding-left: 35px;
@@ -172,6 +178,7 @@
             flex-direction: column;
             gap: 1rem;
             margin-bottom: 3rem;
+            page-break-after: always;
         }
         .profile-info p {
             margin-bottom: 0.75rem;
@@ -273,6 +280,8 @@
         <p><i class="fas fa-envelope me-2"></i> Email: <a href="mailto:navya_ipm24@iift.edu">navya_ipm24@iift.edu</a> | <a href="mailto:navya.neelamegam24@iimb.ac.in">navya.neelamegam24@iimb.ac.in</a> | <a href="mailto:navyaneel3107@gmail.com">navyaneel3107@gmail.com</a></p>
         <p><i class="fab fa-github me-2"></i> GitHub: <a href="https://github.com/navyaneel" target="_blank">github.com/navyaneel</a></p>
     </div>
+
+    <hr>
 
     <div class="resume-section">
         <h2 class="section-title"><i class="fas fa-user-circle"></i> About</h2>
