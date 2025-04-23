@@ -266,7 +266,21 @@
     </style>
 </head>
 <body>
-
+<nav class="navbar navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navya Neelamegam</a>
+    <div>
+      <a class="nav-link d-inline" href="#section2">About</a>
+      <a class="nav-link d-inline" href="#section3">Education</a>
+      <a class="nav-link d-inline" href="#section4">Experience</a>
+      <a class="nav-link d-inline" href="#section5">Roles</a>
+      <a class="nav-link d-inline" href="#section6">Achievements</a>
+      <a class="nav-link d-inline" href="#section7">Skills</a>
+      <a class="nav-link d-inline" href="#section8">Languages</a>
+      <a class="nav-link d-inline" href="#section9">Certifications</a>
+    </div>
+  </div>
+</nav>
 <div class="container mt-5 mb-5 p-4 bg-white shadow rounded">
     <div class="page-fold" onclick="window.location.href='#section2'">
         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -448,7 +462,7 @@
         </ul>
     </div>
 
-    <div class="page-fold">
+    <div id="section9" class="page-fold">
         <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
         <ul>
             <li>Generative AI for Everyone – DeepLearning.AI - Issued Feb 2025</li>
@@ -502,5 +516,9 @@
     document.querySelectorAll('.page-fold').forEach(section => {
         observer.observe(section);
     });
-</script>    
+</script>
+<footer class="text-center mt-5 mb-3">
+  <a href="#top" class="btn btn-outline-primary btn-sm"><i class="fas fa-arrow-up me-1"></i> Back to Top</a>
+  <p class="mt-2 small">© 2025 Navya Neelamegam</p>
+</footer>
 </html>
