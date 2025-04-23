@@ -5,84 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navya Neelamegam - Resume</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <style>
         body {
-            background-color: #f4f6f8;
-            font-family: 'Arial', sans-serif;
+            background-color: #f9f8f8;
+            font-family: 'Inter', sans-serif;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.7;
         }
         .container {
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 30px;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 40px;
             background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        h1, h2 {
-            color: #007bff;
+        .container:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0c305e;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.05);
         }
         h2 {
-            font-size: 1.75rem;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 0.5rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            font-size: 2.25rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 1rem;
+            margin-top: 3.5rem;
+            margin-bottom: 2rem;
+            color: #1a5294;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
         .d-flex {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        .btn-outline-primary, .btn-outline-secondary {
-            border-radius: 5px;
-            font-size: 0.9rem;
-            padding: 0.5rem 1rem;
-        }
-        p {
-            margin-bottom: 1rem;
-            color: #555;
-        }
-        .resume-section {
             margin-bottom: 2.5rem;
         }
+        .btn-outline-primary, .btn-outline-secondary {
+            border-radius: 8px;
+            font-size: 1.1rem;
+            padding: 0.8rem 1.75rem;
+            transition: all 0.2s ease;
+            border-width: 2px;
+            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.08);
+            font-weight: 600;
+        }
+        .btn-outline-primary {
+            color: #007bff;
+            border-color: #007bff;
+            background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(0, 123, 255, 0.05) 50%, rgba(0, 123, 255, 0.1) 100%);
+            background-size: 100% 200%;
+        }
+        .btn-outline-primary:hover {
+            background-position: 0 -100%;
+            color: #fff;
+            border-color: #007bff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .btn-outline-secondary {
+            color: #6c757d;
+            border-color: #6c757d;
+            background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(108, 117, 125, 0.05) 50%, rgba(108, 117, 125, 0.1) 100%);
+            background-size: 100% 200%;
+        }
+        .btn-outline-secondary:hover {
+            background-position: 0 -100%;
+            color: #fff;
+            border-color: #6c757d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+        .resume-section {
+            margin-bottom: 4rem;
+        }
         ul {
-            padding-left: 20px;
-            margin-bottom: 1rem;
+            padding-left: 30px;
+            margin-bottom: 2rem;
             list-style-type: disc;
         }
         ul.list-inline {
             list-style-type: none;
             padding-left: 0;
+            margin-bottom: 0;
         }
         ul.list-inline li {
             display: inline-block;
-            margin-right: 0.5rem;
-            margin-bottom: 0.3rem;
+            margin-right: 1rem;
+            margin-bottom: 0.75rem;
         }
         .badge {
-            border-radius: 5px;
-            padding: 0.4rem 0.8rem;
-            font-size: 0.85rem;
+            border-radius: 8px;
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
             color: #fff;
+            font-weight: 600;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(108, 117, 125, 0.1) 50%, rgba(108, 117, 125, 0.2) 100%);
+            background-size: 100% 200%;
+        }
+        .badge:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+            background-position: 0 -100%;
         }
         .bg-secondary {
             background-color: #6c757d !important;
         }
+        .bg-secondary:hover {
+            background-color: #5a6268 !important;
+        }
         a {
             color: #007bff;
             text-decoration: none;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
         }
         a:hover {
             text-decoration: underline;
+            color: #004080;
+            text-shadow: 1px 1px 2px rgba(0, 123, 255, 0.3);
         }
         .language-item {
             display: flex;
@@ -90,38 +148,96 @@
             align-items: center;
         }
         .language-item strong {
-            min-width: 80px;
+            min-width: 100px;
+            font-weight: 600;
         }
         hr {
-            border-top: 1px solid #eee;
-            margin: 2rem 0;
+            border-top: 2px solid #e0e0e0;
+            margin: 4rem 0;
         }
-        /* Custom Styles */
         .profile-info {
             display: flex;
             flex-direction: column;
-            gap: 0.3rem;
-            margin-bottom: 1.5rem;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
         }
         .profile-info p {
-            margin-bottom: 0.2rem;
-        }
-        .icon-link {
-            margin-left: 0.5rem;
-            color: #007bff;
-        }
-        .icon-link:hover {
-            color: #0056b3;
+            margin-bottom: 0.5rem;
+            color: #666;
+            font-size: 1.1rem;
         }
         .section-title {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1.2rem;
+            gap: 1rem;
+            margin-bottom: 2rem;
         }
         .section-title i {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: #007bff;
+            text-shadow: 1px 1px 2px rgba(0, 123, 255, 0.2);
+        }
+        .work-experience-item {
+            margin-bottom: 3rem;
+            padding-left: 1rem;
+            border-left: 3px solid #e0e0e0;
+            transition: border-left 0.3s ease;
+        }
+        .work-experience-item:hover {
+            border-left-color: #007bff;
+        }
+        .work-experience-item h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .work-experience-item h4 {
+            font-size: 1.2rem;
+            color: #95a5a6;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        .work-experience-item ul {
+            margin-left: 25px;
+            list-style-type: disc;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .responsibility-item {
+            margin-bottom: 3rem;
+            padding-left: 1rem;
+            border-left: 3px solid #e0e0e0;
+            transition: border-left 0.3s ease;
+        }
+        .responsibility-item:hover {
+            border-left-color: #007bff;
+        }
+        .responsibility-item h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .responsibility-item h4 {
+            font-size: 1.2rem;
+            color: #95a5a6;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        .responsibility-item ul {
+            margin-left: 25px;
+            list-style-type: disc;
+            animation: fadeIn 0.5s ease;
         }
     </style>
 </head>
@@ -133,17 +249,19 @@
             <h1>Navya Neelamegam</h1>
         </div>
         <div>
-            <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank" class="btn btn-outline-primary btn-sm"><i class="fab fa-linkedin me-1"></i> LinkedIn</a>
-            <a href="Resume.pdf" download class="btn btn-outline-secondary btn-sm"><i class="fas fa-download me-1"></i> Download PDF</a>
+            <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank" class="btn btn-outline-primary btn-sm"><i class="fab fa-linkedin me-2"></i> LinkedIn</a>
+            <a href="Resume.pdf" download class="btn btn-outline-secondary btn-sm"><i class="fas fa-download me-2"></i> Download PDF</a>
         </div>
     </div>
     <div class="profile-info">
-        <p><i class="fas fa-envelope me-1"></i> Email: <a href="mailto:navya_ipm24@iift.edu">navya_ipm24@iift.edu</a> | <a href="mailto:navya.neelamegam24@iimb.ac.in">navya.neelamegam24@iimb.ac.in</a> | <a href="mailto:navyaneel3107@gmail.com">navyaneel3107@gmail.com</a></p>
-        <p><i class="fab fa-github me-1"></i> GitHub: <a href="https://github.com/navyaneel" target="_blank">github.com/navyaneel</a></p>
+        <p><i class="fas fa-envelope me-2"></i> Email: <a href="mailto:navya_ipm24@iift.edu">navya_ipm24@iift.edu</a> | <a href="mailto:navya.neelamegam24@iimb.ac.in">navya.neelamegam24@iimb.ac.in</a> | <a href="mailto:navyaneel3107@gmail.com">navyaneel3107@gmail.com</a></p>
+        <p><i class="fab fa-github me-2"></i> GitHub: <a href="https://github.com/navyaneel" target="_blank">github.com/navyaneel</a></p>
     </div>
 
+    <hr>
+
     <div class="resume-section">
-        <h2 class="section-title"><i class="fas fa-user"></i> About</h2>
+        <h2 class="section-title"><i class="fas fa-user-circle"></i> About</h2>
         <p>At the intersection of academia and practical application, my journey unfolds at IIFT Kakinada and IIM Bangalore, where I'm currently pursuing degrees in International Business/Business Analytics and Digital Business and Entrepreneurship respectively. My role as a 180 DC Member at 180 Degrees Consulting IIFT Kakinada involves leveraging business analytics to strengthen the impact of non-profits like Pay Your Tuition, focusing on donor engagement and relations.</p>
         <p>As a Zonal Representative at IIM Bangalore, we champion the fusion of digital entrepreneurship and student welfare, facilitating communication and orchestrating NOVA, the institute's inaugural online talent showcase. My summer stint at CLA exposed me to the intricacies of accounting, enhancing my teamwork acumen and instilling a passion for creating a more inclusive and forward-thinking business environment.</p>
     </div>
@@ -156,75 +274,117 @@
 
     <div class="resume-section">
         <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
-        <p><strong>Deepflock.ai - Student Intern (Feb 2025 – Present)</strong></p>
-        <ul>
-            <li>Researched AI agent applications in fintech, focusing on startups and market trends.</li>
-            <li>Contributing to a project for Champions Bank, where findings will be implemented.</li>
-        </ul>
-        <p><strong>IIM Bangalore BBA DBE - Media Strategist/Content writer (Feb 2025 – Present)</strong></p>
-        <ul>
-            <li>Created strategic content to enhance online presence and audience engagement.</li>
-            <li>Developed and managed media plans tailored to the BBA DBE program’s objectives.</li>
-            <li>Collaborated with the outreach team to ensure consistent brand messaging.</li>
-        </ul>
-        <p><strong>GAEE - Research Associate (Feb 2025 – Present)</strong></p>
-        <ul>
-            <li>Wrote articles on renewable energy and global tourism’s economic impact.</li>
-            <li>Led interviews with experts across finance, economics, and research.</li>
-            <li>Supported global economic education for underprivileged students.</li>
-        </ul>
-        <p><strong>180 Degree Consulting - Consultant (Oct 2024 – Present)</strong></p>
-        <ul>
-            <li>Designed donor growth and retention strategy for non-profit Pay Your Tuition.</li>
-            <li>Lead pitch deck development for Meteor Venture to support startup fundraising.</li>
-            <li>Conducted market research to enhance visibility and outreach for mission-driven organizations.</li>
-        </ul>
-        <p><strong>CLA (CliftonLarsonAllen) - Student Intern (Jun 2023 – Aug 2023)</strong></p>
-        <ul>
-            <li>Gained hands-on experience in professional accounting across five service lines.</li>
-            <li>Built foundational skills through real-world case studies and team collaboration.</li>
-            <li>Observed integration of accounting with broader professional services.</li>
-        </ul>
-        <p><strong>Working Women's Forum - Student Intern (Jul 2022 – Aug 2022)</strong></p>
-        <ul>
-            <li>Participated in gender issue training sessions and field visits across community zones.</li>
-            <li>Engaged with members through meetings and discussions to understand grassroots challenges.</li>
-            <li>Contributed case studies, reports, and articles to support the organization’s mission.</li>
-        </ul>
-        <p><strong>CVS Pharmacy - Retail Store Associate (Mar 2023 – May 2023)</strong></p>
-        <ul>
-            <li>Managed customer engagement, cash handling, and inventory upkeep.</li>
-            <li>Delivered excellent service to ensure a smooth and positive shopping experience.</li>
-            <li>Maintained store organization and product availability.</li>
-        </ul>
+
+        <div class="work-experience-item">
+            <h3>Deepflock.ai - Student Intern</h3>
+            <h4>Feb 2025 – Present</h4>
+            <ul>
+                <li>Researched AI agent applications in fintech, focusing on startups and market trends.</li>
+                <li>Contributing to a project for Champions Bank, where findings will be implemented.</li>
+            </ul>
+        </div>
+
+        <div class="work-experience-item">
+            <h3>IIM Bangalore BBA DBE - Media Strategist/Content writer</h3>
+            <h4>Feb 2025 – Present</h4>
+            <ul>
+                <li>Created strategic content to enhance online presence and audience engagement.</li>
+                <li>Developed and managed media plans tailored to the BBA DBE program’s objectives.</li>
+                <li>Collaborated with the outreach team to ensure consistent brand messaging.</li>
+            </ul>
+        </div>
+
+        <div class="work-experience-item">
+            <h3>GAEE - Research Associate</h3>
+            <h4>Feb 2025 – Present</h4>
+            <ul>
+                <li>Wrote articles on renewable energy and global tourism’s economic impact.</li>
+                <li>Led interviews with experts across finance, economics, and research.</li>
+                <li>Supported global economic education for underprivileged students.</li>
+            </ul>
+        </div>
+
+        <div class="work-experience-item">
+            <h3>180 Degree Consulting - Consultant</h3>
+            <h4>Oct 2024 – Present</h4>
+            <ul>
+                <li>Designed donor growth and retention strategy for non-profit Pay Your Tuition.</li>
+                <li>Lead pitch deck development for Meteor Venture to support startup fundraising.</li>
+                <li>Conducted market research to enhance visibility and outreach for mission-driven organizations.</li>
+            </ul>
+        </div>
+
+        <div class="work-experience-item">
+            <h3>CLA (CliftonLarsonAllen) - Student Intern</h3>
+            <h4>Jun 2023 – Aug 2023</h4>
+            <ul>
+                <li>Gained hands-on experience in professional accounting across five service lines.</li>
+                <li>Built foundational skills through real-world case studies and team collaboration.</li>
+                <li>Observed integration of accounting with broader professional services.</li>
+            </ul>
+        </div>
+
+        <div class="work-experience-item">
+            <h3>Working Women's Forum - Student Intern</h3>
+            <h4>Jul 2022 – Aug 2022</h4>
+            <ul>
+                <li>Participated in gender issue training sessions and field visits across community zones.</li>
+                <li>Engaged with members through meetings and discussions to understand grassroots challenges.</li>
+                <li>Contributed case studies, reports, and articles to support the organization’s mission.</li>
+            </ul>
+        </div>
+
+        <div class="work-experience-item">
+            <h3>CVS Pharmacy - Retail Store Associate</h3>
+            <h4>Mar 2023 – May 2023</h4>
+            <ul>
+                <li>Managed customer engagement, cash handling, and inventory upkeep.</li>
+                <li>Delivered excellent service to ensure a smooth and positive shopping experience.</li>
+                <li>Maintained store organization and product availability.</li>
+            </ul>
+        </div>
     </div>
 
     <div class="resume-section">
         <h2 class="section-title"><i class="fas fa-trophy"></i> Position of Responsibility</h2>
-        <p><strong>IIM Bangalore BBA DBE - Zonal Representative (Dec 2024 – Present)</strong></p>
-        <ul>
-            <li>Represent 100+ students, supporting communication, inclusion, and peer engagement.</li>
-            <li>Address student concerns and liaise with faculty for smooth information flow.</li>
-            <li>Co-led NOVA, the program’s first online cultural event.</li>
-        </ul>
-        <p><strong>Ashland High School Culinary Club - Founder/Vice President (Jul 2022 – Jul 2023)</strong></p>
-        <ul>
-            <li>Led a team of 20 members, organizing weekly meetings and culinary events.</li>
-            <li>Fostered an inclusive space to explore global cuisines and food cultures.</li>
-            <li>Coordinated with stakeholders to support club activities and growth.</li>
-        </ul>
-        <p><strong>Ashland High School Cultural Club - Historian/Club Officer (Jul 2022 – Jul 2023)</strong></p>
-        <ul>
-            <li>Organized events promoting diversity and inclusion; tracked outcomes and suggested improvements.</li>
-            <li>Supported team members and contributed to a positive club environment.</li>
-            <li>Represented the club at the Connections Conference, showcasing global cultures and their significance.</li>
-        </ul>
-        <p><strong>A.R.E.A (Ashland Residents for Equity and Action) - Lead Social Media Intern (Jul 2022 – Jul 2023)</strong></p>
-        <ul>
-            <li>Managed social media to promote POC-owned businesses and community inclusion.</li>
-            <li>Boosted engagement by 25% through strategic content and outreach.</li>
-            <li>Supported event planning, highlighting local culture and empowering minority communities.</li>
-        </ul>
+        <div class="responsibility-item">
+            <h3>IIM Bangalore BBA DBE - Zonal Representative</h3>
+            <h4>Dec 2024 – Present</h4>
+            <ul>
+                <li>Represent 100+ students, supporting communication, inclusion, and peer engagement.</li>
+                <li>Address student concerns and liaise with faculty for smooth information flow.</li>
+                <li>Co-led NOVA, the program’s first online cultural event.</li>
+            </ul>
+        </div>
+        <div class="responsibility-item">
+            <h3>Ashland High School Culinary Club - Founder/Vice President</h3>
+            <h4>Jul 2022 – Jul 2023</h4>
+            <ul>
+                <li>Led a team of 20 members, organizing weekly meetings and culinary events.</li>
+                <li>Fostered an inclusive space to explore global cuisines and food cultures.</li>
+                <li>Coordinated with stakeholders to support club activities and growth.</li>
+            </ul>
+        </div>
+
+        <div class="responsibility-item">
+            <h3>Ashland High School Cultural Club - Historian/Club Officer</h3>
+            <h4>Jul 2022 – Jul 2023</h4>
+            <ul>
+                <li>Organized events promoting diversity and inclusion; tracked outcomes and suggested improvements.</li>
+                <li>Supported team members and contributed to a positive club environment.</li>
+                <li>Represented the club at the Connections Conference, showcasing global cultures and their significance.</li>
+            </ul>
+        </div>
+
+        <div class="responsibility-item">
+            <h3>A.R.E.A (Ashland Residents for Equity and Action) - Lead Social Media Intern</h3>
+            <h4>Jul 2022 – Jul 2023</h4>
+            <ul>
+                <li>Managed social media to promote POC-owned businesses and community inclusion.</li>
+                <li>Boosted engagement by 25% through strategic content and outreach.</li>
+                <li>Supported event planning, highlighting local culture and empowering minority communities.</li>
+            </ul>
+        </div>
     </div>
 
     <div class="resume-section">
@@ -246,10 +406,10 @@
     <div class="resume-section">
         <h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
         <ul class="list-inline">
-            <li class="list-inline-item badge bg-secondary"><i class="fas fa-code me-1"></i> Python</li>
-            <li class="list-inline-item badge bg-secondary"><i class="fas fa-file-excel me-1"></i> Excel</li>
-            <li class="list-inline-item badge bg-secondary"><i class="fas fa-calculator me-1"></i> Tax Accounting</li>
-            <li class="list-inline-item badge bg-secondary"><i class="fas fa-handshake me-1"></i> Corporate Etiquette</li>
+            <li class="list-inline-item badge bg-secondary"><i class="fas fa-code me-2"></i> Python</li>
+            <li class="list-inline-item badge bg-secondary"><i class="fas fa-file-excel me-2"></i> Excel</li>
+            <li class="list-inline-item badge bg-secondary"><i class="fas fa-calculator me-2"></i> Tax Accounting</li>
+            <li class="list-inline-item badge bg-secondary"><i class="fas fa-handshake me-2"></i> Corporate Etiquette</li>
         </ul>
     </div>
 
@@ -257,11 +417,11 @@
         <h2 class="section-title"><i class="fas fa-globe"></i> Languages</h2>
         <ul>
             <li class="language-item"><strong>English</strong> – Proficient</li>
-            <li class="language-item"><strong>Tamil  </strong> – Proficient</li>
-            <li class="language-item"><strong>Telugu </strong> – Proficient</li>
-            <li class="language-item"><strong>Hindi  </strong> – Proficient</li>
+            <li class="language-item"><strong>Tamil</strong> – Proficient</li>
+            <li class="language-item"><strong>Telugu</strong> – Proficient</li>
+            <li class="language-item"><strong>Hindi</strong> – Proficient</li>
             <li class="language-item"><strong>Spanish</strong> – Intermediate</li>
-            <li class="language-item"><strong>German </strong> – Intermediate</li>
+            <li class="language-item"><strong>German</strong> – Intermediate</li>
         </ul>
     </div>
 
