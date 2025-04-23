@@ -52,10 +52,20 @@
             padding: 2rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             transform-origin: top;
+            position: relative;
         }
         .page-fold:hover {
             transform: rotateX(-5deg) translateY(-5px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .page-fold:nth-child(odd) {
+            margin-left: 0;
+            margin-right: 5%;
+        }
+        .page-fold:nth-child(even) {
+            margin-right: 0;
+            margin-left: 5%;
+            top: 20px;
         }
         .d-flex {
             display: flex;
