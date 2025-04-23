@@ -1,178 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Navya Neelamegam - Resume</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/5b4ef1a8b5.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      margin: 0;
-      padding: 40px 15px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
-      animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    h1, h2 {
-      color: #2c3e50;
-    }
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-
-    h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-      margin-top: 3rem;
-    }
-
-    .profile-info p {
-      margin: 0.3rem 0;
-      font-size: 0.95rem;
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #0056b3;
-      text-decoration: underline;
-    }
-
-    .btn-outline-primary, .btn-outline-secondary {
-      border-radius: 50px;
-      padding: 0.6rem 1.4rem;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-    }
-
-    .btn-outline-primary:hover, .btn-outline-secondary:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .badge {
-      border-radius: 50px;
-      padding: 0.5rem 1rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      background: linear-gradient(45deg, #6a11cb, #2575fc);
-      color: #fff;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .badge:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .section-title i {
-      color: #6a11cb;
-      margin-right: 0.5rem;
-    }
-
-    .resume-section {
-      margin-bottom: 2.5rem;
-    }
-
-    ul {
-      margin-top: 0.5rem;
-    }
-
-    ul.list-inline li {
-      margin-bottom: 0.6rem;
-    }
-
-    .work-experience-item, .responsibility-item {
-      margin-bottom: 1.8rem;
-    }
-
-    .language-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
-    }
-
-    hr {
-      margin: 2rem 0;
-    }
-
-    .shadow-card {
-      background-color: #f8f9fa;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-      margin-bottom: 1.5rem;
-    }
-
-    .highlight {
-      background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 100%);
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: #fff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navya Neelamegam - Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.ico">
+    <style>
+        body {
+            background-color: #f4f6f8;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.75rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .d-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .btn-outline-primary, .btn-outline-secondary {
+            border-radius: 5px;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        .resume-section {
+            margin-bottom: 2.5rem;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 1rem;
+            list-style-type: disc;
+        }
+        ul.list-inline {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul.list-inline li {
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+        .badge {
+            border-radius: 5px;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+            color: #fff;
+        }
+        .bg-secondary {
+            background-color: #6c757d !important;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .language-item strong {
+            min-width: 80px;
+        }
+        hr {
+            border-top: 1px solid #eee;
+            margin: 2rem 0;
+        }
+        /* Custom Styles */
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            margin-bottom: 1.5rem;
+        }
+        .profile-info p {
+            margin-bottom: 0.2rem;
+        }
+        .icon-link {
+            margin-left: 0.5rem;
+            color: #007bff;
+        }
+        .icon-link:hover {
+            color: #0056b3;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .section-title i {
+            font-size: 1.2rem;
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1>Navya Neelamegam</h1>
-      <div>
-        <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank" class="btn btn-outline-primary me-2">
-          <i class="fab fa-linkedin me-1"></i> LinkedIn
-        </a>
-        <a href="Resume.pdf" download class="btn btn-outline-secondary">
-          <i class="fas fa-download me-1"></i> PDF
-        </a>
-      </div>
+
+<div class="container mt-5 mb-5 p-4 bg-white shadow rounded">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h1>Navya Neelamegam</h1>
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank" class="btn btn-outline-primary btn-sm"><i class="fab fa-linkedin me-1"></i> LinkedIn</a>
+            <a href="Resume.pdf" download class="btn btn-outline-secondary btn-sm"><i class="fas fa-download me-1"></i> Download PDF</a>
+        </div>
+    </div>
+    <div class="profile-info">
+        <p><i class="fas fa-envelope me-1"></i> Email: <a href="mailto:navya_ipm24@iift.edu">navya_ipm24@iift.edu</a> | <a href="mailto:navya.neelamegam24@iimb.ac.in">navya.neelamegam24@iimb.ac.in</a> | <a href="mailto:navyaneel3107@gmail.com">navyaneel3107@gmail.com</a></p>
+        <p><i class="fab fa-github me-1"></i> GitHub: <a href="https://github.com/navyaneel" target="_blank">github.com/navyaneel</a></p>
     </div>
 
-    <div class="profile-info mb-4">
-      <p><i class="fas fa-envelope me-2"></i>
-        <a href="mailto:navya_ipm24@iift.edu">navya_ipm24@iift.edu</a> |
-        <a href="mailto:navya.neelamegam24@iimb.ac.in">navya.neelamegam24@iimb.ac.in</a> |
-        <a href="mailto:navyaneel3107@gmail.com">navyaneel3107@gmail.com</a>
-      </p>
-      <p><i class="fab fa-github me-2"></i> <a href="https://github.com/navyaneel" target="_blank">github.com/navyaneel</a></p>
-    </div>
-
-    <!-- SECTION TEMPLATE EXAMPLE -->
     <div class="resume-section">
-      <h2 class="section-title"><i class="fas fa-user-circle"></i> About</h2>
-      <div class="shadow-card">
-        <p><span class="highlight">Driven</span> by a passion for impact and innovation, I navigate the intersection of academia and real-world application through my academic journey at IIFT and IIM Bangalore. As a consultant at 180 DC, I champion donor analytics, while at IIMB I lead with creativity, launching the first online student showcase.</p>
-      </div>
+        <h2 class="section-title"><i class="fas fa-user"></i> About</h2>
+        <p>At the intersection of academia and practical application, my journey unfolds at IIFT Kakinada and IIM Bangalore, where I'm currently pursuing degrees in International Business/Business Analytics and Digital Business and Entrepreneurship respectively. My role as a 180 DC Member at 180 Degrees Consulting IIFT Kakinada involves leveraging business analytics to strengthen the impact of non-profits like Pay Your Tuition, focusing on donor engagement and relations.</p>
+        <p>As a Zonal Representative at IIM Bangalore, we champion the fusion of digital entrepreneurship and student welfare, facilitating communication and orchestrating NOVA, the institute's inaugural online talent showcase. My summer stint at CLA exposed me to the intricacies of accounting, enhancing my teamwork acumen and instilling a passion for creating a more inclusive and forward-thinking business environment.</p>
     </div>
 
-    <!-- Copy this structure for other sections like Education, Experience, Skills, etc. -->
-    <!-- Simply wrap content in <div class="shadow-card"> ... </div> inside each resume-section -->
+    <div class="resume-section">
+        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+        <p><strong>Indian Institute of Foreign Trade</strong> – BBA in Business Analytics (2027), MBA in International Business (2029)</p>
+        <p><strong>Indian Institute of Management, Bangalore</strong> – BBA in Digital Business and Entrepreneurship (2027)</p>
+    </div>
 
-    <!-- Continue your resume content from here using the improved structure -->
+    <div class="resume-section">
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+        <p><strong>Deepflock.ai - Student Intern (Feb 2025 – Present)</strong></p>
+        <ul>
+            <li>Researched AI agent applications in fintech, focusing on startups and market trends.</li>
+            <li>Contributing to a project for Champions Bank, where findings will be implemented.</li>
+        </ul>
+        <p><strong>IIM Bangalore BBA DBE - Media Strategist/Content writer (Feb 2025 – Present)</strong></p>
+        <ul>
+            <li>Created strategic content to enhance online presence and audience engagement.</li>
+            <li>Developed and managed media plans tailored to the BBA DBE program’s objectives.</li>
+            <li>Collaborated with the outreach team to ensure consistent brand messaging.</li>
+        </ul>
+        <p><strong>GAEE - Research Associate (Feb 2025 – Present)</strong></p>
+        <ul>
+            <li>Wrote articles on renewable energy and global tourism’s economic impact.</li>
+            <li>Led interviews with experts across finance, economics, and research.</li>
+            <li>Supported global economic education for underprivileged students.</li>
+        </ul>
+        <p><strong>180 Degree Consulting - Consultant (Oct 2024 – Present)</strong></p>
+        <ul>
+            <li>Designed donor growth and retention strategy for non-profit Pay Your Tuition.</li>
+            <li>Lead pitch deck development for Meteor Venture to support startup fundraising.</li>
+            <li>Conducted market research to enhance visibility and outreach for mission-driven organizations.</li>
+        </ul>
+        <p><strong>CLA (CliftonLarsonAllen) - Student Intern (Jun 2023 – Aug 2023)</strong></p>
+        <ul>
+            <li>Gained hands-on experience in professional accounting across five service lines.</li>
+            <li>Built foundational skills through real-world case studies and team collaboration.</li>
+            <li>Observed integration of accounting with broader professional services.</li>
+        </ul>
+        <p><strong>Working Women's Forum - Student Intern (Jul 2022 – Aug 2022)</strong></p>
+        <ul>
+            <li>Participated in gender issue training sessions and field visits across community zones.</li>
+            <li>Engaged with members through meetings and discussions to understand grassroots challenges.</li>
+            <li>Contributed case studies, reports, and articles to support the organization’s mission.</li>
+        </ul>
+        <p><strong>CVS Pharmacy - Retail Store Associate (Mar 2023 – May 2023)</strong></p>
+        <ul>
+            <li>Managed customer engagement, cash handling, and inventory upkeep.</li>
+            <li>Delivered excellent service to ensure a smooth and positive shopping experience.</li>
+            <li>Maintained store organization and product availability.</li>
+        </ul>
+    </div>
 
-  </div>
+    <div class="resume-section">
+        <h2 class="section-title"><i class="fas fa-trophy"></i> Position of Responsibility</h2>
+        <p><strong>IIM Bangalore BBA DBE - Zonal Representative (Dec 2024 – Present)</strong></p>
+        <ul>
+            <li>Represent 100+ students, supporting communication, inclusion, and peer engagement.</li>
+            <li>Address student concerns and liaise with faculty for smooth information flow.</li>
+            <li>Co-led NOVA, the program’s first online cultural event.</li>
+        </ul>
+        <p><strong>Ashland High School Culinary Club - Founder/Vice President (Jul 2022 – Jul 2023)</strong></p>
+        <ul>
+            <li>Led a team of 20 members, organizing weekly meetings and culinary events.</li>
+            <li>Fostered an inclusive space to explore global cuisines and food cultures.</li>
+            <li>Coordinated with stakeholders to support club activities and growth.</li>
+        </ul>
+        <p><strong>Ashland High School Cultural Club - Historian/Club Officer (Jul 2022 – Jul 2023)</strong></p>
+        <ul>
+            <li>Organized events promoting diversity and inclusion; tracked outcomes and suggested improvements.</li>
+            <li>Supported team members and contributed to a positive club environment.</li>
+            <li>Represented the club at the Connections Conference, showcasing global cultures and their significance.</li>
+        </ul>
+        <p><strong>A.R.E.A (Ashland Residents for Equity and Action) - Lead Social Media Intern (Jul 2022 – Jul 2023)</strong></p>
+        <ul>
+            <li>Managed social media to promote POC-owned businesses and community inclusion.</li>
+            <li>Boosted engagement by 25% through strategic content and outreach.</li>
+            <li>Supported event planning, highlighting local culture and empowering minority communities.</li>
+        </ul>
+    </div>
+
+    <div class="resume-section">
+        <h2 class="section-title"><i class="fas fa-award"></i> Other Achievements</h2>
+        <p><strong>John and Abigail Adams Scholarship</strong></p>
+        <ul>
+            <li>Received a maximum amount of $1575 per year for college tuition fees as a form of scholarship after writing the MCAS exam 2022 conducted by the government of Massachusetts.</li>
+        </ul>
+        <p><strong>HPAIR (The Harvard College Project for Asian & International Relations)</strong></p>
+        <ul>
+            <li>Selected to attend a 3-day offline conference at Harvard connecting students from all around the world with business leaders worldwide.</li>
+        </ul>
+        <p><strong>2nd Place in Enactus and IIC Village Immersion Competition</strong></p>
+        <ul>
+            <li>Co-developed a funded, sustainable agri-aquaculture model to empower rural communities in Andhra Pradesh through innovative use of hydroponics and crop waste.</li>
+        </ul>
+    </div>
+
+    <div class="resume-section">
+        <h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
+        <ul class="list-inline">
+            <li class="list-inline-item badge bg-secondary"><i class="fas fa-code me-1"></i> Python</li>
+            <li class="list-inline-item badge bg-secondary"><i class="fas fa-file-excel me-1"></i> Excel</li>
+            <li class="list-inline-item badge bg-secondary"><i class="fas fa-calculator me-1"></i> Tax Accounting</li>
+            <li class="list-inline-item badge bg-secondary"><i class="fas fa-handshake me-1"></i> Corporate Etiquette</li>
+        </ul>
+    </div>
+
+    <div class="resume-section">
+        <h2 class="section-title"><i class="fas fa-globe"></i> Languages</h2>
+        <ul>
+            <li class="language-item"><strong>English</strong> – Proficient</li>
+            <li class="language-item"><strong>Tamil  </strong> – Proficient</li>
+            <li class="language-item"><strong>Telugu </strong> – Proficient</li>
+            <li class="language-item"><strong>Hindi  </strong> – Proficient</li>
+            <li class="language-item"><strong>Spanish</strong> – Intermediate</li>
+            <li class="language-item"><strong>German </strong> – Intermediate</li>
+        </ul>
+    </div>
+
+    <div class="resume-section">
+        <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
+        <ul>
+            <li>Generative AI for Everyone – DeepLearning.AI - Issued Feb 2025</li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/your_fontawesome_kit.js" crossorigin="anonymous"></script>
 </body>
 </html>
