@@ -24,52 +24,56 @@
             --section-title: #084298;
         }
         
-        body.light-theme {
-            --bg-color: #f0f0f0;
-            --text-color: #222;
-            --card-bg: #fff;
-            --card-shadow: rgba(0, 0, 0, 0.1);
-            --link-color: #007bff;
-            --section-title: #084298;
-        }
-        
-        body.dark-theme {
-            --bg-color: #1c1c1c;
-            --text-color: #e0e0e0;
-            --card-bg: #2a2a2a;
-            --card-shadow: rgba(255, 255, 255, 0.05);
-            --link-color: #66b2ff;
-            --section-title: #66b2ff;
-        }
-        
         body {
-            background-color: var(--bg-color);
-            font-family: 'Inter', sans-serif;
-            color: var(--text-color);
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
         }
+        
+        .dark-theme {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        
+        .light-theme {
+            background-color: #ffffff;
+            color: #212529;
+        } 
+        
+        .page-fold {
+            margin-bottom: 2rem;
+            cursor: pointer;
+        }
+        
+        .page-fold.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .page-fold:hover {
+            transform: rotateX(-5deg) translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .section-title {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .badge {
+            margin: 0.25rem;
+            font-size: 0.9rem;
+        }
+        
+        .badge:hover {
+            background-color: #343a40;
+        }
+        
         h1, h2 {
             color: var(--section-title);
             font-weight: 900;
             letter-spacing: -0.04em;
             text-shadow: none;
-        }
-        
-        @media (max-width: 576px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
-        }
-
-        @media (max-width: 576px) {
-            #backToTop {
-                padding: 8px 10px;
-                font-size: 14px;
-                bottom: 20px;
-                right: 20px;
-            }
         }
         
         .container {
@@ -122,26 +126,16 @@
             color: #fff;
         }
         
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .section-title i {
-            color: var(--section-title);
-        }
-
         .profile-info {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
             margin-bottom: 2rem;
-        }
+        }        
         .profile-info p {           
             color: #333;
         }
+        
         .work-experience-item {
             margin-bottom: 2rem;
             padding-left: 1rem;
@@ -150,12 +144,7 @@
         }
         .work-experience-item:hover {
             border-left-color: #007bff;
-        }
-        
-        .work-experience-item h3,
-        .responsibility-item h3 {
-            color: var(--section-title);
-        }
+        }        
         
         .responsibility-item {
             margin-bottom: 2rem;
@@ -168,47 +157,57 @@
             border-left-color: #007bff;
             transform: translateX(5px);
         }
+
+        .work-experience-item h3,
+        .responsibility-item h3 {
+            color: var(--section-title);
+        }
         
         .responsibility-item h4 {
             color: #4d4d4d;
         }       
         
-        .responsibility-item ul {
-            margin-left: 25px;
+        .work-experience-item ul {
+            margin-left: 20px;
             list-style-type: disc;
             animation: fadeIn 0.5s ease;
         }
         
+        .responsibility-item ul {
+            margin-left: 25px;
+            list-style-type: disc;
+            animation: fadeIn 0.5s ease;
+        }        
         .work-experience-item h4 {
             font-size: 1.1rem;
             color:var(--section-title);
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
-        .work-experience-item ul {
-            margin-left: 20px;
-            list-style-type: disc;
-            animation: fadeIn 0.5s ease;
+        
+        .visible {
+            animation: fadeIn 1s ease-in forwards;
         }
+        
         @keyframes fadeIn {
-            from {
-                opacity: 0;
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
             }
-            to {
-                opacity: 1;
+            .section-title {
+                font-size: 1.2rem;
             }
-        }
-        .badge {
-            background-color: #495057;
-            color: #fff;
-        }
-        .badge:hover {
-            background-color: #343a40;
-        }
-        .page-fold {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            
+            .profile-info p, ul li {
+                font-size: 0.95rem;
+            }
+            .navbar-brand {
+                font-size: 1rem;
+            }
         }
         
         #backToTop {
@@ -217,16 +216,8 @@
         
         #backToTop:hover {
             background-color: #003d80;
-        }  
+        }
         
-        .page-fold.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .page-fold:hover {
-            transform: rotateX(-5deg) translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
         .d-flex {
             display: flex;
             justify-content: space-between;
@@ -276,26 +267,10 @@
             border-top: 1px solid #e0e0e0;
             margin: 3rem 0;
         }    
-
     </style>
 </head>
 <body>
-<nav class="navbar navbar-light bg-light fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navya Neelamegam</a>
-    <div>
-      <a class="nav-link d-inline" href="#section2">About</a>
-      <a class="nav-link d-inline" href="#section3">Education</a>
-      <a class="nav-link d-inline" href="#section4">Experience</a>
-      <a class="nav-link d-inline" href="#section5">Roles</a>
-      <a class="nav-link d-inline" href="#section6">Achievements</a>
-      <a class="nav-link d-inline" href="#section7">Skills</a>
-      <a class="nav-link d-inline" href="#section8">Languages</a>
-      <a class="nav-link d-inline" href="#section9">Certifications</a>
-    </div>
-  </div>
-</nav>
-
+ 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navya Neelamegam</a>
