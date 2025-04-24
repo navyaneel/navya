@@ -54,7 +54,7 @@
         .container {
             max-width: 1200px;
             margin: 60px auto;
-            padding: 0;
+            padding: 0 1rem;
             background-color: transparent;
             box-shadow: none;
             border-radius: 0;
@@ -67,6 +67,18 @@
             background-image: linear-gradient(to right, #007bff, #084298);
             -webkit-background-clip: text;
             color: transparent;
+        }
+        @media (max-width: 576px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+        }
+        @media (max-width: 576px) {
+            #backToTop {
+                padding: 8px 10px;
+                font-size: 14px;
+                bottom: 20px;
+                right: 20px;
+            }
         }
         h1 {
             font-size: 3rem;
@@ -289,6 +301,27 @@
       <a class="nav-link d-inline" href="#section7">Skills</a>
       <a class="nav-link d-inline" href="#section8">Languages</a>
       <a class="nav-link d-inline" href="#section9">Certifications</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navya Neelamegam</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#section2">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section3">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section4">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section5">Roles</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section6">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section7">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section8">Languages</a></li>
+        <li class="nav-item"><a class="nav-link" href="#section9">Certifications</a></li>        
+      </ul>
     </div>
   </div>
 </nav>
