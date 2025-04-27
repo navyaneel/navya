@@ -16,22 +16,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
    <style>
-       
+
     :root {
     --bg-color: #F5F5DC; /* Sandal yellow */
     --text-color: #800000; /* Maroon Text */
     --card-bg: #990000; /* Slightly lighter maroon for cards */
-    --card-shadow: rgba(0, 0, 0, 0.2);  
+    --card-shadow: rgba(0, 0, 0, 0.2);
     --primary-color: #800000; /* Maroon Text */
     --secondary-color: #00CED1; /* Aqua blue text */
     --accent-color: #00CED1; /* Aqua blue */
     }
-       
+
     body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Poppins', sans-serif; /* Updated body font */
     font-size: 1.1rem;
         transition: background-color 0.3s, color 0.3s;
         background-color: var(--bg-color);
@@ -59,7 +59,7 @@
         box-shadow: 0 4px 8px var(--card-shadow);
         border-radius: 8px;
         padding: 1.5rem;
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smoother transition */
     }
 
     .page-fold.visible {
@@ -68,36 +68,36 @@
     }
 
     .page-fold:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 20px rgba(0, 255, 255, 0.7);
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05); /* Bigger grow on hover */
+    box-shadow: 0 10px 20px var(--accent-color); /* Color glow on hover */
     }
 
     .section-title {
         margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-        color: var(--primary-color); /* Maroon blue */
+        margin-bottom: 1.5rem; /* Increased margin for spacing */
+        font-weight: 700; /* Made it bolder */
+        color: var(--primary-color); /* Maroon */
+        font-size: 1.6rem; /* Bigger title */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Slight shadow */
     }
 
     .badge {
         margin: 0.25rem;
         font-size: 0.9rem;
-        background-color: var(--accent-color); /* Sandal Yellow */
-        color: var(--text-color);
-        border: 1px solid var(--secondary-color); /* Maroon border for contrast */
+        background-color: var(--accent-color); /* Aqua blue */
+        color: var(--text-color); /* Maroon */
+        border: 1px solid var(--primary-color); /* Maroon border */
     }
 
     .badge:hover {
-        background-color: #e0e0b8; /* Slightly darker sandal yellow */
-        color: var(--secondary-color);
+        background-color: #b3e5fc; /* Slightly lighter aqua */
+        color: var(--primary-color);
     }
 
     h1, h2 {
     font-size: 2.7rem;
     text-shadow: 2px 2px 8px #F5F5DC;
-        color: var(--primary-color); /* Aqua blue */
+        color: var(--primary-color); /* Maroon */
         font-weight: 900;
         letter-spacing: -0.04em;
         text-shadow: none;
@@ -106,51 +106,53 @@
     .container {
         max-width: 1200px;
         margin: 60px auto;
-        padding: 0 1rem;
-        background-color: transparent;
+        padding: 2rem; /* Added some padding to the container */
+        background-color: var(--bg-color); /* Sandal yellow container */
         box-shadow: none;
         border-radius: 0;
     }
 
     a {
-        color: var(--primary-color); /* Aqua Blue */
+        color: var(--primary-color); /* Maroon */
         font-weight: 600;
         text-decoration: none;
         transition: color 0.2s ease, text-shadow 0.2s ease;
     }
     a:hover {
         text-decoration: underline;
-        color: #008080; /* Darker shade of aqua blue */
-        text-shadow: 1px 2px 3px rgba(0, 206, 209, 0.4); /* Aqua Blue shadow */
+        color: #590000; /* Darker shade of maroon */
+        text-shadow: 1px 2px 3px rgba(128, 0, 0, 0.4); /* Maroon shadow */
     }
 
     .btn-outline-primary, .btn-outline-secondary {
         border-radius: 8px;
         font-size: 0.95rem;
         padding: 0.75rem 1.5rem;
-        transition: all 0.2s ease;
+        transition: all 0.2s ease, box-shadow 0.2s ease; /* Added box-shadow to transition */
         border-width: 1.5px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
 
     .btn-outline-primary {
-        color: var(--primary-color); /* Aqua blue */
-        border-color: var(--primary-color); /* Aqua blue */
+        color: var(--primary-color); /* Maroon */
+        border-color: var(--primary-color); /* Maroon */
     }
 
     .btn-outline-primary:hover {
-        background-color: var(--primary-color); /* Aqua blue */
+        background-color: var(--primary-color); /* Maroon */
         color: #fff;
+        box-shadow: 0 0 10px var(--accent-color); /* Neon glow on hover */
     }
 
     .btn-outline-secondary {
-        color: var(--secondary-color);
-        border-color: var(--secondary-color);
+        color: var(--secondary-color); /* Aqua blue */
+        border-color: var(--secondary-color); /* Aqua blue */
     }
 
     .btn-outline-secondary:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--secondary-color); /* Aqua blue */
         color: #fff;
+        box-shadow: 0 0 10px var(--primary-color); /* Neon glow on hover */
     }
 
     .profile-info {
@@ -166,28 +168,28 @@
     .work-experience-item {
         margin-bottom: 2rem;
         padding-left: 1rem;
-        border-left: 3px solid var(--accent-color); /* Sandal Yellow */
+        border-left: 3px solid var(--accent-color); /* Aqua blue */
         transition: border-left 0.3s ease;
     }
     .work-experience-item:hover {
-        border-left-color: var(--primary-color); /* Aqua Blue */
+        border-left-color: var(--primary-color); /* Maroon */
     }
 
     .responsibility-item {
         margin-bottom: 2rem;
         padding-left: 1.2rem;
-        border-left: 4px solid var(--accent-color); /* Sandal Yellow */
-        transition: border-left 0.3s ease;
+        border-left: 4px solid var(--accent-color); /* Aqua blue */
+        transition: border-left 0.3s ease, transform 0.2s ease-in-out; /* Added transform transition */
     }
 
     .responsibility-item:hover {
-        border-left-color: var(--primary-color); /* Aqua Blue */
+        border-left-color: var(--primary-color); /* Maroon */
         transform: translateX(5px);
     }
 
     .work-experience-item h3,
     .responsibility-item h3 {
-        color: var(--primary-color); /* Aqua blue */
+        color: var(--primary-color); /* Maroon */
     }
 
     .responsibility-item h4 {
@@ -209,7 +211,7 @@
     }
     .work-experience-item h4 {
         font-size: 1.1rem;
-        color: var(--primary-color); /* Aqua blue */
+        color: var(--primary-color); /* Maroon */
         margin-bottom: 0.5rem;
         font-weight: 500;
     }
@@ -229,14 +231,14 @@
             font-size: 1.8rem;
         }
         .section-title {
-            font-size: 1.2rem;
+            font-size: 1.4rem; /* Slightly bigger on mobile */
         }
 
         .profile-info p, ul li {
             font-size: 0.95rem;
         }
         .navbar-brand {
-            font-size: 1rem;
+            font-size: 1.2rem; /* Slightly bigger on mobile */
         }
     }
 
@@ -303,7 +305,7 @@
         font-size: 18px;
         border: none;
         outline: none;
-        background-color: var(--primary-color); /* Aqua Blue */
+        background-color: var(--primary-color); /* Maroon */
         color: white;
         cursor: pointer;
         padding: 12px 16px;
@@ -313,15 +315,15 @@
     }
 
     #backToTop:hover {
-        background-color: #008080; /* Darker shade of aqua blue */
+        background-color: #590000; /* Darker maroon */
     }
 </style>
 </head>
 <body>
-    
-<nav class="navbar navbar-expand-lg" style="background-color: #800000;">
+
+<nav class="navbar navbar-expand-lg" style="background-color: #00CED1;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" style="color: #00CED1; font-weight: bold; font-size: 1.5rem;">Navya Neelamegam</a>
+    <a class="navbar-brand" href="#" style="color: #800000; font-weight: bold; font-size: 1.5rem;">Navya Neelamegam</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -334,12 +336,12 @@
         <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section6">Achievements</a></li>
         <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section7">Skills</a></li>
         <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section8">Languages</a></li>
-        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section9">Certifications</a></li>        
+        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section9">Certifications</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<div class="container mt-5 mb-5 p-4" style="background-color: #660000; border-radius: 12px; box-shadow: 0 0 20px #F5F5DC;">
+<div class="container mt-5 mb-5 p-4" style="background-color: #F5F5DC; border-radius: 12px; box-shadow: 0 0 20px rgba(0, 206, 209, 0.3);">
     <div class="page-fold" onclick="window.location.href='#section2'">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
@@ -527,28 +529,29 @@
         </ul>
     </div>
 </div>
-    
+
 <footer class="text-center mt-5 mb-3">
   <a href="#top" class="btn btn-outline-primary btn-sm"><i class="fas fa-arrow-up me-1"></i> Back to Top</a>
   <p class="mt-2 small">© 2025 Navya Neelamegam</p>
 </footer>
-    
+
 <button onclick="toggleTheme()" class="btn btn-outline-secondary btn-sm ms-3">
     <i class="fas fa-adjust me-2"></i> Toggle Theme
-</button>    
+</button>
 <script>
     function toggleTheme() {
         document.body.classList.toggle('dark-theme');
         document.body.classList.toggle('light-theme');
+        localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme');
     }
-</script>    
-    
+</script>
+
 <button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
 <script>
     let btn = document.getElementById("backToTop");
     window.onscroll = () => { btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none"; };
     function topFunction() {
-        document.body.scrollTop = 0; 
+        document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
 </script>
@@ -567,7 +570,7 @@
         localStorage.setItem('theme', !isDark ? 'dark-theme' : 'light-theme');
     });
 </script>
-    
+
 <script>
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -584,8 +587,3 @@
 
 </body>
 </html>
-<style>
-.btn-outline-primary:hover, .btn-outline-secondary:hover {
-    box-shadow: 0 0 15px #00CED1, 0 0 25px #00CED1;
-}
-</style>
