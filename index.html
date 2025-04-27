@@ -27,13 +27,6 @@
     --primary-color: #00CED1; /* Aqua blue */
     --secondary-color: #F5F5DC; /* Sandal yellow */
     --accent-color: #F5F5DC; /* Sandal yellow */
-        --bg-color: #f0f0f0; /* Default light background */
-        --text-color: #222; /* Default dark text */
-        --card-bg: #fff; /* Default card background */
-        --card-shadow: rgba(0, 0, 0, 0.1); /* Default card shadow */
-        --primary-color: #00CED1; /* Aqua Blue */
-        --secondary-color: #800000; /* Maroon */
-        --accent-color: #F5F5DC; /* Sandal Yellow (Beige) - subtle accent */
     }
 
     body {
@@ -44,17 +37,17 @@
     }
 
     .dark-theme {
-        --bg-color: #121212;
-        --text-color: #e0e0e0;
-        --card-bg: #1E1E1E;
-        --card-shadow: rgba(255, 255, 255, 0.1);
+        --bg-color: var(--bg-color);
+        --text-color: var(--text-color);
+        --card-bg: var(--card-bg);
+        --card-shadow: var(--card-shadow);
     }
 
     .light-theme {
-        --bg-color: #ffffff;
-        --text-color: #212529;
-        --card-bg: #fff;
-        --card-shadow: rgba(0, 0, 0, 0.1);
+        --bg-color: var(--bg-color);
+        --text-color: var(--text-color);
+        --card-bg: var(--card-bg);
+        --card-shadow: var(--card-shadow);
     }
 
     .page-fold {
