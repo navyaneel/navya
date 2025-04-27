@@ -20,6 +20,13 @@
     <link rel="icon" href="favicon.ico">
    <style>
     :root {
+    --bg-color: #800000; /* Maroon background */
+    --text-color: #00CED1; /* Aqua blue text */
+    --card-bg: #990000; /* Slightly lighter maroon for cards */
+    --card-shadow: rgba(0, 0, 0, 0.2);
+    --primary-color: #00CED1; /* Aqua blue */
+    --secondary-color: #F5F5DC; /* Sandal yellow */
+    --accent-color: #F5F5DC; /* Sandal yellow */
         --bg-color: #f0f0f0; /* Default light background */
         --text-color: #222; /* Default dark text */
         --card-bg: #fff; /* Default card background */
@@ -53,7 +60,7 @@
     .page-fold {
         margin-bottom: 2rem;
         cursor: pointer;
-        background-color: var(--card-bg);
+        background-color: var(--card-bg); color: var(--text-color);
         box-shadow: 0 4px 8px var(--card-shadow);
         border-radius: 8px;
         padding: 1.5rem;
@@ -74,7 +81,7 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-weight: 600;
-        color: var(--secondary-color); /* Maroon */
+        color: var(--primary-color); /* Aqua blue */
     }
 
     .badge {
@@ -91,7 +98,7 @@
     }
 
     h1, h2 {
-        color: var(--secondary-color); /* Maroon */
+        color: var(--primary-color); /* Aqua blue */
         font-weight: 900;
         letter-spacing: -0.04em;
         text-shadow: none;
@@ -128,12 +135,12 @@
     }
 
     .btn-outline-primary {
-        color: var(--secondary-color); /* Maroon */
-        border-color: var(--secondary-color); /* Maroon */
+        color: var(--primary-color); /* Aqua blue */
+        border-color: var(--primary-color); /* Aqua blue */
     }
 
     .btn-outline-primary:hover {
-        background-color: var(--secondary-color); /* Maroon */
+        background-color: var(--primary-color); /* Aqua blue */
         color: #fff;
     }
 
@@ -181,7 +188,7 @@
 
     .work-experience-item h3,
     .responsibility-item h3 {
-        color: var(--secondary-color); /* Maroon */
+        color: var(--primary-color); /* Aqua blue */
     }
 
     .responsibility-item h4 {
@@ -203,7 +210,7 @@
     }
     .work-experience-item h4 {
         font-size: 1.1rem;
-        color: var(--secondary-color); /* Maroon */
+        color: var(--primary-color); /* Aqua blue */
         margin-bottom: 0.5rem;
         font-weight: 500;
     }
