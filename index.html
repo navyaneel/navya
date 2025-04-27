@@ -16,361 +16,455 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" as="style">
     <link rel="icon" href="favicon.ico">
-   <style>
-
-    :root {
-    --bg-color: #F5F5DC; /* Sandal yellow */
-    --text-color: #800000; /* Maroon Text */
-    --card-bg: #990000; /* Slightly lighter maroon for cards */
-    --card-shadow: rgba(0, 0, 0, 0.2);
-    --primary-color: #800000; /* Maroon Text */
-    --secondary-color: #00CED1; /* Aqua blue text */
-    --accent-color: #00CED1; /* Aqua blue */
-    }
-
-    body {
-        font-family: 'Poppins', sans-serif; /* Updated body font */
-    font-size: 1.1rem;
-        transition: background-color 0.3s, color 0.3s;
-        background-color: var(--bg-color);
-        color: var(--text-color);
-    }
-
-    .dark-theme {
-        --bg-color: var(--bg-color);
-        --text-color: var(--text-color);
-        --card-bg: var(--card-bg);
-        --card-shadow: var(--card-shadow);
-    }
-
-    .light-theme {
-        --bg-color: var(--bg-color);
-        --text-color: var(--text-color);
-        --card-bg: var(--card-bg);
-        --card-shadow: var(--card-shadow);
-    }
-
-    .page-fold {
-        margin-bottom: 2rem;
-        cursor: pointer;
-        background-color: var(--card-bg); color: var(--text-color);
-        box-shadow: 0 4px 8px var(--card-shadow);
-        border-radius: 8px;
-        padding: 1.5rem;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smoother transition */
-    }
-
-    .page-fold.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .page-fold:hover {
-    transform: scale(1.05); /* Bigger grow on hover */
-    box-shadow: 0 10px 20px var(--accent-color); /* Color glow on hover */
-    }
-
-    .section-title {
-        margin-top: 1rem;
-        margin-bottom: 1.5rem; /* Increased margin for spacing */
-        font-weight: 700; /* Made it bolder */
-        color: var(--primary-color); /* Maroon */
-        font-size: 1.6rem; /* Bigger title */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Slight shadow */
-    }
-
-    .badge {
-        margin: 0.25rem;
-        font-size: 0.9rem;
-        background-color: var(--accent-color); /* Aqua blue */
-        color: var(--text-color); /* Maroon */
-        border: 1px solid var(--primary-color); /* Maroon border */
-    }
-
-    .badge:hover {
-        background-color: #b3e5fc; /* Slightly lighter aqua */
-        color: var(--primary-color);
-    }
-
-    h1, h2 {
-    font-size: 2.7rem;
-    text-shadow: 2px 2px 8px #F5F5DC;
-        color: var(--primary-color); /* Maroon */
-        font-weight: 900;
-        letter-spacing: -0.04em;
-        text-shadow: none;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 60px auto;
-        padding: 2rem; /* Added some padding to the container */
-        background-color: var(--bg-color); /* Sandal yellow container */
-        box-shadow: none;
-        border-radius: 0;
-    }
-
-    a {
-        color: var(--primary-color); /* Maroon */
-        font-weight: 600;
-        text-decoration: none;
-        transition: color 0.2s ease, text-shadow 0.2s ease;
-    }
-    a:hover {
-        text-decoration: underline;
-        color: #590000; /* Darker shade of maroon */
-        text-shadow: 1px 2px 3px rgba(128, 0, 0, 0.4); /* Maroon shadow */
-    }
-
-    .btn-outline-primary, .btn-outline-secondary {
-        border-radius: 8px;
-        font-size: 0.95rem;
-        padding: 0.75rem 1.5rem;
-        transition: all 0.2s ease, box-shadow 0.2s ease; /* Added box-shadow to transition */
-        border-width: 1.5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    }
-
-    .btn-outline-primary {
-        color: var(--primary-color); /* Maroon */
-        border-color: var(--primary-color); /* Maroon */
-    }
-
-    .btn-outline-primary:hover {
-        background-color: var(--primary-color); /* Maroon */
-        color: #fff;
-        box-shadow: 0 0 10px var(--accent-color); /* Neon glow on hover */
-    }
-
-    .btn-outline-secondary {
-        color: var(--secondary-color); /* Aqua blue */
-        border-color: var(--secondary-color); /* Aqua blue */
-    }
-
-    .btn-outline-secondary:hover {
-        background-color: var(--secondary-color); /* Aqua blue */
-        color: #fff;
-        box-shadow: 0 0 10px var(--primary-color); /* Neon glow on hover */
-    }
-
-    .profile-info {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-bottom: 2rem;
-    }
-    .profile-info p {
-        color: var(--text-color);
-    }
-
-    .work-experience-item {
-        margin-bottom: 2rem;
-        padding-left: 1rem;
-        border-left: 3px solid var(--accent-color); /* Aqua blue */
-        transition: border-left 0.3s ease;
-    }
-    .work-experience-item:hover {
-        border-left-color: var(--primary-color); /* Maroon */
-    }
-
-    .responsibility-item {
-        margin-bottom: 2rem;
-        padding-left: 1.2rem;
-        border-left: 4px solid var(--accent-color); /* Aqua blue */
-        transition: border-left 0.3s ease, transform 0.2s ease-in-out; /* Added transform transition */
-    }
-
-    .responsibility-item:hover {
-        border-left-color: var(--primary-color); /* Maroon */
-        transform: translateX(5px);
-    }
-
-    .work-experience-item h3,
-    .responsibility-item h3 {
-        color: var(--primary-color); /* Maroon */
-    }
-
-    .responsibility-item h4 {
-        color: #4d4d4d;
-    }
-
-    .work-experience-item ul {
-        margin-left: 20px;
-        list-style-type: disc;
-        animation: fadeIn 0.5s ease;
-        color: var(--text-color);
-    }
-
-    .responsibility-item ul {
-        margin-left: 25px;
-        list-style-type: disc;
-        animation: fadeIn 0.5s ease;
-        color: var(--text-color);
-    }
-    .work-experience-item h4 {
-        font-size: 1.1rem;
-        color: var(--primary-color); /* Maroon */
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-    }
-
-    .visible {
-        opacity: 0;
-        animation: fadeIn 1s ease-in forwards;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 1.8rem;
+    <style>
+        :root {
+            --bg-color: #f8f8ff;
+            --text-color: #2c3e50;
+            --primary-color: #007bff;
+            --secondary-color: #dc3545;
+            --accent-color: #ffc107;
+            --card-bg: #ffffff;
+            --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --neon-glow: 0 0 8px rgba(0, 123, 255, 0.8);
         }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1rem;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .dark-theme {
+            --bg-color: #222222;
+            --text-color: #eeeeee;
+            --card-bg: #333333;
+            --card-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+            --neon-glow: 0 0 8px rgba(0, 123, 255, 0.8);
+        }
+
+        .light-theme {
+            --bg-color: var(--bg-color);
+            --text-color: var(--text-color);
+            --card-bg: var(--card-bg);
+            --card-shadow: var(--card-shadow);
+            --neon-glow: 0 0 8px rgba(0, 123, 255, 0.8);
+        }
+
+        .page-fold {
+            margin-bottom: 2rem;
+            cursor: pointer;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            box-shadow: var(--card-shadow);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .page-fold.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .page-fold:hover {
+            transform: scale(1.04);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
         .section-title {
-            font-size: 1.4rem; /* Slightly bigger on mobile */
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        .profile-info p, ul li {
+        .badge {
+            margin: 0.25rem;
+            font-size: 0.9rem;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            border: 1px solid var(--accent-color);
+            border-radius: 5px;
+        }
+
+        .badge:hover {
+            background-color: #f5d76e;
+            color: var(--text-color);
+        }
+
+        h1, h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            text-shadow: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 2rem;
+            background-color: transparent;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        a {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline-primary, .btn-outline-secondary {
+            border-radius: 8px;
             font-size: 0.95rem;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.2s ease, box-shadow 0.2s ease;
+            border-width: 2px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            box-shadow: var(--neon-glow);
+        }
+
+        .btn-outline-secondary {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            box-shadow: var(--neon-glow);
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-info p {
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        .work-experience-item {
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-color);
+            transition: border-left 0.3s ease;
+        }
+
+        .work-experience-item:hover {
+            border-left-color: var(--primary-color);
+        }
+
+        .responsibility-item {
+            margin-bottom: 2rem;
+            padding-left: 1.2rem;
+            border-left: 4px solid var(--accent-color);
+            transition: border-left 0.3s ease, transform 0.2s ease-in-out;
+        }
+
+        .responsibility-item:hover {
+            border-left-color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .work-experience-item h3,
+        .responsibility-item h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .responsibility-item h4 {
+            color: #6c757d;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .work-experience-item ul {
+            margin-left: 20px;
+            list-style-type: disc;
+            animation: fadeIn 0.5s ease;
+            color: var(--text-color);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .responsibility-item ul {
+            margin-left: 25px;
+            list-style-type: disc;
+            animation: fadeIn 0.5s ease;
+            color: var(--text-color);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .work-experience-item h4 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .visible {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .profile-info p,
+            ul li {
+                font-size: 0.95rem;
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            .page-fold {
+                padding: 1rem;
+            }
+        }
+
+        .d-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-color);
+            font-weight: 400;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        ul {
+            padding-left: 25px;
+            margin-bottom: 1.5rem;
+            list-style-type: disc;
+            color: var(--text-color);
+            font-weight: 400;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        ul.list-inline {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        ul.list-inline li {
+            display: inline-block;
+            margin-right: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bg-secondary {
+            background-color: var(--secondary-color) !important;
+        }
+
+        .bg-secondary:hover {
+            background-color: var(--secondary-color) !important;
+        }
+
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .language-item strong {
+            min-width: 90px;
+            font-weight: 600;
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        hr {
+            border-top: 1px solid #e0e0e0;
+            margin: 3rem 0;
+        }
+
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            padding: 12px 16px;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        #backToTop:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            border-bottom: 2px solid #004080;
+        }
+
         .navbar-brand {
-            font-size: 1.2rem; /* Slightly bigger on mobile */
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
         }
-    }
 
-    .d-flex {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1.5rem;
-    }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            font-weight: 600;
+            margin-left: 1rem;
+            transition: color 0.3s ease;
+        }
 
-    p {
-        margin-bottom: 1.2rem;
-        color: var(--text-color);
-        font-weight: 400;
-        line-height: 1.7;
-    }
-    ul {
-        padding-left: 25px;
-        margin-bottom: 1.5rem;
-        list-style-type: disc;
-        color: var(--text-color);
-        font-weight: 400;
-        line-height: 1.7;
-    }
-    ul.list-inline {
-        list-style-type: none;
-        padding-left: 0;
-        margin-bottom: 0;
-    }
-    ul.list-inline li {
-        display: inline-block;
-        margin-right: 0.75rem;
-        margin-bottom: 0.5rem;
-    }
+        .navbar-nav .nav-link:hover {
+            color: #f8f9fa;
+        }
 
-    .bg-secondary {
-        background-color: var(--secondary-color) !important; /* Keeping this for potential Bootstrap elements */
-    }
-    .bg-secondary:hover {
-        background-color: var(--secondary-color) !important;
-    }
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
 
-    .language-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .language-item strong {
-        min-width: 90px;
-        font-weight: 500;
-        color: var(--text-color);
-    }
-    hr {
-        border-top: 1px solid #e0e0e0;
-        margin: 3rem 0;
-    }
-
-    #backToTop {
-        display: none;
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: var(--primary-color); /* Maroon */
-        color: white;
-        cursor: pointer;
-        padding: 12px 16px;
-        border-radius: 50%;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        transition: background-color 0.3s ease;
-    }
-
-    #backToTop:hover {
-        background-color: #590000; /* Darker maroon */
-    }
-</style>
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+    </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg" style="background-color: #00CED1;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#" style="color: #800000; font-weight: bold; font-size: 1.5rem;">Navya Neelamegam</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section2">About</a></li>
-        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section3">Education</a></li>
-        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section4">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section5">Roles</a></li>
-        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section6">Achievements</a></li>
-        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section7">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section8">Languages</a></li>
-        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section9">Certifications</a></li>
-      </ul>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navya Neelamegam</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#section2">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section3">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section4">Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section5">Roles</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section6">Achievements</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section7">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section8">Languages</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section9">Certifications</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
-<div class="container mt-5 mb-5 p-4" style="background-color: #F5F5DC; border-radius: 12px; box-shadow: 0 0 20px rgba(0, 206, 209, 0.3);">
-    <div class="page-fold" onclick="window.location.href='#section2'">
+<div class="container mt-5 mb-5 p-4">
+    <section id="section2" class="page-fold">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
                 <h1>Navya Neelamegam</h1>
             </div>
             <div>
-                <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank" class="btn btn-outline-primary btn-sm"><i class="fab fa-linkedin me-2"></i> LinkedIn</a>
-                <a href="Resume.pdf" download aria-label="Download Navya Neelamegam's Resume as PDF" class="btn btn-outline-secondary btn-sm"><i class="fas fa-download me-2"></i> Download Resume PDF</a>
+                <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank"
+                   class="btn btn-outline-primary btn-sm"><i class="fab fa-linkedin me-2"></i> LinkedIn</a>
+                <a href="Resume.pdf" download
+                   aria-label="Download Navya Neelamegam's Resume as PDF"
+                   class="btn btn-outline-secondary btn-sm"><i class="fas fa-download me-2"></i> Download Resume PDF</a>
             </div>
         </div>
         <div class="profile-info">
-            <p><i class="fas fa-envelope me-2"></i> Email: <a href="mailto:navya_ipm24@iift.edu">navya_ipm24@iift.edu</a> | <a href="mailto:navya.neelamegam24@iimb.ac.in">navya.neelamegam24@iimb.ac.in</a> | <a href="mailto:navyaneel3107@gmail.com">navyaneel3107@gmail.com</a></p>
-            <p><i class="fab fa-github me-2"></i> GitHub: <a href="https://github.com/navyaneel" target="_blank">github.com/navyaneel</a></p>
+            <p><i class="fas fa-envelope me-2"></i> Email:
+                <a href="mailto:navya_ipm24@iift.edu">navya_ipm24@iift.edu</a> |
+                <a href="mailto:navya.neelamegam24@iimb.ac.in">navya.neelamegam24@iimb.ac.in</a> |
+                <a href="mailto:navyaneel3107@gmail.com">navyaneel3107@gmail.com</a></p>
+            <p><i class="fab fa-github me-2"></i> GitHub:
+                <a href="https://github.com/navyaneel" target="_blank">github.com/navyaneel</a></p>
         </div>
-    </div>
+    </section>
 
-    <div id="section2" class="page-fold" onclick="window.location.href='#section3'">
+    <section id="section3" class="page-fold">
         <h2 class="section-title"><i class="fas fa-user-circle"></i> About</h2>
-        <p>At the intersection of academia and practical application, my journey unfolds at IIFT Kakinada and IIM Bangalore, where I'm currently pursuing degrees in International Business/Business Analytics and Digital Business and Entrepreneurship respectively. My role as a 180 DC Member at 180 Degrees Consulting IIFT Kakinada involves leveraging business analytics to strengthen the impact of non-profits like Pay Your Tuition, focusing on donor engagement and relations.</p>
-        <p>As a Zonal Representative at IIM Bangalore, we champion the fusion of digital entrepreneurship and student welfare, facilitating communication and orchestrating NOVA, the institute's inaugural online talent showcase. My summer stint at CLA exposed me to the intricacies of accounting, enhancing my teamwork acumen and instilling a passion for creating a more inclusive and forward-thinking business environment.</p>
-    </div>
+        <p>At the intersection of academia and practical application, my journey unfolds at IIFT Kakinada and IIM Bangalore,
+            where I'm currently pursuing degrees in International Business/Business Analytics and Digital Business and
+            Entrepreneurship respectively. My role as a 180 DC Member at 180 Degrees Consulting IIFT Kakinada involves
+            leveraging business analytics to strengthen the impact of non-profits like Pay Your Tuition, focusing on donor
+            engagement and relations.</p>
+        <p>As a Zonal Representative at IIM Bangalore, we champion the fusion of digital entrepreneurship and student
+            welfare, facilitating communication and orchestrating NOVA, the institute's inaugural online talent showcase. My
+            summer stint at CLA exposed me to the intricacies of accounting, enhancing my teamwork acumen and instilling a
+            passion for creating a more inclusive and forward-thinking business environment.</p>
+    </section>
 
-    <div id="section3" class="page-fold" onclick="window.location.href='#section4'">
+    <section id="section4" class="page-fold">
         <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-        <p><strong>Indian Institute of Foreign Trade, Kakinada </strong> – BBA in Business Analytics (2027), MBA in International Business (2029)</p>
-        <p><strong>Indian Institute of Management, Bangalore</strong> – BBA in Digital Business and Entrepreneurship (2027)</p>
-    </div>
+        <p><strong>Indian Institute of Foreign Trade, Kakinada </strong> – BBA in Business Analytics (2027), MBA in
+            International Business (2029)</p>
+        <p><strong>Indian Institute of Management, Bangalore</strong> – BBA in Digital Business and Entrepreneurship
+            (2027)</p>
+    </section>
 
-    <div id="section4" class="page-fold" onclick="window.location.href='#section5'">
+    <section id="section5" class="page-fold">
         <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
         <div class="work-experience-item">
             <h3>Deepflock.ai, United States - Student Intern</h3>
@@ -440,9 +534,9 @@
                 <li>Maintained store organization and product availability.</li>
             </ul>
         </div>
-    </div>
+    </section>
 
-    <div id="section5" class="page-fold" onclick="window.location.href='#section6'">
+    <section id="section6" class="page-fold">
         <h2 class="section-title"><i class="fas fa-trophy"></i> Position of Responsibility</h2>
         <div class="responsibility-item">
             <h3>IIM Bangalore BBA DBE, India - Zonal Representative</h3>
@@ -469,7 +563,9 @@
             <ul>
                 <li>Organized events promoting diversity and inclusion; tracked outcomes and suggested improvements.</li>
                 <li>Supported team members and contributed to a positive club environment.</li>
-                <li>Represented the club at the Connections Conference, showcasing global cultures and their significance.</li>
+                <li>Represented the club at the Connections Conference, showcasing global cultures and their
+                    significance.
+                </li>
             </ul>
         </div>
 
@@ -482,25 +578,31 @@
                 <li>Supported event planning, highlighting local culture and empowering minority communities.</li>
             </ul>
         </div>
-    </div>
+    </section>
 
-    <div id="section6" class="page-fold" onclick="window.location.href='#section7'">
+    <section id="section7" class="page-fold">
         <h2 class="section-title"><i class="fas fa-award"></i> Other Achievements</h2>
         <p><strong>John and Abigail Adams Scholarship, United States</strong></p>
         <ul>
-            <li>Received a maximum amount of $1575 per year for college tuition fees as a form of scholarship after writing the MCAS exam 2022 conducted by the government of Massachusetts.</li>
+            <li>Received a maximum amount of $1575 per year for college tuition fees as a form of scholarship after
+                writing the MCAS exam 2022 conducted by the government of Massachusetts.
+            </li>
         </ul>
         <p><strong>HPAIR (The Harvard College Project for Asian & International Relations), United States</strong></p>
         <ul>
-            <li>Selected to attend a 3-day offline conference at Harvard connecting students from all around the world with business leaders worldwide.</li>
+            <li>Selected to attend a 3-day offline conference at Harvard connecting students from all around the world
+                with business leaders worldwide.
+            </li>
         </ul>
         <p><strong>2nd Place in Enactus and IIC Village Immersion Competition conducted in India</strong></p>
         <ul>
-            <li>Co-developed a funded, sustainable agri-aquaculture model to empower rural communities in Andhra Pradesh through innovative use of hydroponics and crop waste.</li>
+            <li>Co-developed a funded, sustainable agri-aquaculture model to empower rural communities in Andhra Pradesh
+                through innovative use of hydroponics and crop waste.
+            </li>
         </ul>
-    </div>
+    </section>
 
-    <div id="section7" class="page-fold" onclick="window.location.href='#section8'">
+    <section id="section8" class="page-fold">
         <h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
         <ul class="list-inline">
             <li class="list-inline-item badge bg-secondary"><i class="fas fa-code me-2"></i> Python</li>
@@ -508,9 +610,9 @@
             <li class="list-inline-item badge bg-secondary"><i class="fas fa-calculator me-2"></i> Tax Accounting</li>
             <li class="list-inline-item badge bg-secondary"><i class="fas fa-handshake me-2"></i> Corporate Etiquette</li>
         </ul>
-    </div>
+    </section>
 
-    <div id="section8" class="page-fold">
+    <section id="section9" class="page-fold">
         <h2 class="section-title"><i class="fas fa-globe"></i> Languages</h2>
         <ul>
             <li class="language-item"><strong>English</strong> – Proficient</li>
@@ -520,19 +622,19 @@
             <li class="language-item"><strong>Spanish</strong> – Intermediate</li>
             <li class="language-item"><strong>German</strong> – Intermediate</li>
         </ul>
-    </div>
+    </section>
 
-    <div id="section9" class="page-fold">
+    <section id="section10" class="page-fold">
         <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
         <ul>
             <li>Generative AI for Everyone – DeepLearning.AI - Issued Feb 2025</li>
         </ul>
-    </div>
+    </section>
 </div>
 
 <footer class="text-center mt-5 mb-3">
-  <a href="#top" class="btn btn-outline-primary btn-sm"><i class="fas fa-arrow-up me-1"></i> Back to Top</a>
-  <p class="mt-2 small">© 2025 Navya Neelamegam</p>
+    <a href="#top" class="btn btn-outline-primary btn-sm"><i class="fas fa-arrow-up me-1"></i> Back to Top</a>
+    <p class="mt-2 small">© 2025 Navya Neelamegam</p>
 </footer>
 
 <button onclick="toggleTheme()" class="btn btn-outline-secondary btn-sm ms-3">
@@ -549,7 +651,9 @@
 <button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
 <script>
     let btn = document.getElementById("backToTop");
-    window.onscroll = () => { btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none"; };
+    window.onscroll = () => {
+        btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    };
     function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -578,7 +682,7 @@
                 entry.target.classList.add('visible');
             }
         });
-    }, { threshold: 0.1 });
+    }, {threshold: 0.1});
 
     document.querySelectorAll('.page-fold').forEach(section => {
         observer.observe(section);
