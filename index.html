@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
    <style>
+       
     :root {
     --bg-color: #800000; /* Maroon background */
     --text-color: #00CED1; /* Aqua blue text */
@@ -28,7 +29,7 @@
     --secondary-color: #F5F5DC; /* Sandal yellow */
     --accent-color: #F5F5DC; /* Sandal yellow */
     }
-
+       
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         transition: background-color 0.3s, color 0.3s;
@@ -138,12 +139,12 @@
     }
 
     .btn-outline-secondary {
-        color: #6c757d;
-        border-color: #6c757d;
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
     }
 
     .btn-outline-secondary:hover {
-        background-color: #6c757d;
+        background-color: var(--secondary-color);
         color: #fff;
     }
 
@@ -267,10 +268,10 @@
     }
 
     .bg-secondary {
-        background-color: #6c757d !important; /* Keeping this for potential Bootstrap elements */
+        background-color: var(--secondary-color) !important; /* Keeping this for potential Bootstrap elements */
     }
     .bg-secondary:hover {
-        background-color: #5a6268 !important;
+        background-color: var(--secondary-color) !important;
     }
 
     .language-item {
