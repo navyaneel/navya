@@ -20,12 +20,12 @@
     <link rel="icon" href="favicon.ico">
     <style>
         :root {
-            --bg-color: #f0f0f0;
-            --text-color: #222;
-            --card-bg: #fff;
-            --card-shadow: rgba(0, 0, 0, 0.1);
-            --link-color: #007bff;
-            --section-title: #084298;
+            --bg-color: #f0f0f0; /* Default, can be overridden by theme */
+            --text-color: #222; /* Default, can be overridden by theme */
+            --card-bg: #fff; /* Default, can be overridden by theme */
+            --card-shadow: rgba(0, 0, 0, 0.1); /* Default, can be overridden by theme */
+            --link-color: #800000; /* Maroon */
+            --section-title: #800000; /* Maroon */
         }
         
         body {
@@ -41,7 +41,7 @@
         .light-theme {
             background-color: #ffffff;
             color: #212529;
-        } 
+        }
         
         .page-fold {
             margin-bottom: 2rem;
@@ -93,12 +93,12 @@
             color: var(--link-color);
             font-weight: 600;
             text-decoration: none;
-            transition: color 0.2s ease, text-shadow 0.2s ease;            
+            transition: color 0.2s ease, text-shadow 0.2s ease;
         }
         a:hover {
             text-decoration: underline;
-            color: #003366;
-            text-shadow: 1px 2px 3px rgba(0, 123, 255, 0.4);
+            color: #590000; /* Darker shade of maroon */
+            text-shadow: 1px 2px 3px rgba(128, 0, 0, 0.4); /* Maroon shadow */
         }
         
         .btn-outline-primary, .btn-outline-secondary {
@@ -111,12 +111,12 @@
         }
         
         .btn-outline-primary {
-            color: #0056b3;
-            border-color: #0056b3;
+            color: #800000; /* Maroon */
+            border-color: #800000; /* Maroon */
         }
         
         .btn-outline-primary:hover {
-            background-color: #0056b3;
+            background-color: #800000; /* Maroon */
             color: #fff;
         }
         
@@ -135,8 +135,8 @@
             flex-direction: column;
             gap: 0.5rem;
             margin-bottom: 2rem;
-        }        
-        .profile-info p {           
+        }
+        .profile-info p {
             color: #333;
         }
         
@@ -147,8 +147,8 @@
             transition: border-left 0.3s ease;
         }
         .work-experience-item:hover {
-            border-left-color: #007bff;
-        }        
+            border-left-color: #008080; /* Aqua Green */
+        }
         
         .responsibility-item {
             margin-bottom: 2rem;
@@ -158,7 +158,7 @@
         }
         
         .responsibility-item:hover {
-            border-left-color: #007bff;
+            border-left-color: #008080; /* Aqua Green */
             transform: translateX(5px);
         }
 
@@ -169,7 +169,7 @@
         
         .responsibility-item h4 {
             color: #4d4d4d;
-        }       
+        }
         
         .work-experience-item ul {
             margin-left: 20px;
@@ -181,7 +181,7 @@
             margin-left: 25px;
             list-style-type: disc;
             animation: fadeIn 0.5s ease;
-        }        
+        }
         .work-experience-item h4 {
             font-size: 1.1rem;
             color:var(--section-title);
@@ -213,7 +213,7 @@
             .navbar-brand {
                 font-size: 1rem;
             }
-        }      
+        }
 
         .d-flex {
             display: flex;
@@ -266,7 +266,7 @@
         hr {
             border-top: 1px solid #e0e0e0;
             margin: 3rem 0;
-        } 
+        }
         
         #backToTop {
             display: none;
@@ -277,7 +277,7 @@
             font-size: 18px;
             border: none;
             outline: none;
-            background-color: #007bff;
+            background-color: #008080; /* Aqua Green */
             color: white;
             cursor: pointer;
             padding: 12px 16px;
@@ -287,12 +287,12 @@
         }
         
         #backToTop:hover {
-            background-color: #0056b3;
+            background-color: #005959; /* Darker shade of aqua green */
         }
     </style>
 </head>
 <body>
- 
+    
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navya Neelamegam</a>
@@ -509,13 +509,13 @@
     
 <button onclick="toggleTheme()" class="btn btn-outline-secondary btn-sm ms-3">
     <i class="fas fa-adjust me-2"></i> Toggle Theme
-</button>     
+</button>    
 <script>
     function toggleTheme() {
         document.body.classList.toggle('dark-theme');
         document.body.classList.toggle('light-theme');
     }
-</script>   
+</script>    
     
 <button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
 <script>
