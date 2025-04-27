@@ -32,6 +32,7 @@
        
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
         transition: background-color 0.3s, color 0.3s;
         background-color: var(--bg-color);
         color: var(--text-color);
@@ -67,6 +68,8 @@
     }
 
     .page-fold:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 255, 255, 0.7);
         transform: translateY(-5px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     }
@@ -92,6 +95,8 @@
     }
 
     h1, h2 {
+    font-size: 2.7rem;
+    text-shadow: 2px 2px 8px #F5F5DC;
         color: var(--primary-color); /* Aqua blue */
         font-weight: 900;
         letter-spacing: -0.04em;
@@ -314,27 +319,27 @@
 </head>
 <body>
     
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg" style="background-color: #800000;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navya Neelamegam</a>
+    <a class="navbar-brand" href="#" style="color: #00CED1; font-weight: bold; font-size: 1.5rem;">Navya Neelamegam</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#section2">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#section3">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#section4">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#section5">Roles</a></li>
-        <li class="nav-item"><a class="nav-link" href="#section6">Achievements</a></li>
-        <li class="nav-item"><a class="nav-link" href="#section7">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#section8">Languages</a></li>
-        <li class="nav-item"><a class="nav-link" href="#section9">Certifications</a></li>        
+        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section2">About</a></li>
+        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section3">Education</a></li>
+        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section4">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section5">Roles</a></li>
+        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section6">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section7">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section8">Languages</a></li>
+        <li class="nav-item"><a class="nav-link" style="color: #F5F5DC; font-weight: 600;" href="#section9">Certifications</a></li>        
       </ul>
     </div>
   </div>
 </nav>
-<div class="container mt-5 mb-5 p-4 bg-white shadow rounded">
+<div class="container mt-5 mb-5 p-4" style="background-color: #660000; border-radius: 12px; box-shadow: 0 0 20px #F5F5DC;">
     <div class="page-fold" onclick="window.location.href='#section2'">
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
@@ -579,3 +584,8 @@
 
 </body>
 </html>
+<style>
+.btn-outline-primary:hover, .btn-outline-secondary:hover {
+    box-shadow: 0 0 15px #00CED1, 0 0 25px #00CED1;
+}
+</style>
