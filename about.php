@@ -1,0 +1,630 @@
+<?php
+include('header1.php');
+?> 
+
+    <section class="banner-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="banner_content" data-aos="fade-up">
+                        <figure class="about-rightcircle service-rightcircle mb-0">
+                            <img src="./assets/images/service-rightcircle.png" alt="" class="img-fluid">
+                        </figure>
+                        <h1 class="text-white">About Us</h1>
+                        <p>We are a 9 Year old Government of India
+recognized, sector agnostic high-tech start
+up company, offering SMART (Simple,
+Maintenance-friendly, Affordable, Reliable
+and Timely-to-market) products and
+solutions devoted to solve the business
+problems in various sectors.</p>
+                        <div class="box">
+                            <span class="mb-0">Home</span>
+                            <figure class="mb-0 arrow"><img src="./assets/images/button-arrow.png" alt="" class="img-fluid"></figure>
+                            <span class="mb-0 box_span">About</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+    <figure class="banner-circleright mb-0">
+        <img src="./assets/images/banner-circleright.png" class="img-fluid" alt="">
+    </figure>
+    <figure class="sub-bannerrightlayer mb-0">
+        <img src="./assets/images/sub-bannerrightlayer.png" alt="" class="img-fluid">
+    </figure>
+</div>
+<!-- Aboutus -->
+<section class="aboutus-section">
+    <figure class="offer-toplayer mb-0">
+        <img src="./assets/images/offer-toplayer.png" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 order-2">
+                <div class="about_wrapper">
+                    <figure class="mb-0 aboutus-image1">
+                        <img src="./assets/images/aboutus-image1.jpg" alt="" class="">
+                    </figure>
+                    <figure class="mb-0 aboutus-image2">
+                        <img src="./assets/images/aboutus-image1.jpg" alt="" class="img-fluid">
+                    </figure>
+                    <div class="image-circle">
+                        <div class="years">
+                            <span class="text-white value counter">09</span>
+                            <sup class="text-white mb-0 plus">+</sup>
+                            <span class="text-white text">Years of Experience</span>
+                        </div>
+                        <figure class="mb-0 about-imagecircle">
+                            <img src="./assets/images/about-imagecircle.png" alt="" class="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-2 order-1">
+                <div class="service_content position-relative" data-aos="fade-right">
+                    <figure class="service-rightcircle mb-0">
+                        <img src="./assets/images/service-rightcircle.png" alt="" class="img-fluid">
+                    </figure>
+                    <h6>About Us</h6>
+                    <h2>Innovate Solution For Success</h2>
+                      <p>We serve diverse verticals, including Aerospace, Automotive, Defense, Manufacturing, Healthcare, FMCG, and B2C, delivering tailored solutions for each industry.</p>
+                    <ul class="list-unstyled mb-0">
+                       <li class="text"><i class="circle fa-duotone fa-check"></i>Innovative solutions</li>
+                        <li class="text"><i class="circle fa-duotone fa-check"></i>Best pricing in industry</li>
+                        <li class="text"><i class="circle fa-duotone fa-check"></i>Customer satisfaction</li>
+                        <li class="text text1"><i class="circle fa-duotone fa-check"></i>Experienced team</li>
+                    </ul>
+                    <a class="get_started text-white text-decoration-none" href="./about.php">Get Started
+                        <figure class="mb-0"><img src="./assets/images/button-arrow.png" alt="" class="img-fluid"></figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <figure class="offer-bottomlayer mb-0">
+        <img src="./assets/images/offer-bottomlayer.png" alt="" class="img-fluid">
+    </figure>
+</section>
+<!-- AboutOffer -->
+<section class="aboutoffer-section">
+    <figure class="service-rightlayer mb-0">
+        <img src="./assets/images/service-leftlayer.png" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="offer_content">
+                    <h6>what We Offer</h6>
+                    <h2>some of Our Achievements</h2>
+                    <p>We Provide Solutions not only protect homes but also contribute to a smarter, eco-friendly lifestyle.</p>
+                </div>
+            </div>
+        </div>
+        <div class="achievement_wrapper">
+            <div class="row">
+                <figure class="offer-circleimage mb-0">
+                    <img src="./assets/images/offer-circleimage.png" alt="" class="img-fluid">
+                </figure>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="achievement-box box1">
+                        <figure class="icon achievement-icon">
+                            <img src="./assets/images/achievement-clienticon.png" alt="" class="img-fluid">
+                        </figure> 
+                        <div class="wrapper">
+                            <h3>100</h3>
+                            <p class="text-size-18 mb-0">Satisfied Clients</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="achievement-box box2">
+                        <figure class="icon1 achievement-icon">
+                            <img src="./assets/images/achievement-projecticon.png" alt="" class="img-fluid">
+                        </figure>
+                        <div class="wrapper">
+                            <h3>200</h3>
+                            <p class="text-size-18 mb-0">Projects Completed</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="achievement-box box3">
+                        <figure class="icon achievement-icon">
+                            <img src="./assets/images/achievement-teamicon.png" alt="" class="img-fluid">
+                        </figure> 
+                        <div class="wrapper">
+                            <div class="number">
+                                <h3 class="value counter">25</h3>
+                                <span class="plus">+</span>
+                            </div>
+                            <p class="text text-size-18 mb-0">Team Members</p>
+                        </div>
+                    </div>   
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                    <div class="achievement-box box4">
+                        <figure class="icon1 achievement-icon">
+                            <img src="./assets/images/achievement-awardicon.png" alt="" class="img-fluid">
+                        </figure>
+                        <div class="wrapper">
+                            <div class="number">
+                                <h3 class="value counter">4</h3>
+                                <span class="plus">+</span>
+                            </div>
+                            <p class="text text-size-18 mb-0">Awards Win</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <figure class="service-leftlayer mb-0">
+        <img src="./assets/images/service-rightlayer.png" alt="" class="img-fluid">
+    </figure>
+</section>
+<!-- Experts -->
+<section class="expert-section">
+    <figure class="offer-toplayer mb-0">
+        <img src="./assets/images/offer-toplayer.png" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="expert_content" data-aos="fade-right">
+                    <h6>THE CORE TEAM</h6>
+                    <h2>our professional team members</h2>
+                     <p class="text2">We are a 25 member team including the core team</p>
+                    <a class="get_started text-white text-decoration-none" href="./team.php">Get Started
+                        <figure class="mb-0"><img src="./assets/images/button-arrow.png" alt="" class="img-fluid"></figure>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="expert_wrapper">
+                    <figure class="offer-circleimage mb-0">
+                        <img src="./assets/images/offer-circleimage.png" alt="" class="img-fluid">
+                    </figure>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="team-box">
+                                <figure>
+                                    <img src="./assets/images/dr_jeni-.png" alt="" class="img-fluid">
+                                </figure>
+                                <div class="content">
+                                    <h4>Dr.Jeni Anto Francis</h4>
+                                     <span class="text-size-18">Developer</span>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="team-box">
+                                <figure>
+                                    <img src="./assets/images/Beatrice_Sylvia-.png" alt="" class="img-fluid">
+                                </figure>
+                                <div class="content">
+                                    <h4>Mrs. Beatrice Sylvia </h4>
+                                    <span class="text-size-18">Developer</span>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <li class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-downcontent">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="team-box">
+                                    <figure>
+                                        <img src="./assets/images/Nallamuthu-.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="content">
+                                        <h4>Mr. Nallamuthu</h4>
+                                        <span class="text-size-18">Developer</span>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="team-box">
+                                    <figure>
+                                        <img src="./assets/images/Jerovin-.png" alt="" class="img-fluid">
+                                    </figure>
+                                    <div class="content">
+                                        <h4>Mr. Jerovin</h4>
+                                        <span class="text-size-18">Designer</span>
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <figure class="offer-bottomlayer mb-0">
+        <img src="./assets/images/offer-bottomlayer.png" alt="" class="img-fluid">
+    </figure>
+</section>
+<!-- Testimonial -->
+<section class="testimonial-section position-relative">
+    <figure class="service-leftlayer mb-0">
+        <img src="./assets/images/service-leftlayer.png" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-12 col-sm-12 col-12">
+                <div class="testimonial_wrapper position-relative">
+                    <figure class="service-rightcircle mb-0">
+                        <img src="./assets/images/service-rightcircle.png" alt="" class="img-fluid">
+                    </figure>
+                    <div class="circle_wrapper position-relative" data-aos="fade-right">
+                        <div class="center-circle">
+                            <figure class="testimonial-centerimage mb-0">
+                                <img src="./assets/images/testimonial-centerimage.png" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <figure class="testimonial-image1 position-absolute mb-0">
+                            <img src="./assets/images/testimonial-image1.png" alt="" class="img-fluid">
+                        </figure>
+                        <figure class="testimonial-image2 position-absolute mb-0">
+                            <img src="./assets/images/testimonial-image2.png" alt="" class="img-fluid">
+                        </figure>
+                        <figure class="testimonial-image3 position-absolute mb-0">
+                            <img src="./assets/images/testimonial-image3.png" alt="" class="img-fluid">
+                        </figure>
+                        <figure class="testimonial-image4 position-absolute mb-0">
+                            <img src="./assets/images/testimonial-image4.png" alt="" class="img-fluid">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+                <div class="testimonial_contentwrapper">
+                    <div class="heading">
+                        <h6>TESTIMONIALS</h6>
+                        <h2>What Our Customers Have To Say</h2>
+                    </div>
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial_content">
+                                    <div class="content-box">
+                                        <p>I recently upgraded my home with intelligent technology, including smart sensors and remote monitoring features. The automation system is seamless, and I love how I can control everything from my phone. It’s not just convenient but also energy-efficient, making my home more eco-friendly. Highly recommend these smart home devices!"</p>
+                                        <div class="content">
+                                            <div class="circle">
+                                                <figure class="testimonial-quote mb-0">
+                                                    <img src="./assets/images/testimonial-quote.png" alt="" class="img-fluid">
+                                                </figure>
+                                            </div>
+                                            <div class="designation-outer">
+                                                <span>John D</span>
+                                               <!--  <p class="text-size-18 mb-0">Happy Client</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="testimonial_content">
+                                    <div class="content-box">
+                                        <p>Sarah L</p>
+                                        <div class="content">
+                                            <div class="circle">
+                                                <figure class="testimonial-quote mb-0">
+                                                    <img src="./assets/images/testimonial-quote.png" alt="" class="img-fluid">
+                                                </figure>
+                                            </div>
+                                            <div class="designation-outer">
+                                                <span>The smart home automation solutions exceeded my expectations! The remote monitoring and digital door locks provide top-notch security, and the eco-friendly automation features help me save on energy bills. It’s a perfect blend of convenience, sustainability, and innovation!"</span>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="testimonial_content">
+                                    <div class="content-box">
+                                         <p>Fortune 500 Customer </p>
+                                        <div class="content">
+                                            <div class="circle">
+                                                <figure class="testimonial-quote mb-0">
+                                                    <img src="./assets/images/testimonial-quote.png" alt="" class="img-fluid">
+                                                </figure>
+                                            </div>
+                                            <div class="designation-outer">
+                                                <span>SmartSoC's expertise in semiconductor design and manufacturing has been instrumental in realizing our vision for next-generation consumer electronics. Their solutions have not only met but exceeded our expectations in terms of reliability and performance.</span>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                              <div class="carousel-item">
+                                <div class="testimonial_content">
+                                    <div class="content-box">
+                                        <p>Fortune 500 Customer </p>
+                                        <div class="content">
+                                            <div class="circle">
+                                                <figure class="testimonial-quote mb-0">
+                                                    <img src="./assets/images/testimonial-quote.png" alt="" class="img-fluid">
+                                                </figure>
+                                            </div>
+                                            <div class="designation-outer">
+                                                <span>Working with SmartSoC has been a game-changer for us. Their responsive team and state-of-the-art semiconductor solutions have empowered us to deliver high-quality products to our customers on time and within budget.</span>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="pagination-outer">
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <figure class="service-rightlayer mb-0">
+        <img src="./assets/images/service-rightlayer.png" alt="" class="img-fluid">
+    </figure>
+</section>
+<!-----our Strengths starts-------------------->
+<!-- <section class="service-section p-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-md-12 col-sm-12 col-12">
+                <div class="service_content position-relative" data-aos="fade-right">
+                    <figure class="service-rightcircle mb-0">
+                        <img src="./assets/images/service-rightcircle.png" alt="" class="img-fluid">
+                    </figure>
+                    <h2>Our Strengths</h2>
+                    <p>Differentiators</p>
+                    <ul class="list-unstyled mb-0">
+                        <li class="text"><i class="circle fa-duotone fa-check"></i>Innovation driven company</li>
+                        <li class="text"><i class="circle fa-duotone fa-check"></i>Adoption of latest technology trends </li>
+                        <li class="text"><i class="circle fa-duotone fa-check"></i>Competitive market rates</li>
+                        <li class="text"><i class="circle fa-duotone fa-check"></i>Guaranteed customer satisfaction</li>
+
+                        <li class="text"><i class="circle fa-duotone fa-check"></i>Integrated technology company</li>
+                        <li class="text"><i class="circle fa-duotone fa-check"></i>Complete documentation of work package</li>
+                        <li class="text"><i class="circle fa-duotone fa-check"></i>Flexible business models</li>
+                        <li class="text"><i class="circle fa-duotone fa-check"></i>Partnership with reputed universities </li>
+
+                    </ul>
+                    <a class="get_started text-white text-decoration-none" href="./service.php">For Projects Contact Us
+                        <figure class="mb-0"><img src="./assets/images/button-arrow.png" alt="" class="img-fluid"></figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<!----our Strengths ends-------------------->
+
+<!-- Blog  executed service projects-->
+<section class="blog-section">
+    <figure class="offer-toplayer mb-0">
+        <img src="./assets/images/offer-toplayer.png" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="blog_content" data-aos="fade-right">
+                    <h6>Services & Projects</h6>
+                    <h2>Executed Service Projects</h2>
+                   <p>We cater to multiple industries, including Aerospace, Automotive, Defense, Manufacturing, Healthcare, FMCG, and B2C, with innovative and specialized solutions.</p>
+                    <figure class="offer-circleimage mb-0">
+                        <img src="./assets/images/offer-circleimage.png" alt="" class="img-fluid">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/aircraft cockpit simulator fabrication.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">01</h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>Tejas LCA aircraft cockpit simulator fabrication</h4>
+                                <p class="text-size-18">(Showcased at Aeroshow-2017)...</p>
+                                <a class="read_more text-decoration-none" href="./project-details.php">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/RFID projects.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">02</h3>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>Traction so far in Industry automation services</h4>
+                                <p class="text-size-18">Executed several computer vision based quality inspection projects,RFID projects, IOT projects...</p>
+                                <a class="read_more text-decoration-none" href="./project-details.php">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent mb-0">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/Aerospace.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">03</h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>Traction so far in Defense/Aerospace </h4>
+                                <p class="text-size-18">Mechanical modelling, Mechanical fabrication, APP development, AR/VR projects executed for ADA...</p>
+                                <a class="read_more text-decoration-none" href="./project-details.php">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/electronic design services.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">04</h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>Traction so far in Electronic design services</h4>
+                                <p class="text-size-18">Design of products like Tow light , UV gloves, Traffic controller, dynamic air flow controller…...</p>
+                                <a class="read_more text-decoration-none" href="./project-details.php">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/cable harness.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">05</h3>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>Traction so far in cable harness</h4>
+                                <p class="text-size-18">Established vendor for carrying out cable harness maintenance in Ashok Leyland factory...</p>
+                                <a class="read_more text-decoration-none" href="./project-details.php">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent mb-0">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/antenna design.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">06</h3>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>Traction so far in simulation</h4>
+                                <p class="text-size-18">Carried out multiple simulations for antenna design, tuning, RF design, EMI/EMC...</p>
+                                <a class="read_more text-decoration-none" href="./project-details.php">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/Telecom Services.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">07</h3>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>IT/Telecom Services</h4>
+                                <p class="text-size-18">Software development
+,Hardware board design
+- Embedded design...</p>
+                                <a class="read_more text-decoration-none" href="./project-details.php">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <figure class="offer-bottomlayer mb-0">
+        <img src="./assets/images/offer-bottomlayer.png" alt="" class="img-fluid">
+    </figure>
+</section>
+<!-- Footer -->
+<?php
+include('footer.php');
+?> 

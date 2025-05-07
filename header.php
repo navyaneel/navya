@@ -1,0 +1,98 @@
+<!DOCTYPE php>
+<php lang="zxx">
+<head>
+    <title>dewdastech.com | automation services,simulation,IT/Telecom Service,Defense/Aerospace,Electronic design services</title>
+    <!-- /SEO Ultimate -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta charset="utf-8">
+   
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
+    
+
+    <link rel="manifest" href="assets/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Latest compiled and minified CSS -->
+    <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/js/bootstrap.min.js">
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- StyleSheet link CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/special-classes.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Header  -->
+<div class="banner_outer">
+    <header class="header">
+        <div class="main-header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="https://www.dewdastech.com/">
+                        <figure class="mb-0 banner-logo">
+                            <img src="./assets/images/devdastech.png" alt="" class="img-fluid">
+                        </figure>
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="https://www.dewdastech.com/">Home</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="./about.php">About Us</a>
+                            </li>
+
+                           <!-- <li class="nav-space nav-item dropdown">
+                                <a class="nav-link dropdown-toggle dropdown-color navbar-text-color" href="#" id="navbarDropdownmain" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"> About Us </a>
+                                <div class="dropdown-menu drop-down-content">
+                                    <ul class="list-unstyled drop-down-pages">
+                                        <li class="nav-item">
+                                            <a class="dropdown-item nav-link" href="./project.php">Projects</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item nav-link" href="./awards.php">Awards</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="dropdown-item nav-link" href="./team.php">Teams</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="./service.php">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./project.php">Projects</a>
+                            </li>
+                                      
+                            <li class="nav-space nav-item">
+                                <a class="nav-link" href="contact.php">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="last_list">
+                            <figure class="nav-phoneimage mb-0"><img class="img-fluid" src="./assets/images/nav-phoneimage.png" alt=""></figure>
+                            <div class="content">
+                                <p class="text-size-18 text-white">Call Anytime:</p>
+                                <a class="text-decoration-none last_list_atag" href="tel:+919901035744">+91 9901035744</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>

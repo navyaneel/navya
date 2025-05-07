@@ -1,0 +1,499 @@
+<?php
+include('header1.php');
+?> 
+
+    <section class="banner-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="banner_content" data-aos="fade-up">
+                        <figure class="about-rightcircle service-rightcircle mb-0">
+                            <img src="./assets/images/service-rightcircle.png" alt="" class="img-fluid">
+                        </figure>
+                        <h1 class="text-white">Our Team</h1>
+                        <p>Noidunt eget semper nec ruam sed hendrerit morbi ac feliseao augue pellentesue morbi acer.</p>
+                        <div class="box">
+                            <span class="mb-0">Home</span>
+                            <figure class="mb-0 arrow"><img src="./assets/images/button-arrow.png" alt="" class="img-fluid"></figure>
+                            <span class="mb-0 box_span">Team</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+    <figure class="banner-circleright mb-0">
+        <img src="./assets/images/banner-circleright.png" class="img-fluid" alt="">
+    </figure>
+    <figure class="sub-bannerrightlayer mb-0">
+        <img src="./assets/images/sub-bannerrightlayer.png" alt="" class="img-fluid">
+    </figure>
+</div>
+<!-- team -->
+<section class="team-section">
+    <figure class="offer-toplayer mb-0">
+        <img src="./assets/images/offer-toplayer.png" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="team_content" data-aos="fade-up">
+                    <h6>Expert people</h6>
+                    <h2>professional team members</h2>
+                    <p>Dursus mal suada faci lisis lorem ipsum dolarorit more ame ion consectetur elit vesti at bulum nec
+                        odio aea the dumm recreo that dolocons.</p>
+                    <figure class="offer-circleimage mb-0">
+                        <img src="./assets/images/offer-circleimage.png" alt="" class="img-fluid">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="team_contentbox">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="team-box box-mb">
+                        <div class="box-image">
+                            <figure class="mb-0 teampage-image1">
+                                <img src="./assets/images/teampage-image1.jpg" alt="" class="img-fluid">
+                            </figure> 
+                        </div>
+                        <div class="box-content">
+                            <h4>David Bell</h4>
+                            <span class="text-size-18">Marketer</span>
+                            <p class="text-size-18">Nostrum exercitationem ae ullam corporis suscipit labo riosam aliruiea.</p>
+                            <ul class="list-unstyled mb-0">
+                                <li class="icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="team-box box-mb">
+                        <div class="box-image">
+                            <figure class="mb-0 teampage-image2">
+                                <img src="./assets/images/teampage-image2.jpg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="box-content">
+                            <h4>Kevin Woods</h4>
+                            <span class="text-size-18">Developer</span>
+                            <p class="text-size-18">Nostrum exercitationem ae ullam corporis suscipit labo riosam aliruiea.</p>
+                            <ul class="list-unstyled mb-0">
+                                <li class="icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="team-box">
+                        <div class="box-image">
+                            <figure class="mb-0 teampage-image3">
+                                <img src="./assets/images/teampage-image3.jpg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="box-content">
+                            <h4>Georgia James</h4>
+                            <span class="text-size-18">Developer</span>
+                            <p class="text-size-18">Nostrum exercitationem ae ullam corporis suscipit labo riosam aliruiea.</p>
+                            <ul class="list-unstyled mb-0">
+                                <li class="icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="team-box">
+                        <div class="box-image">
+                            <figure class="mb-0 teampage-image4">
+                                <img src="./assets/images/teampage-image4.jpg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="box-content">
+                            <h4>Alina James</h4>
+                            <span class="text-size-18">Designer</span>
+                            <p class="text-size-18">Nostrum exercitationem ae ullam corporis suscipit labo riosam aliruiea.</p>
+                            <ul class="list-unstyled mb-0">
+                                <li class="icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="team-box">
+                        <div class="box-image">
+                            <figure class="mb-0 teampage-image5">
+                                <img src="./assets/images/teampage-image5.jpg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="box-content">
+                            <h4>Jonthan Zoe</h4>
+                            <span class="text-size-18">Manager</span>
+                            <p class="text-size-18">Nostrum exercitationem ae ullam corporis suscipit labo riosam aliruiea.</p>
+                            <ul class="list-unstyled mb-0">
+                                <li class="icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="team-box">
+                        <div class="box-image">
+                            <figure class="mb-0 teampage-image6">
+                                <img src="./assets/images/teampage-image6.jpg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="box-content">
+                            <h4>Zark Dae</h4>
+                            <span class="text-size-18">Assistant</span>
+                            <p class="text-size-18">Nostrum exercitationem ae ullam corporis suscipit labo riosam aliruiea.</p>
+                            <ul class="list-unstyled mb-0">
+                                <li class="icons"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li class="icons"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <figure class="offer-bottomlayer mb-0">
+        <img src="./assets/images/offer-bottomlayer.png" alt="" class="img-fluid">
+    </figure>
+</section>
+<!-- Skills -->
+<section class="skill-section">
+    <figure class="service-rightlayer mb-0">
+        <img src="./assets/images/service-leftlayer.png" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="skill_wrapper">
+                    <figure class="offer-circleimage mb-0">
+                        <img src="./assets/images/offer-circleimage.png" alt="" class="img-fluid">
+                    </figure>
+                    <figure class="skill-image mb-0">
+                        <img src="./assets/images/skill-image.jpg" alt="" class="">
+                    </figure>
+                    <figure class="service-dotimage mb-0">
+                        <img src="./assets/images/service-dotimage.png" alt="" class="img-fluid">
+                    </figure>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="skill_content" data-aos="fade-right">
+                    <h6>Professional Skills</h6>
+                    <h2>Bringing new it business solutions</h2>
+                    <p>Grursus mal suada faci lisis lorem ipsum dolarorit more
+                        ion consectetur elit vesti at relum.</p>
+                    <div class="skill-measure">
+                        <p class="text text-size-18">Web Development</p>
+                        <div class="percentage">
+                            <span class="mb-0 counter text-size-18">75</span>
+                            <span class="mb-0 plus">%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-measure">
+                        <p class="text text-size-18">Web Design</p>
+                        <div class="percentage">
+                            <span class="mb-0 counter text-size-18">85</span>
+                            <span class="mb-0 plus">%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar2" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-measure">
+                        <p class="text text-size-18">App Development</p>
+                        <div class="percentage">
+                            <span class="mb-0 counter text-size-18">60</span>
+                            <span class="mb-0 plus">%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-measure">
+                        <p class="text text-size-18">IT Solutions</p>
+                        <div class="percentage">
+                            <span class="mb-0 counter text-size-18">95</span>
+                            <span class="mb-0 plus">%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar4" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <figure class="service-leftlayer mb-0">
+        <img src="./assets/images/service-rightlayer.png" alt="" class="img-fluid">
+    </figure>
+</section>
+<!-- Blog -->
+<section class="blog-section">
+    <figure class="offer-toplayer mb-0">
+        <img src="./assets/images/offer-toplayer.png" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="blog_content" data-aos="fade-right">
+                    <h6>News and articles</h6>
+                    <h2>our latest blog posts</h2>
+                    <p>Grursus mal suada faci lisis lorem ipsum dolarorit more ame ion consectetur elit vesti at bulum nec
+                        odio aea the dumm recreo that dolocons.</p>
+                    <figure class="offer-circleimage mb-0">
+                        <img src="./assets/images/offer-circleimage.png" alt="" class="img-fluid">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/blog-image1.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">18</h3>
+                                    <span class="text-white">March</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>Useful Tips From Experts In Service.</h4>
+                                <p class="text-size-18">Nostrum exercitationem aeullam 
+                                    corporis suscipit labo riosam aliruiea
+                                    molestiae non recusandae...</p>
+                                <a class="read_more text-decoration-none" href="./single-post.html">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/blog-image2.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">26</h3>
+                                    <span class="text-white">April</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>How Will Service Be In The Future.</h4>
+                                <p class="text-size-18">Nostrum exercitationem aeullam 
+                                    corporis suscipit labo riosam aliruiea
+                                    molestiae non recusandae...</p>
+                                <a class="read_more text-decoration-none" href="./single-post.html">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent mb-0">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/blog-image3.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">09</h3>
+                                    <span class="text-white">June</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>How Service Can Ease Your Pain.</h4>
+                                <p class="text-size-18">Nostrum exercitationem aeullam 
+                                    corporis suscipit labo riosam aliruiea
+                                    molestiae non recusandae...</p>
+                                <a class="read_more text-decoration-none" href="./single-post.html">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/blog-image1.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">18</h3>
+                                    <span class="text-white">March</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>Useful Tips From Experts In Service.</h4>
+                                <p class="text-size-18">Nostrum exercitationem aeullam 
+                                    corporis suscipit labo riosam aliruiea
+                                    molestiae non recusandae...</p>
+                                <a class="read_more text-decoration-none" href="./single-post.html">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/blog-image2.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">26</h3>
+                                    <span class="text-white">April</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>How Will Service Be In The Future.</h4>
+                                <p class="text-size-18">Nostrum exercitationem aeullam 
+                                    corporis suscipit labo riosam aliruiea
+                                    molestiae non recusandae...</p>
+                                <a class="read_more text-decoration-none" href="./single-post.html">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent mb-0">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/blog-image3.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">09</h3>
+                                    <span class="text-white">June</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>How Service Can Ease Your Pain.</h4>
+                                <p class="text-size-18">Nostrum exercitationem aeullam 
+                                    corporis suscipit labo riosam aliruiea
+                                    molestiae non recusandae...</p>
+                                <a class="read_more text-decoration-none" href="./single-post.html">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/blog-image1.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">18</h3>
+                                    <span class="text-white">March</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>Useful Tips From Experts In Service.</h4>
+                                <p class="text-size-18">Nostrum exercitationem aeullam 
+                                    corporis suscipit labo riosam aliruiea
+                                    molestiae non recusandae...</p>
+                                <a class="read_more text-decoration-none" href="./single-post.html">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/blog-image2.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">26</h3>
+                                    <span class="text-white">April</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>How Will Service Be In The Future.</h4>
+                                <p class="text-size-18">Nostrum exercitationem aeullam 
+                                    corporis suscipit labo riosam aliruiea
+                                    molestiae non recusandae...</p>
+                                <a class="read_more text-decoration-none" href="./single-post.html">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blog_boxcontent mb-0">
+                        <div class="upper_portion">
+                            <figure class="mb-0"><img src="./assets/images/blog-image3.jpg" class="article_img" alt=""></figure>
+                            <div class="image_content">
+                                <div class="content">
+                                    <h3 class="text-white counter">09</h3>
+                                    <span class="text-white">June</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lower_portion_wrapper">
+                            <div class="lower_portion">
+                                <h4>How Service Can Ease Your Pain.</h4>
+                                <p class="text-size-18">Nostrum exercitationem aeullam 
+                                    corporis suscipit labo riosam aliruiea
+                                    molestiae non recusandae...</p>
+                                <a class="read_more text-decoration-none" href="./single-post.html">Read More
+                                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <figure class="offer-bottomlayer mb-0">
+        <img src="./assets/images/offer-bottomlayer.png" alt="" class="img-fluid">
+    </figure>
+</section>
+<!-- Footer -->
+<?php
+include('footer.php');
+?> 
