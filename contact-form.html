@@ -7,7 +7,7 @@
 
 <h2>Contact Us</h2>
 
-<form id="contactForm" action="your-processing-script.php" method="post">
+<form id="contactForm" action="contact-form.php" method="post">
   <label for="fname">Name:</label><br>
   <input type="text" id="fname" name="fname"><br><br>
   <label for="email">Email:</label><br>
@@ -25,7 +25,7 @@
 
     const formData = new FormData(this);
 
-    fetch('your-processing-script.php', { // Replace with the actual path to your PHP script
+    fetch('contact-form.php', { // Replace with the actual path to your PHP script
       method: 'POST',
       body: formData
     })
