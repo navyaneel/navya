@@ -601,9 +601,7 @@
     <p class="mt-2 small">© 2025 Navya Neelamegam</p>
 </footer>
 
-<button onclick="toggleTheme()" class="btn btn-outline-secondary btn-sm ms-3">
-    <i class="fas fa-adjust me-2"></i> Toggle Theme
-</button>
+<button id="theme-toggle" aria-label="Toggle theme">🌙</button>
 <script>
     function toggleTheme() {
         document.body.classList.toggle('dark-theme');
@@ -625,7 +623,14 @@
 </script>
 
 <script>
+document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('theme-toggle');
+    
+    if (!toggleButton) {
+        console.error('Theme toggle button not found!');
+        return;
+    }
+    
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem('theme');
 
@@ -637,6 +642,7 @@
         document.body.classList.toggle('light-theme', isDark);
         localStorage.setItem('theme', !isDark ? 'dark-theme' : 'light-theme');
     });
+});
 </script>
 
 <script>
