@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, "/home/nsubrama/apps")
+sys.path.insert(0, "/Users/navyaneelamegam/fun_gitrepo/navya/.venv/lib/python3.13/site-packages")
 
 import streamlit as st
 import pandas as pd
