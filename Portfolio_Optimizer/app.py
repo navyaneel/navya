@@ -102,22 +102,24 @@ with st.sidebar:
                 data = yf.download(tickers, start=start_date, end=end_date, progress=False)
                 
                 if isinstance(data.columns, pd.MultiIndex):
-                    if "Adj Close" in data.columns.levels[0]:
-                        prices = data["Adj Close"]
-                    elif "Close" in data.columns.levels[0]:
-                        prices = data["Close"]
+                    level0 = data.columns.get_level_values(0)
+                    if "Adj Close" in level0:
+                        prices = data.loc[:, level0 == "Adj Close"]
+                    elif "Close" in level0:
+                        prices = data.loc[:, level0 == "Close"]
                     else:
-                        raise ValueError("Yahoo Finance data missing Adjusted Close prices")
-                elif "Adj Close" in data.columns:
-                    prices = data[["Adj Close"]].copy()
-                    prices.columns = tickers if len(tickers) > 1 else [tickers[0]]
-                elif "Close" in data.columns:
-                    prices = data[["Close"]].copy()
-                    prices.columns = tickers if len(tickers) > 1 else [tickers[0]]
+                        raise ValueError("Yahoo Finance data missing Adjusted Close or Close prices")
+                    prices.columns = prices.columns.get_level_values(1)
                 else:
-                    raise ValueError("Yahoo Finance data missing price columns")
+                    if "Adj Close" in data.columns:
+                        prices = data[["Adj Close"]].copy()
+                        prices.columns = tickers if len(tickers) > 1 else [tickers[0]]
+                    elif "Close" in data.columns:
+                        prices = data[["Close"]].copy()
+                        prices.columns = tickers if len(tickers) > 1 else [tickers[0]]
+                    else:
+                        raise ValueError("Yahoo Finance data missing Adjusted Close or Close prices")
 
-                # If data is returned as a Series for a single ticker, convert to DataFrame
                 if isinstance(prices, pd.Series):
                     prices = prices.to_frame(name=tickers[0])
 
