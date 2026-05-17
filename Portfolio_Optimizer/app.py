@@ -99,10 +99,31 @@ with st.sidebar:
                     start_date = end_date - timedelta(days=1825)
                 
                 import yfinance as yf
-                prices = yf.download(tickers, start=start_date, end=end_date, progress=False)["Adj Close"]
+                data = yf.download(tickers, start=start_date, end=end_date, progress=False)
+                
+                if isinstance(data.columns, pd.MultiIndex):
+                    if "Adj Close" in data.columns.levels[0]:
+                        prices = data["Adj Close"]
+                    elif "Close" in data.columns.levels[0]:
+                        prices = data["Close"]
+                    else:
+                        raise ValueError("Yahoo Finance data missing Adjusted Close prices")
+                elif "Adj Close" in data.columns:
+                    prices = data[["Adj Close"]].copy()
+                    prices.columns = tickers if len(tickers) > 1 else [tickers[0]]
+                elif "Close" in data.columns:
+                    prices = data[["Close"]].copy()
+                    prices.columns = tickers if len(tickers) > 1 else [tickers[0]]
+                else:
+                    raise ValueError("Yahoo Finance data missing price columns")
+
+                # If data is returned as a Series for a single ticker, convert to DataFrame
+                if isinstance(prices, pd.Series):
+                    prices = prices.to_frame(name=tickers[0])
+
                 returns = prices.pct_change().dropna()
                 
-                data_status = f"✓ Live Data ({len(prices)} days, {len(tickers)} stocks)"
+                data_status = f"✓ Live Data ({len(prices)} days, {len(prices.columns)} stocks)"
         except Exception as e:
             st.error(f"❌ Error fetching data: {e}")
             st.stop()
@@ -393,7 +414,7 @@ with tab4:
     
     with col1:
         st.subheader("Performance Metrics")
-        st.dataframe(metrics.style.format("{:.4f}"), use_container_width=True)
+        st.dataframe(metrics, use_container_width=True)
     
     with col2:
         st.subheader("Key Insights")
