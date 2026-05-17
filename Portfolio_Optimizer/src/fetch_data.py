@@ -62,12 +62,41 @@ def fetch_stock_data(tickers=None, start=None, end=None, save=True):
     return prices
 
 
-def load_prices():
-    return pd.read_csv(os.path.join(DATA_DIR, "prices.csv"), index_col=0, parse_dates=True)
+def load_prices(data_path=None):
+    """Load prices from CSV file."""
+    if data_path is None:
+        data_path = os.path.join(DATA_DIR, "prices.csv")
+    return pd.read_csv(data_path, index_col=0, parse_dates=True)
 
 
-def load_returns():
-    return pd.read_csv(os.path.join(DATA_DIR, "returns.csv"), index_col=0, parse_dates=True)
+def load_returns(data_path=None):
+    """Load returns from CSV file."""
+    if data_path is None:
+        data_path = os.path.join(DATA_DIR, "returns.csv")
+    return pd.read_csv(data_path, index_col=0, parse_dates=True)
+
+
+def fetch_live_data(tickers, start, end):
+    """
+    Fetch live data from Yahoo Finance.
+    
+    Args:
+        tickers: List of ticker symbols
+        start: Start date (YYYY-MM-DD)
+        end: End date (YYYY-MM-DD)
+        
+    Returns:
+        DataFrame with adjusted close prices
+    """
+    try:
+        import yfinance as yf
+        data = yf.download(tickers, start=start, end=end, progress=False)["Adj Close"]
+        if len(tickers) == 1:
+            data = pd.DataFrame(data)
+            data.columns = tickers
+        return data
+    except Exception as e:
+        raise RuntimeError(f"Failed to fetch live data: {e}")
 
 
 if __name__ == "__main__":

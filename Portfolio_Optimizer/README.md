@@ -1,8 +1,18 @@
-# 📈 Portfolio Optimizer — Mean-Variance Optimization
+# 📈 Portfolio Optimizer — Modern Portfolio Theory
 
 **Author:** Navya Neelamegam, School of Information Studies, Syracuse University
 
-Optimize a 5-stock portfolio (AAPL, MSFT, GOOG, AMZN, TSLA) using Modern Portfolio Theory. The optimizer finds the allocation that maximizes the Sharpe ratio via `scipy.optimize` mean-variance optimization, then backtests against an equal-weight baseline.
+Optimize a stock portfolio using Modern Portfolio Theory with interactive web interface. Choose between synthesized or live market data, visualize efficient frontiers, and backtest optimized allocations.
+
+---
+
+## ✨ Features
+
+- **📊 Dual Data Sources**: Synthesized data (3 market conditions) or live Yahoo Finance data
+- **🎯 Optimization**: Maximum Sharpe Ratio & Minimum Volatility portfolios
+- **📈 Visualizations**: Interactive Plotly charts for frontier, allocations, and backtest
+- **💰 Backtest**: Historical performance vs equal-weight baseline
+- **🌐 Web Interface**: Streamlit dashboard for real-time analysis
 
 ---
 
@@ -10,34 +20,59 @@ Optimize a 5-stock portfolio (AAPL, MSFT, GOOG, AMZN, TSLA) using Modern Portfol
 
 ```
 Portfolio_Optimizer/
+├── app.py                      # 🌐 Streamlit web application
+├── generate_data.py            # 🎲 Synthetic data generation (bull/bear/sideways)
+├── run_analysis.py             # 📊 Batch analysis script
+├── notebook.ipynb              # 📓 Jupyter notebook
 ├── data/
-│   ├── prices.csv              # Daily adjusted close prices (2019–2024)
-│   ├── returns.csv             # Daily log returns
-│   ├── optimal_weights.csv     # Optimized portfolio weights
-│   ├── efficient_frontier.png  # Efficient frontier chart
-│   ├── allocation.png          # Pie chart of optimal allocations
-│   ├── backtest.png            # Backtest cumulative returns + drawdown
-│   └── exploratory.png         # Normalized prices + correlation matrix
+│   ├── prices.csv              # Daily adjusted close prices
+│   ├── returns.csv             # Daily returns
+│   └── optimal_weights.csv     # Optimized portfolio weights
 ├── src/
-│   ├── fetch_data.py           # Data generation (GBM-based realistic stock data)
-│   ├── optimize.py             # Mean-variance optimization (scipy.optimize)
-│   └── backtest.py             # Backtest engine with performance metrics
-├── notebook.ipynb              # Jupyter notebook with full analysis
-├── run_analysis.py             # Script to generate all charts and results
+│   ├── fetch_data.py           # Data fetching (live & synthetic)
+│   ├── optimize.py             # Mean-variance optimization (scipy)
+│   └── backtest.py             # Backtest engine
+├── requirements.txt            # Python dependencies
 └── README.md
 ```
 
-## Quick Start
+## 🚀 Installation
 
 ```bash
 # Install dependencies
-pip install numpy pandas scipy matplotlib
+pip install -r requirements.txt
 
-# Generate data and run analysis
-python src/fetch_data.py
+# Or install individually
+pip install streamlit plotly yfinance pandas numpy scipy
+```
+
+## 🎯 Usage
+
+### Option 1: Web Dashboard (Recommended)
+
+```bash
+streamlit run app.py
+```
+
+Then open your browser to `http://localhost:8501`
+
+**Features:**
+- Toggle between **Synthesized** and **Live** data
+- Choose market condition (Bull, Bear, Sideways)
+- Select stocks and historical period
+- Adjust optimization parameters
+- View 4 tabs: Data Overview, Optimization, Allocation, Backtest
+
+### Option 2: Command Line Analysis
+
+```bash
+# Generate synthetic data
+python generate_data.py
+
+# Run batch analysis
 python run_analysis.py
 
-# Or open the Jupyter notebook
+# Or use Jupyter notebook
 jupyter notebook notebook.ipynb
 ```
 
