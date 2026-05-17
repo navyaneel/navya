@@ -187,7 +187,7 @@ with tab1:
         labels={"value": "Indexed Price", "variable": "Stock"}
     )
     fig.update_layout(hovermode="x unified", height=400)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     
     col1, col2 = st.columns(2)
     
@@ -198,7 +198,7 @@ with tab1:
             "Annual Volatility": returns.std() * np.sqrt(252),
             "Sharpe Ratio": (returns.mean() * 252 - RISK_FREE_RATE) / (returns.std() * np.sqrt(252)),
         })
-        st.dataframe(summary.style.format("{:.4f}"), use_container_width=True)
+        st.dataframe(summary.style.format("{:.4f}"), width='stretch')
     
     with col2:
         st.subheader("Correlation Matrix")
@@ -217,7 +217,7 @@ with tab1:
             textfont={"size": 10}
         ))
         fig.update_layout(height=400, width=400)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
 # ============================================================================
 # TAB 2: Portfolio Optimization
@@ -304,7 +304,7 @@ with tab2:
         height=600,
         template="plotly_white"
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     
     # Display optimal weights
     col1, col2 = st.columns(2)
@@ -321,7 +321,7 @@ with tab2:
             "% Allocation": ms_weights * 100
         })
         weights_df = weights_df[weights_df["Weight"] > 0.001].sort_values("Weight", ascending=False)
-        st.dataframe(weights_df, use_container_width=True, hide_index=True)
+        st.dataframe(weights_df, width='stretch', hide_index=True)
     
     with col2:
         st.subheader("Minimum Volatility Portfolio")
@@ -335,7 +335,7 @@ with tab2:
             "% Allocation": mv_weights * 100
         })
         weights_df = weights_df[weights_df["Weight"] > 0.001].sort_values("Weight", ascending=False)
-        st.dataframe(weights_df, use_container_width=True, hide_index=True)
+        st.dataframe(weights_df, width='stretch', hide_index=True)
 
 # ============================================================================
 # TAB 3: Allocation
@@ -358,7 +358,7 @@ with tab3:
             title=f"Max Sharpe (Sharpe={ms_stats[2]:.3f})",
             height=500
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
     
     with col2:
         st.subheader("Min Volatility Allocation")
@@ -375,7 +375,7 @@ with tab3:
             title=f"Min Volatility (Sharpe={mv_stats[2]:.3f})",
             height=500
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width='stretch')
 
 # ============================================================================
 # TAB 4: Backtest
@@ -409,14 +409,14 @@ with tab4:
         height=500,
         template="plotly_white"
     )
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
     
     # Metrics table
     col1, col2 = st.columns(2)
     
     with col1:
         st.subheader("Performance Metrics")
-        st.dataframe(metrics, use_container_width=True)
+        st.dataframe(metrics, width='stretch')
     
     with col2:
         st.subheader("Key Insights")
