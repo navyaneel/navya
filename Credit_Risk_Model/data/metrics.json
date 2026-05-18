@@ -1,0 +1,16 @@
+{
+  "logistic_regression": {
+    "accuracy": 0.767,
+    "precision": 0.3677,
+    "recall": 0.8129,
+    "f1": 0.5064,
+    "auc_roc": 0.8559
+  },
+  "xgboost": {
+    "accuracy": 0.812,
+    "precision": 0.4081,
+    "recall": 0.619,
+    "f1": 0.4919,
+    "auc_roc": 0.8255
+  }
+}

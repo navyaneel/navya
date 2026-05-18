@@ -3,10 +3,10 @@ import sys
 import json
 
 sys.path.insert(0, os.path.dirname(__file__))
-from src.generate_data import generate_lending_data, save_data
-from src.eda import load_data
-from src.model import run_pipeline, get_feature_importance
-from src.roc_auc import compute_metrics
+from Credit_Risk_Model.src.generate_data import generate_lending_data, save_data
+from Credit_Risk_Model.src.eda import load_data
+from Credit_Risk_Model.src.model import run_pipeline, get_feature_importance
+from Credit_Risk_Model.src.roc_auc import compute_metrics
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
 
