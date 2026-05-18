@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 import os
 
 # Custom imports
-from src.fetch_data import fetch_stock_data, load_prices, load_returns
+from Stock_prediction.src.fetch_data import fetch_stock_data, load_prices, load_returns
 from src.optimize import (
     optimize_max_sharpe, optimize_min_volatility,
     efficient_frontier, random_portfolios, RISK_FREE_RATE
