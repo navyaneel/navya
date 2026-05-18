@@ -9,7 +9,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import json
 
-from Stock_prediction.src.fetch_data import load_prices, load_returns
+from src.fetch_data import load_prices, load_returns
 from src.optimize import (
     optimize_max_sharpe, optimize_min_volatility,
     efficient_frontier, random_portfolios, RISK_FREE_RATE,

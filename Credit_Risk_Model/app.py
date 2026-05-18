@@ -6,12 +6,12 @@ import pandas as pd
 import streamlit as st
 
 sys.path.insert(0, os.path.dirname(__file__))
-from Credit_Risk_Model.src.generate_data import generate_lending_data, save_data
-from Credit_Risk_Model.src.eda import load_data, summary_stats, plot_target_distribution, \
+from src.generate_data import generate_lending_data, save_data
+from src.eda import load_data, summary_stats, plot_target_distribution, \
     plot_numeric_distributions, plot_correlation_matrix, \
     plot_categorical_default_rates, plot_box_by_default
-from Credit_Risk_Model.src.model import run_pipeline, get_feature_importance
-from Credit_Risk_Model.src.roc_auc import compute_metrics, plot_roc_curve, plot_confusion_matrix, \
+from src.model import run_pipeline, get_feature_importance, XGBOOST_AVAILABLE
+from src.roc_auc import compute_metrics, plot_roc_curve, plot_confusion_matrix, \
     plot_precision_recall_curve, plot_feature_importance, classification_report_df
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
@@ -84,17 +84,24 @@ with tab2:
 
         lr = results['lr_model']
         xgb = results['xgb_model']
+        xgb_available = results.get('xgboost_available', False)
         X_test = results['X_test']
         y_test = results['y_test']
         feat_names = results['feature_names']
 
         lr_pred = lr.predict(X_test)
         lr_proba = lr.predict_proba(X_test)[:, 1]
-        xgb_pred = xgb.predict(X_test)
-        xgb_proba = xgb.predict_proba(X_test)[:, 1]
-
         lr_metrics = compute_metrics(y_test, lr_pred, lr_proba)
-        xgb_metrics = compute_metrics(y_test, xgb_pred, xgb_proba)
+
+        if xgb_available and xgb is not None:
+            xgb_pred = xgb.predict(X_test)
+            xgb_proba = xgb.predict_proba(X_test)[:, 1]
+            xgb_metrics = compute_metrics(y_test, xgb_pred, xgb_proba)
+        else:
+            xgb_pred = None
+            xgb_proba = None
+            xgb_metrics = None
+            st.warning("XGBoost is unavailable in this environment. Only Logistic Regression results are shown.")
 
         st.session_state['lr_pred'] = lr_pred
         st.session_state['lr_proba'] = lr_proba
@@ -102,6 +109,7 @@ with tab2:
         st.session_state['xgb_proba'] = xgb_proba
         st.session_state['lr_metrics'] = lr_metrics
         st.session_state['xgb_metrics'] = xgb_metrics
+        st.session_state['xgb_available'] = xgb_available
 
         st.success("Training complete!")
 
@@ -113,8 +121,11 @@ with tab2:
                 st.metric(k.upper(), f"{v:.4f}")
         with mc2:
             st.markdown("**XGBoost**")
-            for k, v in xgb_metrics.items():
-                st.metric(k.upper(), f"{v:.4f}")
+            if xgb_metrics is not None:
+                for k, v in xgb_metrics.items():
+                    st.metric(k.upper(), f"{v:.4f}")
+            else:
+                st.info("XGBoost metrics unavailable.")
 
         st.subheader("Feature Importance")
         fi1, fi2 = st.columns(2)
@@ -122,8 +133,11 @@ with tab2:
             lr_imp = get_feature_importance(lr, feat_names, 'logistic')
             st.plotly_chart(plot_feature_importance(lr_imp, 'Logistic Regression'), use_container_width=True)
         with fi2:
-            xgb_imp = get_feature_importance(xgb, feat_names, 'xgboost')
-            st.plotly_chart(plot_feature_importance(xgb_imp, 'XGBoost'), use_container_width=True)
+            if xgb is not None:
+                xgb_imp = get_feature_importance(xgb, feat_names, 'xgboost')
+                st.plotly_chart(plot_feature_importance(xgb_imp, 'XGBoost'), use_container_width=True)
+            else:
+                st.info("XGBoost feature importance unavailable.")
 
         os.makedirs(DATA_DIR, exist_ok=True)
         metrics_out = {'logistic_regression': lr_metrics, 'xgboost': xgb_metrics}
@@ -139,24 +153,31 @@ with tab3:
         xgb_proba = st.session_state['xgb_proba']
         lr_pred = st.session_state['lr_pred']
         xgb_pred = st.session_state['xgb_pred']
+        xgb_available = st.session_state.get('xgb_available', False)
 
-        st.plotly_chart(plot_roc_curve(y_test, lr_proba, xgb_proba), use_container_width=True)
-        st.plotly_chart(plot_precision_recall_curve(y_test, lr_proba, xgb_proba), use_container_width=True)
+        if xgb_available and xgb_proba is not None:
+            st.plotly_chart(plot_roc_curve(y_test, lr_proba, xgb_proba), use_container_width=True)
+            st.plotly_chart(plot_precision_recall_curve(y_test, lr_proba, xgb_proba), use_container_width=True)
 
-        cm1, cm2 = st.columns(2)
-        with cm1:
+            cm1, cm2 = st.columns(2)
+            with cm1:
+                st.plotly_chart(plot_confusion_matrix(y_test, lr_pred, 'Logistic Regression'), use_container_width=True)
+            with cm2:
+                st.plotly_chart(plot_confusion_matrix(y_test, xgb_pred, 'XGBoost'), use_container_width=True)
+
+            st.subheader("Classification Reports")
+            r1, r2 = st.columns(2)
+            with r1:
+                st.markdown("**Logistic Regression**")
+                st.dataframe(classification_report_df(y_test, lr_pred), use_container_width=True)
+            with r2:
+                st.markdown("**XGBoost**")
+                st.dataframe(classification_report_df(y_test, xgb_pred), use_container_width=True)
+        else:
+            st.warning("XGBoost is unavailable; showing only Logistic Regression evaluation.")
             st.plotly_chart(plot_confusion_matrix(y_test, lr_pred, 'Logistic Regression'), use_container_width=True)
-        with cm2:
-            st.plotly_chart(plot_confusion_matrix(y_test, xgb_pred, 'XGBoost'), use_container_width=True)
-
-        st.subheader("Classification Reports")
-        r1, r2 = st.columns(2)
-        with r1:
-            st.markdown("**Logistic Regression**")
+            st.subheader("Classification Report")
             st.dataframe(classification_report_df(y_test, lr_pred), use_container_width=True)
-        with r2:
-            st.markdown("**XGBoost**")
-            st.dataframe(classification_report_df(y_test, xgb_pred), use_container_width=True)
     else:
         st.info("Train the models first to see evaluation.")
 
@@ -196,24 +217,29 @@ with tab4:
                 'total_acc': 25, 'delinq_2yrs': delinq, 'pub_rec': pub_rec,
                 'mort_acc': 2, 'default': 0
             }])
-            from Credit_Risk_Model.src.model import preprocess
+            from src.model import preprocess
             full_df = pd.concat([df, input_df], ignore_index=True)
             X_all, _, feat_names, _ = preprocess(full_df)
             X_input = X_all[-1:, :]
 
             lr = st.session_state['results']['lr_model']
             xgb_m = st.session_state['results']['xgb_model']
+            xgb_available = st.session_state.get('xgb_available', False)
             lr_prob = lr.predict_proba(X_input)[0][1]
-            xgb_prob = xgb_m.predict_proba(X_input)[0][1]
 
             st.markdown("### Prediction Results")
             c1, c2 = st.columns(2)
             with c1:
                 st.metric("Logistic Regression", f"{lr_prob:.1%}",
                           "HIGH RISK" if lr_prob > 0.5 else "LOW RISK")
-            with c2:
-                st.metric("XGBoost", f"{xgb_prob:.1%}",
-                          "HIGH RISK" if xgb_prob > 0.5 else "LOW RISK")
+            if xgb_available and xgb_m is not None:
+                xgb_prob = xgb_m.predict_proba(X_input)[0][1]
+                with c2:
+                    st.metric("XGBoost", f"{xgb_prob:.1%}",
+                              "HIGH RISK" if xgb_prob > 0.5 else "LOW RISK")
+            else:
+                with c2:
+                    st.info("XGBoost unavailable for prediction.")
     else:
         st.info("Train the models first to make predictions.")
 
