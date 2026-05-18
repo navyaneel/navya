@@ -6,12 +6,12 @@ import pandas as pd
 import streamlit as st
 
 sys.path.insert(0, os.path.dirname(__file__))
-from src.generate_data import generate_lending_data, save_data
-from src.eda import load_data, summary_stats, plot_target_distribution, \
+from Credit_Risk_Model.src.generate_data import generate_lending_data, save_data
+from Credit_Risk_Model.src.eda import load_data, summary_stats, plot_target_distribution, \
     plot_numeric_distributions, plot_correlation_matrix, \
     plot_categorical_default_rates, plot_box_by_default
-from src.model import run_pipeline, get_feature_importance
-from src.roc_auc import compute_metrics, plot_roc_curve, plot_confusion_matrix, \
+from Credit_Risk_Model.src.model import run_pipeline, get_feature_importance
+from Credit_Risk_Model.src.roc_auc import compute_metrics, plot_roc_curve, plot_confusion_matrix, \
     plot_precision_recall_curve, plot_feature_importance, classification_report_df
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
@@ -196,7 +196,7 @@ with tab4:
                 'total_acc': 25, 'delinq_2yrs': delinq, 'pub_rec': pub_rec,
                 'mort_acc': 2, 'default': 0
             }])
-            from src.model import preprocess
+            from Credit_Risk_Model.src.model import preprocess
             full_df = pd.concat([df, input_df], ignore_index=True)
             X_all, _, feat_names, _ = preprocess(full_df)
             X_input = X_all[-1:, :]
