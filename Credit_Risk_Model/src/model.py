@@ -3,7 +3,13 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from xgboost import XGBClassifier
+
+try:
+    from xgboost import XGBClassifier
+    XGBOOST_AVAILABLE = True
+except Exception:
+    XGBClassifier = None
+    XGBOOST_AVAILABLE = False
 
 def preprocess(df):
     df = df.copy()
@@ -25,6 +31,9 @@ def train_logistic(X_train, y_train):
     return model
 
 def train_xgboost(X_train, y_train):
+    if not XGBOOST_AVAILABLE:
+        return None
+
     neg = int(np.sum(y_train == 0))
     pos = int(np.sum(y_train == 1))
     spw = neg / pos if pos > 0 else 1
@@ -41,6 +50,8 @@ def train_xgboost(X_train, y_train):
     return model
 
 def get_feature_importance(model, feature_names, model_type='logistic'):
+    if model is None:
+        return pd.DataFrame({'feature': feature_names, 'importance': np.zeros(len(feature_names))})
     if model_type == 'logistic':
         importances = np.abs(model.coef_[0])
     else:
@@ -58,6 +69,7 @@ def run_pipeline(df, test_size=0.2):
     return {
         'lr_model': lr_model,
         'xgb_model': xgb_model,
+        'xgboost_available': XGBOOST_AVAILABLE,
         'X_train': X_train,
         'X_test': X_test,
         'y_train': y_train,
