@@ -1,642 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Navya Neelamegam's professional resume - featuring education, experience, and leadership roles at Syracuse University, GAEE, Deepflock.ai, Meteor Venture, and more.">
-    <meta name="keywords" content="Navya Neelamegam, Syracuse University, Whitman School of Management, iSchool, Finance, Applied Data Science, Resume, Internship, Leadership">
-    <meta name="author" content="Navya Neelamegam">
-    <meta property="og:title" content="Navya Neelamegam - Resume">
-    <meta property="og:description" content="Explore the professional journey of Navya Neelamegam.">
-    <meta property="og:image" content="https://example.com/navya-thumbnail.jpg">
-    <meta property="og:url" content="https://navyaneel.github.io/navya/index.html">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/1776f237ea.js" crossorigin="anonymous"></script>
-    <title>Navya Neelamegam - Resume</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" as="style">
-    <link rel="icon" href="favicon.ico">
-    <style>
-        :root {
-            --bg-color: #f8f8ff;
-            --text-color: #800000;
-            --primary-color: #800000;
-            --secondary-color: #FFD700;
-            --accent-color: #FFD700;
-            --card-bg: #ffffff;
-            --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            --neon-glow: 0 0 15px rgba(255, 215, 0, 0.7);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Navya Neelamegam's professional resume - Finance & Applied Data Science, Syracuse University.">
+<meta name="author" content="Navya Neelamegam">
+<meta property="og:title" content="Navya Neelamegam - Resume">
+<meta property="og:url" content="https://navyaneel.github.io/navya/index.html">
+<script src="https://kit.fontawesome.com/1776f237ea.js" crossorigin="anonymous"></script>
+<title>Navya Neelamegam — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<style>
+    :root{
+        --ink:#0E1420;
+        --paper:#F6F5F1;
+        --chalk:#FFFFFF;
+        --steel:#46566B;
+        --steel-soft:#8A93A0;
+        --brass:#B08D2B;
+        --brass-deep:#8C6E1E;
+        --hairline:#D9D6CC;
+    }
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+        margin:0;
+        background:var(--paper);
+        color:var(--ink);
+        font-family:'Inter',sans-serif;
+        font-size:16px;
+        line-height:1.65;
+        -webkit-font-smoothing:antialiased;
+    }
+    body.dark-theme{
+        --paper:#0E1420;
+        --chalk:#171F2E;
+        --ink:#F3F1EA;
+        --steel:#B7C0CC;
+        --steel-soft:#7C8798;
+        --hairline:#2A3344;
+    }
+    .mono{font-family:'IBM Plex Mono',monospace;}
+    a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brass);transition:opacity .15s ease;}
+    a:hover{opacity:.65;}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
-            transition: background-color 0.3s, color 0.3s;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
+    .masthead{
+        background:var(--ink);
+        color:var(--paper);
+        padding:4.5rem 6vw 2.5rem;
+        position:relative;
+    }
+    body.dark-theme .masthead{background:#080B12;}
+    .masthead-eyebrow{
+        font-family:'IBM Plex Mono',monospace;
+        font-size:.78rem;
+        letter-spacing:.18em;
+        text-transform:uppercase;
+        color:var(--brass);
+        margin-bottom:1.1rem;
+    }
+    .masthead h1{
+        font-family:'Fraunces',serif;
+        font-weight:700;
+        font-size:clamp(2.6rem,6vw,5rem);
+        line-height:.98;
+        letter-spacing:-.01em;
+        margin:0 0 1rem;
+        color:var(--paper);
+    }
+    .masthead-role{
+        font-family:'IBM Plex Mono',monospace;
+        font-size:clamp(.85rem,1.4vw,1rem);
+        color:#C7CCD6;
+        letter-spacing:.02em;
+        margin-bottom:2rem;
+        max-width:640px;
+    }
+    .masthead-links{
+        display:flex;
+        flex-wrap:wrap;
+        gap:.75rem;
+        margin-bottom:2.2rem;
+    }
+    .btn-sharp{
+        font-family:'IBM Plex Mono',monospace;
+        font-size:.8rem;
+        letter-spacing:.04em;
+        text-transform:uppercase;
+        padding:.62rem 1.15rem;
+        border:1px solid rgba(255,255,255,.22);
+        color:var(--paper);
+        background:transparent;
+        transition:background .15s ease, color .15s ease;
+        display:inline-flex;
+        align-items:center;
+        gap:.5rem;
+    }
+    .btn-sharp:hover{background:var(--brass);border-color:var(--brass);color:var(--ink);opacity:1;}
+    .btn-sharp.primary{background:var(--brass);color:var(--ink);border-color:var(--brass);}
+    .btn-sharp.primary:hover{background:transparent;color:var(--paper);border-color:rgba(255,255,255,.22);}
 
-        .dark-theme {
-            --bg-color: #222222;
-            --text-color: #eeeeee;
-            --card-bg: #333333;
-            --card-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-            --neon-glow: 0 0 15px rgba(241, 196, 15, 0.8);
-        }
+    .contact-row{
+        display:flex;
+        flex-wrap:wrap;
+        gap:1.6rem;
+        font-family:'IBM Plex Mono',monospace;
+        font-size:.82rem;
+        color:#AEB6C2;
+    }
+    .contact-row a{color:#DCE0E6;border-bottom:1px solid rgba(255,255,255,.25);}
 
-        .light-theme {
-            --bg-color: var(--bg-color);
-            --text-color: var(--text-color);
-            --card-bg: var(--card-bg);
-            --card-shadow: var(--card-shadow);
-            --neon-glow: 0 0 15px rgba(255, 215, 0, 0.8);
-        }
+    .ticker-wrap{
+        background:var(--brass);
+        color:var(--ink);
+        overflow:hidden;
+        white-space:nowrap;
+        border-top:1px solid var(--brass-deep);
+        border-bottom:1px solid var(--brass-deep);
+    }
+    .ticker-track{
+        display:inline-block;
+        padding-left:100%;
+        animation:ticker 32s linear infinite;
+        font-family:'IBM Plex Mono',monospace;
+        font-size:.82rem;
+        font-weight:600;
+        letter-spacing:.03em;
+        text-transform:uppercase;
+        padding-top:.55rem;
+        padding-bottom:.55rem;
+    }
+    .ticker-track span{margin:0 1.4rem;}
+    .ticker-track span.sep{color:var(--brass-deep);}
+    @keyframes ticker{
+        0%{transform:translateX(0);}
+        100%{transform:translateX(-100%);}
+    }
+    @media (prefers-reduced-motion: reduce){
+        .ticker-track{animation:none;padding-left:0;}
+    }
 
-        .page-fold {
-            margin-bottom: 2rem;
-            cursor: pointer;
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            box-shadow: var(--card-shadow);
-            border-radius: 10px;
-            padding: 1.5rem;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
+    .wrap{max-width:920px;margin:0 auto;padding:0 6vw;}
+    nav.subnav{
+        background:var(--chalk);
+        border-bottom:1px solid var(--hairline);
+        position:sticky;
+        top:0;
+        z-index:20;
+    }
+    nav.subnav .wrap{
+        display:flex;
+        gap:1.75rem;
+        overflow-x:auto;
+        padding-top:.9rem;
+        padding-bottom:.9rem;
+        max-width:920px;
+    }
+    nav.subnav a{
+        font-family:'IBM Plex Mono',monospace;
+        font-size:.76rem;
+        letter-spacing:.06em;
+        text-transform:uppercase;
+        color:var(--steel);
+        border-bottom:none;
+        white-space:nowrap;
+    }
+    nav.subnav a:hover{color:var(--brass-deep);opacity:1;}
 
-        .page-fold.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    section{
+        padding:3.2rem 0;
+        border-bottom:1px solid var(--hairline);
+        opacity:0;
+        transform:translateY(14px);
+        transition:opacity .5s ease, transform .5s ease;
+    }
+    section.visible{opacity:1;transform:translateY(0);}
+    section:last-of-type{border-bottom:none;}
 
-        .page-fold:hover {
-            transform: scale(1.04);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-        }
+    .section-eyebrow{
+        font-family:'IBM Plex Mono',monospace;
+        font-size:.76rem;
+        letter-spacing:.14em;
+        text-transform:uppercase;
+        color:var(--brass-deep);
+        margin-bottom:.6rem;
+    }
+    .section-title{
+        font-family:'Fraunces',serif;
+        font-weight:600;
+        font-size:1.9rem;
+        margin:0 0 1.8rem;
+        color:var(--ink);
+    }
 
-        .section-title {
-            margin-top: 1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            font-size: 2rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
+    .edu-block{margin-bottom:1.6rem;}
+    .edu-head{
+        display:flex;
+        justify-content:space-between;
+        align-items:baseline;
+        flex-wrap:wrap;
+        gap:.4rem;
+        margin-bottom:.3rem;
+    }
+    .edu-head h3{font-size:1.15rem;font-weight:700;margin:0;}
+    .edu-dates{font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:var(--steel);}
+    .edu-sub{color:var(--steel);font-size:.95rem;margin-bottom:.6rem;}
+    .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem;}
+    .tag{
+        font-family:'IBM Plex Mono',monospace;
+        font-size:.74rem;
+        letter-spacing:.02em;
+        padding:.3rem .6rem;
+        border:1px solid var(--hairline);
+        color:var(--steel);
+        background:var(--chalk);
+    }
+    .tag.gold{border-color:var(--brass);color:var(--brass-deep);}
 
-        .badge {
-            margin: 0.25rem;
-            font-size: 0.9rem;
-            background-color: var(--accent-color);
-            color: var(--text-color);
-            border: 1px solid var(--accent-color);
-            border-radius: 5px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
+    .ledger{
+        border-left:2px solid var(--hairline);
+        padding-left:1.3rem;
+        margin-bottom:2.1rem;
+        transition:border-color .18s ease;
+    }
+    .ledger:hover{border-left-color:var(--brass);}
+    .ledger-head{
+        display:flex;
+        justify-content:space-between;
+        align-items:baseline;
+        flex-wrap:wrap;
+        gap:.3rem .8rem;
+        margin-bottom:.15rem;
+    }
+    .ledger-head h3{
+        font-size:1.15rem;
+        font-weight:700;
+        margin:0;
+        color:var(--ink);
+    }
+    .ledger-dates{
+        font-family:'IBM Plex Mono',monospace;
+        font-size:.8rem;
+        color:var(--steel);
+        white-space:nowrap;
+    }
+    .ledger-role{
+        font-style:italic;
+        color:var(--brass-deep);
+        font-size:.95rem;
+        margin-bottom:.7rem;
+    }
+    .ledger ul{margin:0;padding-left:1.2rem;color:var(--steel);}
+    .ledger li{margin-bottom:.45rem;font-size:.97rem;line-height:1.6;}
+    .ledger li::marker{color:var(--brass);}
 
-        .badge:hover {
-            background-color: #f7e01b;
-            color: var(--text-color);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-        }
+    .interest-row{display:flex;flex-wrap:wrap;gap:.7rem;}
+    .interest-row .tag{padding:.5rem .9rem;font-size:.82rem;}
 
-        h1, h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            text-shadow: none;
-        }
+    footer{
+        text-align:center;
+        padding:2.5rem 0 3rem;
+        font-family:'IBM Plex Mono',monospace;
+        font-size:.78rem;
+        color:var(--steel-soft);
+    }
+    footer a{border-bottom:none;color:var(--steel-soft);}
 
-        .container {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 2rem;
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
+    #theme-toggle{
+        position:fixed;
+        bottom:28px;
+        right:28px;
+        z-index:99;
+        width:46px;height:46px;
+        border:1px solid var(--hairline);
+        background:var(--chalk);
+        cursor:pointer;
+        font-size:1.1rem;
+        display:flex;align-items:center;justify-content:center;
+    }
+    #backToTop{
+        display:none;
+        position:fixed;
+        bottom:82px;
+        right:28px;
+        z-index:99;
+        width:46px;height:46px;
+        border:1px solid var(--hairline);
+        background:var(--ink);
+        color:var(--paper);
+        cursor:pointer;
+        font-size:1rem;
+        align-items:center;
+        justify-content:center;
+    }
 
-        a {
-            color: var(--primary-color);
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.2s ease, text-shadow 0.2s ease;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #b80000;
-            text-shadow: 1px 1px 2px rgba(128, 0, 0, 0.1);
-        }
-
-        .btn-outline-primary, .btn-outline-secondary {
-            border-radius: 8px;
-            font-size: 0.95rem;
-            padding: 0.75rem 1.5rem;
-            transition: all 0.2s ease, box-shadow 0.2s ease;
-            border-width: 2px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-outline-primary {
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn-outline-primary:hover {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            box-shadow: var(--neon-glow), 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .btn-outline-secondary {
-            color: var(--secondary-color);
-            border-color: var(--secondary-color);
-        }
-
-        .btn-outline-secondary:hover {
-            background-color: var(--secondary-color);
-            color: #ffffff;
-            box-shadow: var(--neon-glow), 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .profile-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .profile-info p {
-            color: var(--text-color);
-            font-size: 1rem;
-        }
-
-        .work-experience-item {
-            margin-bottom: 2rem;
-            padding-left: 1rem;
-            border-left: 3px solid var(--accent-color);
-            transition: border-left 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .work-experience-item:hover {
-            border-left-color: var(--primary-color);
-            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
-        }
-
-        .responsibility-item {
-            margin-bottom: 2rem;
-            padding-left: 1.2rem;
-            border-left: 4px solid var(--accent-color);
-            transition: border-left 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.3s ease;
-        }
-
-        .responsibility-item:hover {
-            border-left-color: var(--primary-color);
-            transform: translateX(5px);
-            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
-        }
-
-        .work-experience-item h3,
-        .responsibility-item h3 {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .responsibility-item h4 {
-            color: #6c757d;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .work-experience-item ul {
-            margin-left: 20px;
-            list-style-type: disc;
-            animation: fadeIn 0.5s ease;
-            color: var(--text-color);
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .responsibility-item ul {
-            margin-left: 25px;
-            list-style-type: disc;
-            animation: fadeIn 0.5s ease;
-            color: var(--text-color);
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .work-experience-item h4 {
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .visible {
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .section-title {
-                font-size: 1.75rem;
-            }
-
-            .profile-info p,
-            ul li {
-                font-size: 0.95rem;
-            }
-
-            .navbar-brand {
-                font-size: 1.2rem;
-            }
-
-            .container {
-                padding: 1.5rem;
-            }
-
-            .page-fold {
-                padding: 1rem;
-            }
-        }
-
-        .d-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        p {
-            margin-bottom: 1.2rem;
-            color: var(--text-color);
-            font-weight: 400;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        ul {
-            padding-left: 25px;
-            margin-bottom: 1.5rem;
-            list-style-type: disc;
-            color: var(--text-color);
-            font-weight: 400;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        ul.list-inline {
-            list-style-type: none;
-            padding-left: 0;
-            margin-bottom: 0;
-        }
-
-        ul.list-inline li {
-            display: inline-block;
-            margin-right: 0.75rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .bg-secondary {
-            background-color: var(--secondary-color) !important;
-        }
-
-        .bg-secondary:hover {
-            background-color: var(--secondary-color) !important;
-        }
-
-        .language-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .language-item strong {
-            min-width: 90px;
-            font-weight: 600;
-            color: var(--text-color);
-            font-size: 1rem;
-        }
-
-        hr {
-            border-top: 1px solid #e0e0e0;
-            margin: 3rem 0;
-        }
-
-        #backToTop {
-            display: none;
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: var(--primary-color);
-            color: white;
-            cursor: pointer;
-            padding: 12px 16px;
-            border-radius: 50%;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            transition: background-color 0.3s ease;
-        }
-
-        #backToTop:hover {
-            background-color: #b80000;
-        }
-
-        .navbar {
-            background-color: var(--primary-color);
-            padding: 1rem;
-            border-bottom: 2px solid #720e0e;
-        }
-
-        .navbar-brand {
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 1.5rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-
-        .navbar-nav .nav-link {
-            color: #ffffff;
-            font-weight: 600;
-            margin-left: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #f8f9fa;
-        }
-
-        .navbar-toggler {
-            border-color: rgba(255, 255, 255, 0.5);
-        }
-
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-    </style>
+    @media (max-width:640px){
+        .masthead{padding:3rem 6vw 2rem;}
+        .edu-head, .ledger-head{flex-direction:column;align-items:flex-start;}
+    }
+</style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navya Neelamegam</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#section3">Education</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section4">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section5">Leadership</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section6">Campus Engagement</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section7">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section8">Interests</a></li>
-            </ul>
-        </div>
+<header class="masthead">
+    <div class="masthead-eyebrow">Résumé — Updated 2026</div>
+    <h1>Navya<br>Neelamegam</h1>
+    <div class="masthead-role">FINANCE (WHITMAN) × APPLIED DATA SCIENCE (ISCHOOL) — SYRACUSE UNIVERSITY, CLASS OF 2028</div>
+    <div class="masthead-links">
+        <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank" class="btn-sharp primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/navyaneel" target="_blank" class="btn-sharp"><i class="fab fa-github"></i> GitHub</a>
+        <a href="Resume.pdf" download class="btn-sharp"><i class="fas fa-download"></i> Download PDF</a>
     </div>
-</nav>
-<div class="container mt-5 mb-5 p-4">
-    <section id="section2" class="page-fold">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <div>
-                <h1>Navya Neelamegam</h1>
-            </div>
-            <div>
-                <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank"
-                   class="btn btn-outline-primary btn-sm"><i class="fab fa-linkedin me-2"></i> LinkedIn</a>
-                <a href="Resume.pdf" download
-                   aria-label="Download Navya Neelamegam's Resume as PDF"
-                   class="btn btn-outline-secondary btn-sm"><i class="fas fa-download me-2"></i> Download Resume PDF</a>
-            </div>
-        </div>
-        <div class="profile-info">
-            <p><i class="fas fa-phone me-2"></i> Phone: +1 (508) 215-8814</p>
-            <p><i class="fas fa-envelope me-2"></i> Email:
-                <a href="mailto:nneelame@syr.edu">nneelame@syr.edu</a> |
-                <a href="mailto:nav.neelamegam@gmail.com">nav.neelamegam@gmail.com</a></p>
-            <p><i class="fas fa-map-marker-alt me-2"></i> Ashland, MA</p>
-            <p><i class="fab fa-github me-2"></i> GitHub:
-                <a href="https://github.com/navyaneel" target="_blank">github.com/navyaneel</a></p>
-        </div>
-    </section>
+    <div class="contact-row">
+        <span><i class="fas fa-phone"></i>&nbsp; +1 (508) 215-8814</span>
+        <span><i class="fas fa-envelope"></i>&nbsp; <a href="mailto:nneelame@syr.edu">nneelame@syr.edu</a></span>
+        <span><i class="fas fa-envelope"></i>&nbsp; <a href="mailto:nav.neelamegam@gmail.com">nav.neelamegam@gmail.com</a></span>
+        <span><i class="fas fa-map-marker-alt"></i>&nbsp; Ashland, MA</span>
+    </div>
+</header>
 
-    <section id="section3" class="page-fold">
-        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-        <p><strong>Syracuse University, Syracuse, NY </strong> - (May 2025 - May 2028, Expected)
-        <ul>
-            <li><strong> Martin J. Whitman School of Management,</strong> Bachelor of Science: Finance </li>
-            <li><strong> School of Information Studies,</strong> Bachelor of Science: Applied Data Science</li>
-            <li> Renée Crown University <strong>Honors</strong> Student</li>
-            <li> <strong>Chancellor's Scholarship</strong> recipient</li>
-            <li> <strong>Invest in Success Scholarship</strong> recipient</li>
-            <li><strong>GPA </strong> 3.861/4.0, Dean's List</li>
-        </ul>
-        </p>
-        <p><strong>Indian Institute of Foreign Trade, Kakinada, AP </strong> – Bachelor of Science: Business Analytics (Freshman Year Study Abroad)
-            <br><em>September 2024 - May 2025</em></p>
-    </section>
-
-    <section id="section4" class="page-fold">
-        <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
-
-        <div class="work-experience-item">
-            <h3>Meteor Venture</h3>
-            <h4>Marketing Team Lead Intern | March 2025 – June 2025</h4>
-            <ul>
-                <li> Led a team of 3 consultants to develop an investor-facing fund brochure covering fund structure, deal flow process, and India startup market analysis for an early-stage angel network. </li>
-                <li> Synthesized macroeconomic data and VC growth trends into investor-ready deliverables to support Meteor Venture's external fundraising efforts. </li>
-            </ul>
-        </div>
-
-        <div class="work-experience-item">
-            <h3>Deepflock.ai</h3>
-            <h4>Student Intern | February 2025 – March 2025</h4>
-            <ul>
-                <li> Authored a 15-page research report on AI agent applications in FinTech covering fraud detection, credit risk assessment, algorithmic trading, and regulatory compliance. </li>
-                <li> Conducted competitive landscape analysis of ZestFinance, Bud Financial, and Upstart, evaluating ML architectures and market positioning for early-stage fintech applications. </li>
-            </ul>
-        </div>
-
-        <div class="work-experience-item">
-            <h3>Global Association of Economics Education (GAEE)</h3>
-            <h4>Research Associate | February 2025 – June 2025</h4>
-            <ul>
-                <li> Co-authored "The Price of Pink," selected for publication in the GAEE India Journal; conducted statistical analysis of 26 product pairs using R (t-tests, ANOVA, regression) to quantify gender-based pricing disparities in India. </li>
-                <li> Built a regression model estimating that the Pink Tax reduces women's monthly disposable income by ₹3,575, providing empirical evidence of its macroeconomic impact. </li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="section5" class="page-fold">
-        <h2 class="section-title"><i class="fas fa-trophy"></i> Leadership</h2>
-
-        <div class="responsibility-item">
-            <h3>Student Government Association</h3>
-            <h4>Finance Board Commissioner | April 2026 – Present</h4>
-            <ul>
-                <li> Appointed Finance Board Commissioner for Syracuse University's 70th SGA session; oversee funding allocation across 300+ student organizations managing a $4M+ annual student activity budget. </li>
-                <li> Review event and travel funding requests for compliance with SGA fiscal policy, collaborating with university administrators to ensure equitable distribution of student activity funds. </li>
-            </ul>
-        </div>
-
-        <div class="responsibility-item">
-            <h3>South Asian Student Association</h3>
-            <h4>VP of Finance | April 2026 – Present</h4>
-            <ul>
-                <li> Elected VP of Finance for 200+ member South Asian student organization; oversee $20K+ annual SGA budget across 15+ cultural and community events including Diwali, Holi, and Mock Shaadi. </li>
-                <li> Manage funding requisitions, reimbursement compliance, and budget allocation while coordinating with SGA to advocate for organizational funding priorities. </li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="section6" class="page-fold">
-        <h2 class="section-title"><i class="fas fa-users"></i> Campus Engagement</h2>
-
-        <div class="responsibility-item">
-            <h3>Investment Club</h3>
-            <h4>Member | September 2025 – Present</h4>
-            <ul>
-                <li> Collaborate within the Fixed Income Funds group to research and evaluate potential fund investments, analyzing market trends and fixed income instruments. </li>
-                <li> Participate in weekly investment discussions covering macroeconomic trends, portfolio strategy, and financial analysis. </li>
-            </ul>
-        </div>
-
-        <div class="responsibility-item">
-            <h3>Private Equity Club</h3>
-            <h4>Member | January 2026 – May 2026</h4>
-            <ul>
-                <li> Applied DCF valuation frameworks and financial statement analysis to evaluate prospective investment targets through hands-on club projects. </li>
-                <li> Developed foundational private equity skill set through technical modeling exercises and investment case reviews. </li>
-            </ul>
-        </div>
-
-        <div class="responsibility-item">
-            <h3>180 Degree Consulting (180 DC), Kakinada, AP</h3>
-            <h4>Lead Consultant | October 2024 – May 2025</h4>
-            <ul>
-                <li> Served as Lead Consultant delivering pro bono strategy engagements for non-profit clients, including advising Pay Your Tuition (PYT) on donor engagement and communication strategy. </li>
-                <li> Developed tailored marketing frameworks and presented strategic recommendations to non-profit leadership to strengthen long-term donor relationships. </li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="section7" class="page-fold">
-        <h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
-        <p><strong>Technical:</strong></p>
-        <ul class="list-inline">
-            <li class="list-inline-item badge bg-secondary"><i class="fas fa-code me-2"></i> R (ggplot2, statistical modeling)</li>
-            <li class="list-inline-item badge bg-secondary"><i class="fas fa-code me-2"></i> Python (pandas, Streamlit)</li>
-            <li class="list-inline-item badge bg-secondary"><i class="fas fa-file-excel me-2"></i> Excel (MOS: Excel Associate)</li>
-            <li class="list-inline-item badge bg-secondary"><i class="fas fa-calculator me-2"></i> Financial Modeling &amp; DCF Valuation</li>
-        </ul>
-        <p class="mt-3"><strong>Certifications:</strong></p>
-        <ul class="list-inline">
-            <li class="list-inline-item badge bg-secondary"><i class="fas fa-certificate me-2"></i> Google AI Essentials</li>
-            <li class="list-inline-item badge bg-secondary"><i class="fas fa-certificate me-2"></i> Generative AI for Everyone</li>
-        </ul>
-    </section>
-
-    <section id="section8" class="page-fold">
-        <h2 class="section-title"><i class="fas fa-heart"></i> Interests</h2>
-        <ul>
-            <li>Video editing &amp; content creation</li>
-            <li>South Asian dance (Co-Dance Captain, Desi Performance at Syracuse University)</li>
-            <li>Ice skating</li>
-            <li>Rock climbing</li>
-        </ul>
-    </section>
+<div class="ticker-wrap">
+    <div class="ticker-track">
+        <span>GPA 3.861/4.0</span><span class="sep">•</span>
+        <span>CHANCELLOR'S SCHOLAR</span><span class="sep">•</span>
+        <span>RENÉE CROWN HONORS</span><span class="sep">•</span>
+        <span>INVEST IN SUCCESS SCHOLAR</span><span class="sep">•</span>
+        <span>SGA FINANCE BOARD COMMISSIONER</span><span class="sep">•</span>
+        <span>$4M+ BUDGET OVERSIGHT</span><span class="sep">•</span>
+        <span>PUBLISHED — GAEE INDIA JOURNAL</span><span class="sep">•</span>
+        <span>GPA 3.861/4.0</span><span class="sep">•</span>
+        <span>CHANCELLOR'S SCHOLAR</span><span class="sep">•</span>
+        <span>RENÉE CROWN HONORS</span><span class="sep">•</span>
+        <span>INVEST IN SUCCESS SCHOLAR</span><span class="sep">•</span>
+        <span>SGA FINANCE BOARD COMMISSIONER</span><span class="sep">•</span>
+        <span>$4M+ BUDGET OVERSIGHT</span><span class="sep">•</span>
+        <span>PUBLISHED — GAEE INDIA JOURNAL</span><span class="sep">•</span>
+    </div>
 </div>
 
-<footer class="text-center mt-5 mb-3">
-    <a href="#top" class="btn btn-outline-primary btn-sm"><i class="fas fa-arrow-up me-1"></i> Back to Top</a>
-    <p class="mt-2 small">© 2026 Navya Neelamegam</p>
+<nav class="subnav">
+    <div class="wrap">
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#campus">Campus Engagement</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interests</a>
+    </div>
+</nav>
+
+<div class="wrap">
+
+    <section id="education">
+        <div class="section-eyebrow">01 / Academic Record</div>
+        <h2 class="section-title">Education</h2>
+
+        <div class="edu-block">
+            <div class="edu-head">
+                <h3>Syracuse University, Syracuse, NY</h3>
+                <span class="edu-dates mono">May 2025 – May 2028 (Expected)</span>
+            </div>
+            <div class="edu-sub">Martin J. Whitman School of Management, B.S. Finance &nbsp;·&nbsp; School of Information Studies, B.S. Applied Data Science</div>
+            <div class="tags">
+                <span class="tag gold">GPA 3.861/4.0</span>
+                <span class="tag">Renée Crown Honors</span>
+                <span class="tag">Chancellor's Scholarship</span>
+                <span class="tag">Invest in Success Scholarship</span>
+                <span class="tag">Dean's List</span>
+            </div>
+        </div>
+
+        <div class="edu-block">
+            <div class="edu-head">
+                <h3>Indian Institute of Foreign Trade, Kakinada, AP</h3>
+                <span class="edu-dates mono">Sep 2024 – May 2025</span>
+            </div>
+            <div class="edu-sub">B.S. Business Analytics (Freshman Year Study Abroad)</div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="section-eyebrow">02 / Track Record</div>
+        <h2 class="section-title">Work Experience</h2>
+
+        <div class="ledger">
+            <div class="ledger-head">
+                <h3>Meteor Venture</h3>
+                <span class="ledger-dates mono">Mar 2025 – Jun 2025</span>
+            </div>
+            <div class="ledger-role">Marketing Team Lead Intern</div>
+            <ul>
+                <li>Led a team of 3 consultants to develop an investor-facing fund brochure covering fund structure, deal flow process, and India startup market analysis for an early-stage angel network.</li>
+                <li>Synthesized macroeconomic data and VC growth trends into investor-ready deliverables to support Meteor Venture's external fundraising efforts.</li>
+            </ul>
+        </div>
+
+        <div class="ledger">
+            <div class="ledger-head">
+                <h3>Deepflock.ai</h3>
+                <span class="ledger-dates mono">Feb 2025 – Mar 2025</span>
+            </div>
+            <div class="ledger-role">Student Intern</div>
+            <ul>
+                <li>Authored a 15-page research report on AI agent applications in FinTech covering fraud detection, credit risk assessment, algorithmic trading, and regulatory compliance.</li>
+                <li>Conducted competitive landscape analysis of ZestFinance, Bud Financial, and Upstart, evaluating ML architectures and market positioning for early-stage fintech applications.</li>
+            </ul>
+        </div>
+
+        <div class="ledger">
+            <div class="ledger-head">
+                <h3>Global Association of Economics Education (GAEE)</h3>
+                <span class="ledger-dates mono">Feb 2025 – Jun 2025</span>
+            </div>
+            <div class="ledger-role">Research Associate</div>
+            <ul>
+                <li>Co-authored "The Price of Pink," selected for publication in the GAEE India Journal; conducted statistical analysis of 26 product pairs using R (t-tests, ANOVA, regression) to quantify gender-based pricing disparities in India.</li>
+                <li>Built a regression model estimating that the Pink Tax reduces women's monthly disposable income by ₹3,575, providing empirical evidence of its macroeconomic impact.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="leadership">
+        <div class="section-eyebrow">03 / Governance</div>
+        <h2 class="section-title">Leadership</h2>
+
+        <div class="ledger">
+            <div class="ledger-head">
+                <h3>Student Government Association</h3>
+                <span class="ledger-dates mono">Apr 2026 – Present</span>
+            </div>
+            <div class="ledger-role">Finance Board Commissioner</div>
+            <ul>
+                <li>Appointed Finance Board Commissioner for Syracuse University's 70th SGA session; oversee funding allocation across 300+ student organizations managing a $4M+ annual student activity budget.</li>
+                <li>Review event and travel funding requests for compliance with SGA fiscal policy, collaborating with university administrators to ensure equitable distribution of student activity funds.</li>
+            </ul>
+        </div>
+
+        <div class="ledger">
+            <div class="ledger-head">
+                <h3>South Asian Student Association</h3>
+                <span class="ledger-dates mono">Apr 2026 – Present</span>
+            </div>
+            <div class="ledger-role">VP of Finance</div>
+            <ul>
+                <li>Elected VP of Finance for 200+ member South Asian student organization; oversee $20K+ annual SGA budget across 15+ cultural and community events including Diwali, Holi, and Mock Shaadi.</li>
+                <li>Manage funding requisitions, reimbursement compliance, and budget allocation while coordinating with SGA to advocate for organizational funding priorities.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="campus">
+        <div class="section-eyebrow">04 / Beyond the Classroom</div>
+        <h2 class="section-title">Campus Engagement</h2>
+
+        <div class="ledger">
+            <div class="ledger-head">
+                <h3>Investment Club</h3>
+                <span class="ledger-dates mono">Sep 2025 – Present</span>
+            </div>
+            <div class="ledger-role">Member</div>
+            <ul>
+                <li>Collaborate within the Fixed Income Funds group to research and evaluate potential fund investments, analyzing market trends and fixed income instruments.</li>
+                <li>Participate in weekly investment discussions covering macroeconomic trends, portfolio strategy, and financial analysis.</li>
+            </ul>
+        </div>
+
+        <div class="ledger">
+            <div class="ledger-head">
+                <h3>Private Equity Club</h3>
+                <span class="ledger-dates mono">Jan 2026 – May 2026</span>
+            </div>
+            <div class="ledger-role">Member</div>
+            <ul>
+                <li>Applied DCF valuation frameworks and financial statement analysis to evaluate prospective investment targets through hands-on club projects.</li>
+                <li>Developed foundational private equity skill set through technical modeling exercises and investment case reviews.</li>
+            </ul>
+        </div>
+
+        <div class="ledger">
+            <div class="ledger-head">
+                <h3>180 Degree Consulting (180 DC), Kakinada, AP</h3>
+                <span class="ledger-dates mono">Oct 2024 – May 2025</span>
+            </div>
+            <div class="ledger-role">Lead Consultant</div>
+            <ul>
+                <li>Served as Lead Consultant delivering pro bono strategy engagements for non-profit clients, including advising Pay Your Tuition (PYT) on donor engagement and communication strategy.</li>
+                <li>Developed tailored marketing frameworks and presented strategic recommendations to non-profit leadership to strengthen long-term donor relationships.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-eyebrow">05 / Toolkit</div>
+        <h2 class="section-title">Skills</h2>
+        <p class="mono" style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-bottom:.7rem;">Technical</p>
+        <div class="tags" style="margin-bottom:1.8rem;">
+            <span class="tag gold">R — ggplot2, statistical modeling</span>
+            <span class="tag gold">Python — pandas, Streamlit</span>
+            <span class="tag gold">Excel — MOS Excel Associate</span>
+            <span class="tag gold">Financial Modeling &amp; DCF Valuation</span>
+        </div>
+        <p class="mono" style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-bottom:.7rem;">Certifications</p>
+        <div class="tags">
+            <span class="tag">Google AI Essentials</span>
+            <span class="tag">Generative AI for Everyone</span>
+        </div>
+    </section>
+
+    <section id="interests">
+        <div class="section-eyebrow">06 / Off the Clock</div>
+        <h2 class="section-title">Interests</h2>
+        <div class="interest-row">
+            <span class="tag">Video Editing &amp; Content Creation</span>
+            <span class="tag">South Asian Dance — Co-Dance Captain, Desi Performance</span>
+            <span class="tag">Ice Skating</span>
+            <span class="tag">Rock Climbing</span>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    © 2026 Navya Neelamegam — <a href="#top">Back to top</a>
 </footer>
 
 <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
-<script>
-    function toggleTheme() {
-        document.body.classList.toggle('dark-theme');
-        document.body.classList.toggle('light-theme');
-        localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme');
-    }
-</script>
-
-<button onclick="topFunction()" id="backToTop" title="Go to top">↑</button>
-<script>
-    let btn = document.getElementById("backToTop");
-    window.onscroll = () => {
-        btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
-    };
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-</script>
+<button onclick="topFunction()" id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('theme-toggle');
-
-    if (!toggleButton) {
-        console.error('Theme toggle button not found!');
-        return;
-    }
-
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem('theme');
-
-    document.body.classList.add(savedTheme || (prefersDark ? 'dark-theme' : 'light-theme'));
-
+    if (savedTheme === 'dark-theme' || (!savedTheme && prefersDark)) {
+        document.body.classList.add('dark-theme');
+        toggleButton.textContent = '☀️';
+    }
     toggleButton.addEventListener('click', () => {
-        const isDark = document.body.classList.contains('dark-theme');
-        document.body.classList.toggle('dark-theme', !isDark);
-        document.body.classList.toggle('light-theme', isDark);
-        localStorage.setItem('theme', !isDark ? 'dark-theme' : 'light-theme');
+        const isDark = document.body.classList.toggle('dark-theme');
+        toggleButton.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDark ? 'dark-theme' : 'light-theme');
     });
-});
-</script>
 
-<script>
+    let btn = document.getElementById("backToTop");
+    window.onscroll = () => {
+        btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "flex" : "none";
+    };
+
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('visible');
         });
-    }, {threshold: 0.1});
-
-    document.querySelectorAll('.page-fold').forEach(section => {
-        observer.observe(section);
-    });
+    }, {threshold: 0.08});
+    document.querySelectorAll('section').forEach(s => observer.observe(s));
+});
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 </script>
 
 </body>
