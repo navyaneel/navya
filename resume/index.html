@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Navya Neelamegam's professional resume - Finance & Applied Data Science, Syracuse University.">
+<meta name="description" content="Navya Neelamegam - Finance & Applied Data Science, Syracuse University. Quant finance, ML, credit risk, portfolio optimization.">
 <meta name="author" content="Navya Neelamegam">
 <meta property="og:title" content="Navya Neelamegam - Resume">
-<meta property="og:url" content="https://navyaneel.github.io/navya/index.html">
+<meta property="og:url" content="https://navyaneel.github.io/navya/resume/index.html">
 <script src="https://kit.fontawesome.com/1776f237ea.js" crossorigin="anonymous"></script>
 <title>Navya Neelamegam — Resume</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,308 +15,125 @@
 <link rel="icon" href="favicon.ico">
 <style>
     :root{
-        --ink:#0E1420;
-        --paper:#F6F5F1;
-        --chalk:#FFFFFF;
-        --steel:#46566B;
-        --steel-soft:#8A93A0;
-        --brass:#B08D2B;
-        --brass-bright:#E3B94A;
-        --brass-deep:#8C6E1E;
-        --hairline:#D9D6CC;
-        --up:#1E8A5A;
+        --ink:#0E1420; --paper:#F6F5F1; --chalk:#FFFFFF;
+        --steel:#46566B; --steel-soft:#8A93A0;
+        --brass:#B08D2B; --brass-bright:#E3B94A; --brass-deep:#8C6E1E;
+        --hairline:#D9D6CC; --up:#1E8A5A;
     }
     *{box-sizing:border-box;}
     html{scroll-behavior:smooth;}
-    body{
-        margin:0;
-        background:var(--paper);
-        color:var(--ink);
-        font-family:'Inter',sans-serif;
-        font-size:16px;
-        line-height:1.65;
-        -webkit-font-smoothing:antialiased;
-    }
-    body.dark-theme{
-        --paper:#0E1420;
-        --chalk:#171F2E;
-        --ink:#F3F1EA;
-        --steel:#B7C0CC;
-        --steel-soft:#7C8798;
-        --hairline:#2A3344;
-    }
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+    body.dark-theme{--paper:#0E1420;--chalk:#171F2E;--ink:#F3F1EA;--steel:#B7C0CC;--steel-soft:#7C8798;--hairline:#2A3344;}
     .mono{font-family:'IBM Plex Mono',monospace;}
     a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--brass);transition:opacity .15s ease;}
     a:hover{opacity:.65;}
 
-    /* ===== MASTHEAD with animated chart line ===== */
-    .masthead{
-        background:var(--ink);
-        color:var(--paper);
-        padding:5rem 4vw 0;
-        position:relative;
-        overflow:hidden;
-    }
+    /* MASTHEAD */
+    .masthead{background:var(--ink);color:var(--paper);padding:5rem 4vw 0;position:relative;overflow:hidden;}
     body.dark-theme .masthead{background:#080B12;}
-    .masthead-inner{
-        max-width:1400px;
-        margin:0 auto;
-        position:relative;
-        z-index:2;
-    }
-    .chart-svg{
-        position:absolute;
-        top:0; right:0;
-        width:70%;
-        height:100%;
-        z-index:1;
-        opacity:.55;
-    }
-    .chart-svg path.line{
-        fill:none;
-        stroke:var(--brass);
-        stroke-width:2.5;
-        stroke-linecap:round;
-        stroke-dasharray:2200;
-        stroke-dashoffset:2200;
-        animation:draw 2.6s cubic-bezier(.4,0,.2,1) forwards .3s;
-    }
-    .chart-svg path.fill{
-        fill:url(#chartGradient);
-        opacity:0;
-        animation:fadein 1.5s ease forwards 1.6s;
-    }
+    .masthead-inner{max-width:1400px;margin:0 auto;position:relative;z-index:2;}
+    .chart-svg{position:absolute;top:0;right:0;width:70%;height:100%;z-index:1;opacity:.55;}
+    .chart-svg path.line{fill:none;stroke:var(--brass);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:2200;stroke-dashoffset:2200;animation:draw 2.6s cubic-bezier(.4,0,.2,1) forwards .3s;}
+    .chart-svg path.fill{fill:url(#chartGradient);opacity:0;animation:fadein 1.5s ease forwards 1.6s;}
     @keyframes draw{to{stroke-dashoffset:0;}}
     @keyframes fadein{to{opacity:1;}}
-
-    .masthead-eyebrow{
-        font-family:'IBM Plex Mono',monospace;
-        font-size:.78rem;
-        letter-spacing:.18em;
-        text-transform:uppercase;
-        color:var(--brass-bright);
-        margin-bottom:1.1rem;
-    }
-    .masthead h1{
-        font-family:'Fraunces',serif;
-        font-weight:700;
-        font-size:clamp(3rem,7vw,6.5rem);
-        line-height:.95;
-        letter-spacing:-.01em;
-        margin:0 0 1.1rem;
-        color:var(--paper);
-    }
-    .masthead-role{
-        font-family:'IBM Plex Mono',monospace;
-        font-size:clamp(.85rem,1.2vw,1.05rem);
-        color:#C7CCD6;
-        letter-spacing:.02em;
-        margin-bottom:2.2rem;
-        max-width:700px;
-    }
-    .masthead-links{
-        display:flex;
-        flex-wrap:wrap;
-        gap:.75rem;
-        margin-bottom:2.4rem;
-    }
-    .btn-sharp{
-        font-family:'IBM Plex Mono',monospace;
-        font-size:.8rem;
-        letter-spacing:.04em;
-        text-transform:uppercase;
-        padding:.7rem 1.3rem;
-        border:1px solid rgba(255,255,255,.22);
-        color:var(--paper);
-        background:transparent;
-        transition:background .15s ease, color .15s ease, transform .15s ease;
-        display:inline-flex;
-        align-items:center;
-        gap:.5rem;
-    }
+    .masthead-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-bright);margin-bottom:1.1rem;}
+    .masthead h1{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(2.6rem,6vw,5.6rem);line-height:.97;letter-spacing:-.01em;margin:0 0 1.1rem;color:var(--paper);}
+    .masthead-headline{font-family:'Inter',sans-serif;font-size:clamp(.95rem,1.4vw,1.15rem);color:#DCE0E6;max-width:760px;margin-bottom:1.4rem;font-weight:500;}
+    .masthead-role{font-family:'IBM Plex Mono',monospace;font-size:clamp(.8rem,1.1vw,.95rem);color:#9AA3B0;letter-spacing:.02em;margin-bottom:2.2rem;max-width:700px;}
+    .masthead-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2.4rem;}
+    .btn-sharp{font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;padding:.7rem 1.3rem;border:1px solid rgba(255,255,255,.22);color:var(--paper);background:transparent;transition:background .15s ease,color .15s ease,transform .15s ease;display:inline-flex;align-items:center;gap:.5rem;}
     .btn-sharp:hover{background:var(--brass);border-color:var(--brass);color:var(--ink);opacity:1;transform:translateY(-2px);}
     .btn-sharp.primary{background:var(--brass);color:var(--ink);border-color:var(--brass);}
     .btn-sharp.primary:hover{background:transparent;color:var(--paper);border-color:rgba(255,255,255,.22);}
-
-    .contact-row{
-        display:flex;
-        flex-wrap:wrap;
-        gap:1.8rem;
-        font-family:'IBM Plex Mono',monospace;
-        font-size:.82rem;
-        color:#AEB6C2;
-        padding-bottom:2.6rem;
-    }
+    .contact-row{display:flex;flex-wrap:wrap;gap:1.8rem;font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:#AEB6C2;padding-bottom:2.6rem;}
     .contact-row a{color:#DCE0E6;border-bottom:1px solid rgba(255,255,255,.25);}
 
-    /* ===== KPI DASHBOARD STRIP ===== */
-    .kpi-strip{
-        background:var(--chalk);
-        border-bottom:1px solid var(--hairline);
-    }
-    .kpi-grid{
-        max-width:1400px;
-        margin:0 auto;
-        display:grid;
-        grid-template-columns:repeat(4,1fr);
-    }
-    .kpi{
-        padding:2rem 1.5rem;
-        border-right:1px solid var(--hairline);
-        text-align:left;
-    }
+    /* KPI */
+    .kpi-strip{background:var(--chalk);border-bottom:1px solid var(--hairline);}
+    .kpi-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+    .kpi{padding:2rem 1.5rem;border-right:1px solid var(--hairline);}
     .kpi:last-child{border-right:none;}
-    .kpi-label{
-        font-family:'IBM Plex Mono',monospace;
-        font-size:.72rem;
-        letter-spacing:.1em;
-        text-transform:uppercase;
-        color:var(--steel);
-        margin-bottom:.4rem;
-    }
-    .kpi-value{
-        font-family:'Fraunces',serif;
-        font-weight:700;
-        font-size:clamp(1.6rem,2.4vw,2.4rem);
-        color:var(--ink);
-        display:flex;
-        align-items:baseline;
-        gap:.3rem;
-    }
+    .kpi-label{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-bottom:.4rem;}
+    .kpi-value{font-family:'Fraunces',serif;font-weight:700;font-size:clamp(1.5rem,2.2vw,2.2rem);color:var(--ink);display:flex;align-items:baseline;gap:.3rem;}
     .kpi-value .unit{font-size:.5em;color:var(--brass-deep);font-family:'IBM Plex Mono',monospace;font-weight:600;}
-    .kpi-tick{font-size:.75rem;color:var(--up);margin-left:.4rem;}
+    .kpi-tick{font-size:.72rem;color:var(--up);margin-left:.4rem;font-family:'IBM Plex Mono',monospace;}
 
-    /* ===== TICKER ===== */
-    .ticker-wrap{
-        background:var(--brass);
-        color:var(--ink);
-        overflow:hidden;
-        white-space:nowrap;
-        border-bottom:1px solid var(--brass-deep);
-    }
-    .ticker-track{
-        display:inline-block;
-        padding-left:100%;
-        animation:ticker 30s linear infinite;
-        font-family:'IBM Plex Mono',monospace;
-        font-size:.8rem;
-        font-weight:600;
-        letter-spacing:.03em;
-        text-transform:uppercase;
-        padding-top:.5rem;
-        padding-bottom:.5rem;
-    }
+    /* TICKER */
+    .ticker-wrap{background:var(--brass);color:var(--ink);overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--brass-deep);}
+    .ticker-track{display:inline-block;padding-left:100%;animation:ticker 38s linear infinite;font-family:'IBM Plex Mono',monospace;font-size:.8rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding-top:.5rem;padding-bottom:.5rem;}
     .ticker-track span{margin:0 1.3rem;}
     .ticker-track span.sep{color:var(--brass-deep);}
     @keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
-    @media (prefers-reduced-motion: reduce){
-        .ticker-track{animation:none;padding-left:0;}
-        .chart-svg path.line{animation:none;stroke-dashoffset:0;}
-        .chart-svg path.fill{animation:none;opacity:1;}
-    }
+    @media (prefers-reduced-motion: reduce){.ticker-track{animation:none;padding-left:0;}.chart-svg path.line{animation:none;stroke-dashoffset:0;}.chart-svg path.fill{animation:none;opacity:1;}}
 
-    /* ===== TWO-COLUMN WIDE LAYOUT ===== */
-    .page{
-        max-width:1400px;
-        margin:0 auto;
-        display:grid;
-        grid-template-columns:300px 1fr;
-        gap:0;
-    }
-    aside.rail{
-        border-right:1px solid var(--hairline);
-        padding:3rem 2rem 3rem 4vw;
-        position:sticky;
-        top:0;
-        align-self:start;
-        height:100vh;
-        overflow-y:auto;
-    }
-    .rail h4{
-        font-family:'IBM Plex Mono',monospace;
-        font-size:.74rem;
-        letter-spacing:.12em;
-        text-transform:uppercase;
-        color:var(--brass-deep);
-        margin:0 0 .9rem;
-        padding-top:1.6rem;
-        border-top:1px solid var(--hairline);
-    }
+    /* LAYOUT */
+    .page{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:300px 1fr;gap:0;}
+    aside.rail{border-right:1px solid var(--hairline);padding:3rem 2rem 3rem 4vw;position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;}
+    .rail h4{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brass-deep);margin:0 0 .9rem;padding-top:1.5rem;border-top:1px solid var(--hairline);}
     .rail h4:first-child{padding-top:0;border-top:none;}
-    .rail nav{display:flex;flex-direction:column;gap:.55rem;margin-bottom:.4rem;}
-    .rail nav a{
-        font-family:'IBM Plex Mono',monospace;
-        font-size:.82rem;
-        color:var(--steel);
-        border-bottom:none;
-    }
+    .rail nav{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.4rem;}
+    .rail nav a{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--steel);border-bottom:none;}
     .rail nav a:hover{color:var(--brass-deep);opacity:1;}
-    .rail .tags{display:flex;flex-wrap:wrap;gap:.4rem;}
-
+    .rail .tags{display:flex;flex-wrap:wrap;gap:.35rem;}
+    .rail .lang-list{display:flex;flex-direction:column;gap:.35rem;}
+    .rail .lang-row{display:flex;justify-content:space-between;font-size:.78rem;color:var(--steel);}
+    .rail .lang-row strong{color:var(--ink);font-weight:600;}
     main.content{padding:3rem 4vw 4rem 3rem;}
 
-    section{
-        padding-bottom:3rem;
-        margin-bottom:3rem;
-        border-bottom:1px solid var(--hairline);
-        opacity:0;
-        transform:translateY(14px);
-        transition:opacity .5s ease, transform .5s ease;
-    }
+    section{padding-bottom:2.8rem;margin-bottom:2.8rem;border-bottom:1px solid var(--hairline);opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease;}
     section.visible{opacity:1;transform:translateY(0);}
     section:last-of-type{border-bottom:none;}
+    .section-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:.6rem;}
+    .section-title{font-family:'Fraunces',serif;font-weight:600;font-size:2rem;margin:0 0 1.6rem;color:var(--ink);}
+    .lede{color:var(--steel);font-size:1.02rem;line-height:1.75;max-width:760px;}
+    .lede strong{color:var(--ink);}
 
-    .section-eyebrow{
-        font-family:'IBM Plex Mono',monospace;
-        font-size:.76rem;
-        letter-spacing:.14em;
-        text-transform:uppercase;
-        color:var(--brass-deep);
-        margin-bottom:.6rem;
-    }
-    .section-title{
-        font-family:'Fraunces',serif;
-        font-weight:600;
-        font-size:2.1rem;
-        margin:0 0 1.8rem;
-        color:var(--ink);
-    }
-
-    .edu-block{margin-bottom:1.6rem;}
+    /* Education */
+    .edu-block{margin-bottom:1.7rem;}
     .edu-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.4rem;margin-bottom:.3rem;}
-    .edu-head h3{font-size:1.2rem;font-weight:700;margin:0;}
-    .edu-dates{font-family:'IBM Plex Mono',monospace;font-size:.82rem;color:var(--steel);}
-    .edu-sub{color:var(--steel);font-size:.97rem;margin-bottom:.6rem;}
-    .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem;}
-    .tag{
-        font-family:'IBM Plex Mono',monospace;
-        font-size:.74rem;
-        letter-spacing:.02em;
-        padding:.32rem .65rem;
-        border:1px solid var(--hairline);
-        color:var(--steel);
-        background:var(--chalk);
-    }
+    .edu-head h3{font-size:1.15rem;font-weight:700;margin:0;}
+    .edu-dates{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--steel);white-space:nowrap;}
+    .edu-sub{color:var(--steel);font-size:.95rem;margin-bottom:.5rem;}
+    .edu-note{color:var(--steel-soft);font-size:.88rem;margin-bottom:.5rem;}
+    .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem;}
+    .tag{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.02em;padding:.3rem .6rem;border:1px solid var(--hairline);color:var(--steel);background:var(--chalk);}
     .tag.gold{border-color:var(--brass);color:var(--brass-deep);}
 
+    /* Ledger */
+    .subhead{font-family:'IBM Plex Mono',monospace;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin:1.6rem 0 1rem;}
+    .subhead:first-child{margin-top:0;}
     .ledger-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:0 3rem;}
-    .ledger{
-        border-left:2px solid var(--hairline);
-        padding-left:1.3rem;
-        margin-bottom:2.2rem;
-        transition:border-color .18s ease, transform .18s ease;
-    }
+    .ledger{border-left:2px solid var(--hairline);padding-left:1.2rem;margin-bottom:2rem;transition:border-color .18s ease,transform .18s ease;}
     .ledger:hover{border-left-color:var(--brass);transform:translateX(3px);}
     .ledger-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.3rem .8rem;margin-bottom:.15rem;}
-    .ledger-head h3{font-size:1.18rem;font-weight:700;margin:0;color:var(--ink);}
-    .ledger-dates{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--steel);white-space:nowrap;}
-    .ledger-role{font-style:italic;color:var(--brass-deep);font-size:.96rem;margin-bottom:.7rem;}
-    .ledger ul{margin:0;padding-left:1.2rem;color:var(--steel);}
-    .ledger li{margin-bottom:.45rem;font-size:.97rem;line-height:1.6;}
+    .ledger-head h3{font-size:1.1rem;font-weight:700;margin:0;color:var(--ink);}
+    .ledger-dates{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--steel);white-space:nowrap;}
+    .ledger-role{font-style:italic;color:var(--brass-deep);font-size:.93rem;margin-bottom:.6rem;}
+    .ledger ul{margin:0;padding-left:1.1rem;color:var(--steel);}
+    .ledger li{margin-bottom:.4rem;font-size:.94rem;line-height:1.6;}
     .ledger li::marker{color:var(--brass);}
 
-    .interest-row{display:flex;flex-wrap:wrap;gap:.7rem;}
-    .interest-row .tag{padding:.5rem .9rem;font-size:.82rem;}
+    .early-list{border:1px solid var(--hairline);}
+    .early-row{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.4rem 1rem;padding:.85rem 1.1rem;border-bottom:1px solid var(--hairline);}
+    .early-row:last-child{border-bottom:none;}
+    .early-role{font-weight:600;font-size:.92rem;}
+    .early-org{color:var(--steel);font-size:.88rem;}
+    .early-dates{font-family:'IBM Plex Mono',monospace;font-size:.76rem;color:var(--steel-soft);white-space:nowrap;}
+
+    /* Projects */
+    .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:1.6rem;}
+    .proj-card{border:1px solid var(--hairline);padding:1.4rem;background:var(--chalk);transition:border-color .18s ease,transform .18s ease;}
+    .proj-card:hover{border-color:var(--brass);transform:translateY(-3px);}
+    .proj-head{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;margin-bottom:.3rem;}
+    .proj-head h3{font-size:1.05rem;font-weight:700;margin:0;}
+    .proj-dates{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--steel-soft);white-space:nowrap;}
+    .proj-desc{color:var(--steel);font-size:.92rem;line-height:1.6;margin-bottom:.8rem;}
+    .proj-link{font-family:'IBM Plex Mono',monospace;font-size:.76rem;}
+
+    /* Skills */
+    .skill-tag{display:inline-flex;align-items:center;gap:.4rem;}
+    .skill-count{font-size:.68rem;color:var(--brass-deep);background:rgba(176,141,43,.12);padding:.05rem .35rem;}
 
     footer{text-align:center;padding:2.5rem 0 3rem;font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--steel-soft);}
     footer a{border-bottom:none;color:var(--steel-soft);}
@@ -329,14 +146,12 @@
         aside.rail{position:static;height:auto;border-right:none;border-bottom:1px solid var(--hairline);padding:2rem 6vw;}
         main.content{padding:2.5rem 6vw;}
         .kpi-grid{grid-template-columns:repeat(2,1fr);}
-        .kpi:nth-child(2){border-right:none;}
-        .kpi:nth-child(3){border-top:1px solid var(--hairline);}
-        .kpi:nth-child(4){border-top:1px solid var(--hairline);}
+        .kpi:nth-child(3),.kpi:nth-child(4){border-top:1px solid var(--hairline);}
         .chart-svg{width:100%;opacity:.35;}
     }
     @media (max-width:640px){
         .masthead{padding:3rem 6vw 0;}
-        .edu-head, .ledger-head{flex-direction:column;align-items:flex-start;}
+        .edu-head,.ledger-head,.early-row{flex-direction:column;align-items:flex-start;}
         .kpi-grid{grid-template-columns:1fr 1fr;}
     }
 </style>
@@ -345,18 +160,17 @@
 
 <header class="masthead">
     <svg class="chart-svg" viewBox="0 0 800 400" preserveAspectRatio="none">
-        <defs>
-            <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#B08D2B" stop-opacity="0.35"/>
-                <stop offset="100%" stop-color="#B08D2B" stop-opacity="0"/>
-            </linearGradient>
-        </defs>
+        <defs><linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#B08D2B" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#B08D2B" stop-opacity="0"/>
+        </linearGradient></defs>
         <path class="fill" d="M0,320 L60,300 L120,310 L180,260 L240,270 L300,210 L360,225 L420,170 L480,185 L540,120 L600,140 L660,90 L720,100 L800,40 L800,400 L0,400 Z"/>
         <path class="line" d="M0,320 L60,300 L120,310 L180,260 L240,270 L300,210 L360,225 L420,170 L480,185 L540,120 L600,140 L660,90 L720,100 L800,40"/>
     </svg>
     <div class="masthead-inner">
         <div class="masthead-eyebrow">Résumé — Updated 2026</div>
         <h1>Navya<br>Neelamegam</h1>
+        <div class="masthead-headline">Syracuse Finance + Applied Data Science · Passionate about Quant Finance &amp; ML · LSTM · Credit Risk · Portfolio Optimization · Renée Crown Honors</div>
         <div class="masthead-role">FINANCE (WHITMAN) × APPLIED DATA SCIENCE (ISCHOOL) — SYRACUSE UNIVERSITY, CLASS OF 2028</div>
         <div class="masthead-links">
             <a href="https://www.linkedin.com/in/navyaneelamegam/" target="_blank" class="btn-sharp primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -374,22 +188,10 @@
 
 <div class="kpi-strip">
     <div class="kpi-grid">
-        <div class="kpi">
-            <div class="kpi-label">GPA</div>
-            <div class="kpi-value"><span class="counter" data-target="3.861" data-decimals="3">0</span><span class="unit">/4.0</span></div>
-        </div>
-        <div class="kpi">
-            <div class="kpi-label">Student Activity Budget Overseen</div>
-            <div class="kpi-value">$<span class="counter" data-target="4">0</span><span class="unit">M+</span></div>
-        </div>
-        <div class="kpi">
-            <div class="kpi-label">Student Orgs Served</div>
-            <div class="kpi-value"><span class="counter" data-target="300">0</span><span class="unit">+</span></div>
-        </div>
-        <div class="kpi">
-            <div class="kpi-label">Research</div>
-            <div class="kpi-value" style="font-size:1.15rem;">Published<span class="kpi-tick">GAEE India Journal</span></div>
-        </div>
+        <div class="kpi"><div class="kpi-label">GPA</div><div class="kpi-value"><span class="counter" data-target="3.861" data-decimals="3">0</span><span class="unit">/4.0</span></div></div>
+        <div class="kpi"><div class="kpi-label">Budget Overseen (SGA)</div><div class="kpi-value">$<span class="counter" data-target="4">0</span><span class="unit">M+</span></div></div>
+        <div class="kpi"><div class="kpi-label">Student Orgs Served</div><div class="kpi-value"><span class="counter" data-target="300">0</span><span class="unit">+</span></div></div>
+        <div class="kpi"><div class="kpi-label">Research</div><div class="kpi-value" style="font-size:1.1rem;">Published<span class="kpi-tick">GAEE India Journal '26</span></div></div>
     </div>
 </div>
 
@@ -397,16 +199,20 @@
     <div class="ticker-track">
         <span>CHANCELLOR'S SCHOLAR</span><span class="sep">•</span>
         <span>RENÉE CROWN HONORS</span><span class="sep">•</span>
-        <span>INVEST IN SUCCESS SCHOLAR</span><span class="sep">•</span>
         <span>SGA FINANCE BOARD COMMISSIONER</span><span class="sep">•</span>
         <span>SASA VP OF FINANCE</span><span class="sep">•</span>
-        <span>"THE PRICE OF PINK" — 26 PRODUCT PAIRS ANALYZED</span><span class="sep">•</span>
+        <span>FYS 101 PEER LEADER & TA</span><span class="sep">•</span>
+        <span>"THE PRICE OF PINK" — GAEE INDIA JOURNAL</span><span class="sep">•</span>
+        <span>4 END-TO-END ML/QUANT PROJECTS</span><span class="sep">•</span>
+        <span>6 LANGUAGES</span><span class="sep">•</span>
         <span>CHANCELLOR'S SCHOLAR</span><span class="sep">•</span>
         <span>RENÉE CROWN HONORS</span><span class="sep">•</span>
-        <span>INVEST IN SUCCESS SCHOLAR</span><span class="sep">•</span>
         <span>SGA FINANCE BOARD COMMISSIONER</span><span class="sep">•</span>
         <span>SASA VP OF FINANCE</span><span class="sep">•</span>
-        <span>"THE PRICE OF PINK" — 26 PRODUCT PAIRS ANALYZED</span><span class="sep">•</span>
+        <span>FYS 101 PEER LEADER & TA</span><span class="sep">•</span>
+        <span>"THE PRICE OF PINK" — GAEE INDIA JOURNAL</span><span class="sep">•</span>
+        <span>4 END-TO-END ML/QUANT PROJECTS</span><span class="sep">•</span>
+        <span>6 LANGUAGES</span><span class="sep">•</span>
     </div>
 </div>
 
@@ -414,26 +220,44 @@
     <aside class="rail">
         <h4>Navigate</h4>
         <nav>
+            <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
-            <a href="#leadership">Leadership</a>
-            <a href="#campus">Campus Engagement</a>
+            <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
+            <a href="#languages">Languages</a>
             <a href="#interests">Interests</a>
         </nav>
 
         <h4>Technical Skills</h4>
         <div class="tags">
-            <span class="tag gold">R</span>
-            <span class="tag gold">Python</span>
-            <span class="tag gold">Excel</span>
-            <span class="tag gold">DCF Modeling</span>
+            <span class="tag gold">Python <span class="skill-count">2</span></span>
+            <span class="tag gold">R <span class="skill-count">2</span></span>
+            <span class="tag gold">Pandas <span class="skill-count">2</span></span>
+            <span class="tag gold">scikit-learn <span class="skill-count">2</span></span>
+            <span class="tag gold">TensorFlow / Keras</span>
+            <span class="tag gold">XGBoost</span>
+            <span class="tag gold">SciPy / NumPy <span class="skill-count">1</span></span>
+            <span class="tag gold">Plotly <span class="skill-count">1</span></span>
+            <span class="tag gold">Streamlit <span class="skill-count">1</span></span>
+            <span class="tag gold">Excel — MOS Associate</span>
         </div>
 
         <h4>Certifications</h4>
         <div class="tags">
+            <span class="tag">MOS: Excel Associate</span>
             <span class="tag">Google AI Essentials</span>
             <span class="tag">Gen AI for Everyone</span>
+        </div>
+
+        <h4>Languages</h4>
+        <div class="lang-list">
+            <div class="lang-row"><span>Tamil</span><strong>Native</strong></div>
+            <div class="lang-row"><span>Telugu</span><strong>Native</strong></div>
+            <div class="lang-row"><span>English</span><strong>Full Pro</strong></div>
+            <div class="lang-row"><span>Hindi</span><strong>Full Pro</strong></div>
+            <div class="lang-row"><span>Spanish</span><strong>Elementary</strong></div>
+            <div class="lang-row"><span>German</span><strong>Elementary</strong></div>
         </div>
 
         <h4>Interests</h4>
@@ -447,182 +271,280 @@
 
     <main class="content">
 
+        <section id="about">
+            <div class="section-eyebrow">00 / Overview</div>
+            <h2 class="section-title">About</h2>
+            <p class="lede">
+                Pursuing dual degrees in <strong>Finance</strong> (Whitman School) and <strong>Applied Data Science</strong> (iSchool) at Syracuse University as a Renée Crown Honors and Chancellor's Scholar, I've built four end-to-end Python projects spanning credit risk modeling (XGBoost + Logistic Regression), portfolio optimization (Markowitz MPT, SLSQP), SPY price prediction (stacked LSTM, TensorFlow), and audio feature analytics (K-Means, PCA, Random Forest). Each ships with a live Streamlit dashboard.
+            </p>
+            <p class="lede">
+                On the research side, I co-authored a quantitative study on gender-based pricing disparities — accepted for publication in the <strong>GAEE India Journal</strong> — using paired t-tests, ANOVA, and regression in R across 26 matched product pairs. I'm currently developing an Honors thesis proposal examining racial disparities in mortgage lending using HMDA data, with a focus on the CFPB's Regulation B disparate impact framework.
+            </p>
+            <p class="lede">
+                Beyond technical work, I oversee a $4M+ annual student activity budget as Finance Board Commissioner for Syracuse's SGA, and contributed investor-facing strategy work for Meteor Venture, an early-stage angel network. Prior to Syracuse, I completed programs at IIM Bangalore and IIFT during my freshman year, with field research on rural economic development in Andhra Pradesh.
+            </p>
+            <p class="lede"><strong>Targeting an MFE or MFin program for Fall 2028.</strong></p>
+        </section>
+
         <section id="education">
             <div class="section-eyebrow">01 / Academic Record</div>
             <h2 class="section-title">Education</h2>
 
             <div class="edu-block">
-                <div class="edu-head">
-                    <h3>Syracuse University, Syracuse, NY</h3>
-                    <span class="edu-dates mono">May 2025 – May 2028 (Expected)</span>
-                </div>
-                <div class="edu-sub">Martin J. Whitman School of Management, B.S. Finance &nbsp;·&nbsp; School of Information Studies, B.S. Applied Data Science</div>
+                <div class="edu-head"><h3>Whitman School of Management, Syracuse University</h3><span class="edu-dates mono">May 2025 – May 2028</span></div>
+                <div class="edu-sub">Bachelor of Science, Finance</div>
                 <div class="tags">
                     <span class="tag gold">GPA 3.861/4.0</span>
-                    <span class="tag">Renée Crown Honors</span>
-                    <span class="tag">Chancellor's Scholarship</span>
-                    <span class="tag">Invest in Success Scholarship</span>
-                    <span class="tag">Dean's List</span>
+                    <span class="tag">Investment Club</span>
+                    <span class="tag">Women in Business</span>
+                    <span class="tag">Private Equity Club</span>
                 </div>
             </div>
 
             <div class="edu-block">
-                <div class="edu-head">
-                    <h3>Indian Institute of Foreign Trade, Kakinada, AP</h3>
-                    <span class="edu-dates mono">Sep 2024 – May 2025</span>
+                <div class="edu-head"><h3>School of Information Studies, Syracuse University</h3><span class="edu-dates mono">May 2025 – May 2028</span></div>
+                <div class="edu-sub">Bachelor of Science, Applied Data Science</div>
+                <div class="tags"><span class="tag gold">GPA 3.861/4.0</span></div>
+            </div>
+
+            <div class="edu-block">
+                <div class="edu-head"><h3>Indian Institute of Management Bangalore</h3><span class="edu-dates mono">Sep 2024 – Sep 2025</span></div>
+                <div class="edu-sub">Bachelor of Business Administration, Digital Business and Entrepreneurship</div>
+                <div class="edu-note">Completed during freshman year as a concurrent dual-enrollment student alongside IIFT, prior to transferring to Syracuse. Focused on digital strategy, entrepreneurship, and technology-driven business models.</div>
+            </div>
+
+            <div class="edu-block">
+                <div class="edu-head"><h3>Indian Institute of Foreign Trade</h3><span class="edu-dates mono">Sep 2024 – May 2025</span></div>
+                <div class="edu-sub">Bachelor of Business Administration, Business Analytics</div>
+                <div class="edu-note">Completed during freshman year concurrently with IIM Bangalore, prior to transferring to Syracuse. Included field research on the Atreyapuram rural economy and women-led Pootharekulu industry.</div>
+            </div>
+
+            <div class="edu-block">
+                <div class="edu-head"><h3>Ashland High School</h3><span class="edu-dates mono">Sep 2021 – Jun 2024</span></div>
+                <div class="edu-sub">Founder &amp; VP, Culinary Club · Historian/Club Officer, Cultural Club</div>
+                <div class="tags">
+                    <span class="tag">AP Statistics</span><span class="tag">AP Biology</span><span class="tag">AP Chemistry</span>
+                    <span class="tag">AP Eng. Language</span><span class="tag">AP Eng. Literature</span>
                 </div>
-                <div class="edu-sub">B.S. Business Analytics (Freshman Year Study Abroad)</div>
+            </div>
+
+            <div class="edu-block">
+                <div class="edu-head"><h3>Munich International School e.V.</h3><span class="edu-dates mono">Sep 2019 – Sep 2021</span></div>
+                <div class="edu-sub">International Baccalaureate (IB) Curriculum — Munich, Germany</div>
+                <div class="edu-note">Freshman year of high school.</div>
             </div>
         </section>
 
         <section id="experience">
             <div class="section-eyebrow">02 / Track Record</div>
-            <h2 class="section-title">Work Experience</h2>
+            <h2 class="section-title">Experience</h2>
+
+            <div class="subhead">Current Roles</div>
             <div class="ledger-grid">
                 <div class="ledger">
-                    <div class="ledger-head">
-                        <h3>Syracuse University</h3>
-                        <span class="ledger-dates mono">Aug 2026 – Present</span>
-                    </div>
-                    <div class="ledger-role">FYS 101 Peer Leader &amp; Teaching Assistant</div>
+                    <div class="ledger-head"><h3>FYS 101 Peer Leader &amp; TA</h3><span class="ledger-dates mono">Aug 2026 – Present</span></div>
+                    <div class="ledger-role">Syracuse University · Part-time</div>
                     <ul>
-                        <li>Serve as a peer leader and teaching assistant for FYS 101, mentoring 20+ incoming first-year students through their transition to Syracuse.</li>
+                        <li>Mentor 20+ incoming first-year students through their transition to Syracuse.</li>
                         <li>Track individual student progress and flag early warning signs to support at-risk students before issues escalate.</li>
-                        <li>Report outcomes to faculty weekly, building sharp, concise communication skills under recurring deadlines.</li>
+                        <li>Report outcomes to faculty weekly, building sharp, concise communication under recurring deadlines.</li>
                     </ul>
                 </div>
-
                 <div class="ledger">
-                    <div class="ledger-head">
-                        <h3>Meteor Venture</h3>
-                        <span class="ledger-dates mono">Mar – Jun 2025</span>
-                    </div>
-                    <div class="ledger-role">Marketing Team Lead Intern</div>
+                    <div class="ledger-head"><h3>Student Government Association</h3><span class="ledger-dates mono">Apr 2026 – Present</span></div>
+                    <div class="ledger-role">Finance Board Commissioner · Full-time</div>
                     <ul>
-                        <li>Led a team of 3 consultants to develop an investor-facing fund brochure covering fund structure, deal flow process, and India startup market analysis for an early-stage angel network.</li>
-                        <li>Synthesized macroeconomic data and VC growth trends into investor-ready deliverables to support external fundraising efforts.</li>
+                        <li>Appointed for Syracuse's 70th SGA session, overseeing funding allocations for 300+ student organizations and a $4M+ annual budget.</li>
+                        <li>Evaluate funding requests against fiscal compliance, multi-year sustainability, and budget constraints across a high-volume, multi-stakeholder environment.</li>
+                        <li>Partner with administrators and student leaders to ensure equitable, transparent allocation of funds.</li>
                     </ul>
                 </div>
-
                 <div class="ledger">
-                    <div class="ledger-head">
-                        <h3>Deepflock.ai</h3>
-                        <span class="ledger-dates mono">Feb – Mar 2025</span>
-                    </div>
-                    <div class="ledger-role">Student Intern</div>
+                    <div class="ledger-head"><h3>South Asian Student Association (SASA)</h3><span class="ledger-dates mono">Apr 2026 – Present</span></div>
+                    <div class="ledger-role">VP of Finance · Full-time</div>
                     <ul>
-                        <li>Authored a 15-page research report on AI agent applications in FinTech covering fraud detection, credit risk assessment, algorithmic trading, and regulatory compliance.</li>
-                        <li>Conducted competitive landscape analysis of ZestFinance, Bud Financial, and Upstart.</li>
+                        <li>Elected VP of Finance for a 200+ member organization, overseeing a $20,000+ annual budget for cultural and community programming.</li>
+                        <li>Lead budgeting, reimbursement, and funding-approval for 15+ annual events including Diwali and Holi.</li>
+                        <li>Partner with SGA and university stakeholders to secure funding and maintain compliance.</li>
                     </ul>
                 </div>
+            </div>
 
+            <div class="subhead">Internships &amp; Research</div>
+            <div class="ledger-grid">
                 <div class="ledger">
-                    <div class="ledger-head">
-                        <h3>Global Association of Economics Education (GAEE)</h3>
-                        <span class="ledger-dates mono">Feb – Jun 2025</span>
-                    </div>
-                    <div class="ledger-role">Research Associate</div>
+                    <div class="ledger-head"><h3>IIM Bangalore BBA(DBE)</h3><span class="ledger-dates mono">Dec 2024 – Dec 2025</span></div>
+                    <div class="ledger-role">Zonal Representative · Full-time · Remote</div>
                     <ul>
-                        <li>Co-authored "The Price of Pink," selected for publication in the GAEE India Journal; conducted statistical analysis of 26 product pairs using R (t-tests, ANOVA, regression) to quantify gender-based pricing disparities in India.</li>
-                        <li>Built a regression model estimating that the Pink Tax reduces women's monthly disposable income by ₹3,575.</li>
+                        <li>Elected Zonal Representative, representing 100+ students across diverse states and backgrounds.</li>
+                        <li>Facilitated communication and community-building to strengthen engagement and inclusion.</li>
+                        <li>Spearheaded NOVA, a weekly student engagement initiative.</li>
                     </ul>
+                </div>
+                <div class="ledger">
+                    <div class="ledger-head"><h3>Meteor Venture</h3><span class="ledger-dates mono">Mar – Jun 2025</span></div>
+                    <div class="ledger-role">Marketing Consultant · Internship</div>
+                    <ul>
+                        <li>Led a 3-person consulting team to create an investor-facing fund brochure for an early-stage angel network, outlining fund structure, deal flow, and the India startup landscape.</li>
+                        <li>Analyzed macroeconomic and VC data — GDP trends, VC activity, sector-level funding — into fundraising materials.</li>
+                        <li>Managed weekly client check-ins across modeling and fund research workstreams.</li>
+                    </ul>
+                </div>
+                <div class="ledger">
+                    <div class="ledger-head"><h3>GAEE India</h3><span class="ledger-dates mono">Feb – Jun 2025</span></div>
+                    <div class="ledger-role">Research Associate · Full-time</div>
+                    <ul>
+                        <li>Analyzed 26 matched product pairs across Amazon, Flipkart, and Nykaa using R — paired t-tests, Wilcoxon signed-rank, ANOVA, linear regression — quantifying a ₹358 average price premium for women's products.</li>
+                        <li>Built a regression model estimating a ₹3,575 monthly disposable income reduction from gender-based pricing.</li>
+                        <li>Designed a 46-respondent mixed-methods survey and conducted qualitative interviews.</li>
+                        <li>Co-authored findings accepted for publication in the GAEE India Journal (forthcoming 2026).</li>
+                    </ul>
+                </div>
+                <div class="ledger">
+                    <div class="ledger-head"><h3>180 Degrees Consulting, IIFT Kakinada</h3><span class="ledger-dates mono">Oct 2024 – May 2025</span></div>
+                    <div class="ledger-role">180 DC Consultant · Full-time</div>
+                    <ul>
+                        <li>Served as Lead Consultant delivering pro bono strategy engagements for nonprofit clients across global markets.</li>
+                        <li>Led a team advising Pay Your Tuition (PYT) on donor engagement strategy and communication frameworks.</li>
+                        <li>Presented strategic recommendations translating stakeholder insight into practical initiatives.</li>
+                    </ul>
+                </div>
+                <div class="ledger">
+                    <div class="ledger-head"><h3>Deepflock.ai</h3><span class="ledger-dates mono">Feb – Mar 2025</span></div>
+                    <div class="ledger-role">Student Research Intern · Internship · Remote</div>
+                    <ul>
+                        <li>Authored a 15-page report on AI agent applications in fintech: fraud detection, credit scoring, algorithmic trading, portfolio management, regulatory compliance.</li>
+                        <li>Analyzed the competitive landscape of ZestFinance, Bud Financial, and Upstart.</li>
+                        <li>Evaluated K-means clustering, autoencoder anomaly detection, and transformer-based NLP for credit risk assessment in underserved borrower segments.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subhead">Early Experience</div>
+            <div class="early-list">
+                <div class="early-row">
+                    <div><span class="early-role">Student Intern</span> — <span class="early-org">CLA (CliftonLarsonAllen), Quincy, MA</span></div>
+                    <span class="early-dates mono">Jun – Aug 2023</span>
+                </div>
+                <div class="early-row">
+                    <div><span class="early-role">Social Media Manager</span> — <span class="early-org">Ashland Residents for Equity and Action</span></div>
+                    <span class="early-dates mono">Jul 2022 – Jul 2023</span>
+                </div>
+                <div class="early-row">
+                    <div><span class="early-role">Retail Store Associate</span> — <span class="early-org">CVS Pharmacy, Ashland, MA</span></div>
+                    <span class="early-dates mono">Mar – May 2023</span>
                 </div>
             </div>
         </section>
 
-        <section id="leadership">
-            <div class="section-eyebrow">03 / Governance</div>
-            <h2 class="section-title">Leadership</h2>
-            <div class="ledger-grid">
-                <div class="ledger">
-                    <div class="ledger-head">
-                        <h3>Student Government Association</h3>
-                        <span class="ledger-dates mono">Apr 2026 – Present</span>
-                    </div>
-                    <div class="ledger-role">Finance Board Commissioner</div>
-                    <ul>
-                        <li>Appointed Finance Board Commissioner for Syracuse University's 70th SGA session; oversee funding allocation across 300+ student organizations managing a $4M+ annual student activity budget.</li>
-                        <li>Review event and travel funding requests for compliance with SGA fiscal policy.</li>
-                    </ul>
+        <section id="projects">
+            <div class="section-eyebrow">03 / Built &amp; Published</div>
+            <h2 class="section-title">Projects &amp; Research</h2>
+            <div class="proj-grid">
+
+                <div class="proj-card">
+                    <div class="proj-head"><h3>Credit Risk Model</h3><span class="proj-dates mono">2026</span></div>
+                    <div class="proj-desc">End-to-end loan default prediction (Logistic Regression + XGBoost) on LendingClub-style data, 17 features, full EDA-to-dashboard pipeline with live Streamlit prediction.</div>
+                    <div class="tags" style="margin-bottom:.8rem;"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">scikit-learn</span><span class="tag">Streamlit</span></div>
+                    <a class="proj-link" href="https://github.com/navyaneel/credit-risk-model" target="_blank">GitHub →</a>
                 </div>
 
-                <div class="ledger">
-                    <div class="ledger-head">
-                        <h3>South Asian Student Association</h3>
-                        <span class="ledger-dates mono">Apr 2026 – Present</span>
-                    </div>
-                    <div class="ledger-role">VP of Finance</div>
-                    <ul>
-                        <li>Elected VP of Finance for 200+ member organization; oversee $20K+ annual SGA budget across 15+ cultural and community events including Diwali, Holi, and Mock Shaadi.</li>
-                        <li>Manage funding requisitions, reimbursement compliance, and budget allocation.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="campus">
-            <div class="section-eyebrow">04 / Beyond the Classroom</div>
-            <h2 class="section-title">Campus Engagement</h2>
-            <div class="ledger-grid">
-                <div class="ledger">
-                    <div class="ledger-head">
-                        <h3>Investment Club</h3>
-                        <span class="ledger-dates mono">Sep 2025 – Present</span>
-                    </div>
-                    <div class="ledger-role">Member</div>
-                    <ul>
-                        <li>Collaborate within the Fixed Income Funds group to research and evaluate potential fund investments.</li>
-                        <li>Participate in weekly investment discussions covering macroeconomic trends and portfolio strategy.</li>
-                    </ul>
+                <div class="proj-card">
+                    <div class="proj-head"><h3>Portfolio Optimizer</h3><span class="proj-dates mono">2026</span></div>
+                    <div class="proj-desc">Markowitz Mean-Variance optimization via SciPy's SLSQP solver; efficient frontier across 5,000 Monte Carlo simulations, live Yahoo Finance data, backtesting vs. equal-weight (2019–2024).</div>
+                    <div class="tags" style="margin-bottom:.8rem;"><span class="tag">Python</span><span class="tag">SciPy</span><span class="tag">Plotly</span><span class="tag">Streamlit</span></div>
+                    <a class="proj-link" href="https://github.com/navyaneel/portfolio-optimizer" target="_blank">GitHub →</a>
                 </div>
 
-                <div class="ledger">
-                    <div class="ledger-head">
-                        <h3>Private Equity Club</h3>
-                        <span class="ledger-dates mono">Jan – May 2026</span>
-                    </div>
-                    <div class="ledger-role">Member</div>
-                    <ul>
-                        <li>Applied DCF valuation frameworks and financial statement analysis to evaluate prospective investment targets.</li>
-                        <li>Developed foundational private equity skill set through technical modeling exercises.</li>
-                    </ul>
+                <div class="proj-card">
+                    <div class="proj-head"><h3>SPY Stock Price Prediction</h3><span class="proj-dates mono">2026</span></div>
+                    <div class="proj-desc">Stacked LSTM (TensorFlow/Keras) predicting next-day SPY close from 5 years OHLCV + RSI/MA features. Strong price-level accuracy (MAPE &lt;5%) but revealed a real limitation in directional forecasting — an honest, useful finding.</div>
+                    <div class="tags" style="margin-bottom:.8rem;"><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">Streamlit</span></div>
+                    <a class="proj-link" href="https://github.com/navyaneel/stock-prediction" target="_blank">GitHub →</a>
                 </div>
 
-                <div class="ledger">
-                    <div class="ledger-head">
-                        <h3>180 Degree Consulting (180 DC)</h3>
-                        <span class="ledger-dates mono">Oct 2024 – May 2025</span>
-                    </div>
-                    <div class="ledger-role">Lead Consultant</div>
-                    <ul>
-                        <li>Delivered pro bono strategy engagements for non-profit clients, including advising Pay Your Tuition (PYT) on donor engagement.</li>
-                        <li>Presented strategic recommendations to non-profit leadership to strengthen long-term donor relationships.</li>
-                    </ul>
+                <div class="proj-card">
+                    <div class="proj-head"><h3>What Makes a Hit</h3><span class="proj-dates mono">Feb–Apr 2026</span></div>
+                    <div class="proj-desc">Spotify audio feature dashboard — synthetic/Kaggle/live API data, genre profiling, K-Means/DBSCAN clustering, PCA, regression models predicting popularity.</div>
+                    <div class="tags" style="margin-bottom:.8rem;"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Streamlit</span></div>
+                    <a class="proj-link" href="https://github.com/navyaneel/spotify-analyzer" target="_blank">GitHub →</a>
                 </div>
+
+                <div class="proj-card">
+                    <div class="proj-head"><h3>The Price of Pink</h3><span class="proj-dates mono">Jul–Dec 2025</span></div>
+                    <div class="proj-desc">Co-authored mixed-methods study on gender-based pricing disparities in India — 26 matched product pairs, paired t-tests, ANOVA, regression in R, 46-respondent survey. Accepted for publication, GAEE India Journal.</div>
+                    <div class="tags" style="margin-bottom:.8rem;"><span class="tag">R</span><span class="tag">Statistical Analysis</span></div>
+                    <a class="proj-link" href="https://journal.gaee.org/index.php/gjae/issue/view/7/6" target="_blank">Read the Journal →</a>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-head"><h3>Village Immersion — Atreyapuram</h3><span class="proj-dates mono">Jan–Apr 2025</span></div>
+                    <div class="proj-desc">Field research on Atreyapuram's rural economy and women-led Pootharekulu industry — supply chains, governance, welfare scheme impacts; developed digital/cooperative market-access strategies. Produced a field documentary.</div>
+                    <div class="tags" style="margin-bottom:.8rem;"><span class="tag">Field Research</span><span class="tag">IIFT</span></div>
+                </div>
+
+                <div class="proj-card">
+                    <div class="proj-head"><h3>AI Agents in FinTech</h3><span class="proj-dates mono">Feb–Mar 2025</span></div>
+                    <div class="proj-desc">Independent research report on AI agents transforming financial services — fraud detection, credit risk, algorithmic trading, regulatory compliance — with competitive analysis of ZestFinance, Bud Financial, and Upstart.</div>
+                    <div class="tags"><span class="tag">Research</span><span class="tag">Deepflock.ai</span></div>
+                </div>
+
             </div>
         </section>
 
         <section id="skills">
-            <div class="section-eyebrow">05 / Toolkit</div>
+            <div class="section-eyebrow">04 / Toolkit</div>
             <h2 class="section-title">Skills</h2>
-            <p class="mono" style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-bottom:.7rem;">Technical</p>
-            <div class="tags" style="margin-bottom:1.8rem;">
-                <span class="tag gold">R — ggplot2, statistical modeling</span>
-                <span class="tag gold">Python — pandas, Streamlit</span>
-                <span class="tag gold">Excel — MOS Excel Associate</span>
-                <span class="tag gold">Financial Modeling &amp; DCF Valuation</span>
+            <p class="mono" style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-bottom:.7rem;">Technical &amp; Quant</p>
+            <div class="tags" style="margin-bottom:1.6rem;">
+                <span class="tag gold skill-tag">Python <span class="skill-count">2 endorsements</span></span>
+                <span class="tag gold skill-tag">R <span class="skill-count">2 endorsements</span></span>
+                <span class="tag gold skill-tag">Pandas <span class="skill-count">2 endorsements</span></span>
+                <span class="tag gold skill-tag">scikit-learn <span class="skill-count">2 endorsements</span></span>
+                <span class="tag gold skill-tag">NumPy <span class="skill-count">1 endorsement</span></span>
+                <span class="tag gold skill-tag">Plotly <span class="skill-count">1 endorsement</span></span>
+                <span class="tag gold skill-tag">Streamlit <span class="skill-count">1 endorsement</span></span>
+                <span class="tag gold">TensorFlow / Keras</span>
+                <span class="tag gold">XGBoost</span>
+                <span class="tag gold">SciPy</span>
+                <span class="tag gold">Regression Analysis</span>
+                <span class="tag gold">ANOVA</span>
+                <span class="tag gold">Statistical Data Analysis</span>
+            </div>
+            <p class="mono" style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-bottom:.7rem;">Business &amp; Office</p>
+            <div class="tags" style="margin-bottom:1.6rem;">
+                <span class="tag">Financial Modeling &amp; DCF Valuation</span>
+                <span class="tag">Excel — MOS Excel Associate</span>
             </div>
             <p class="mono" style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-bottom:.7rem;">Certifications</p>
             <div class="tags">
-                <span class="tag">Google AI Essentials</span>
-                <span class="tag">Generative AI for Everyone</span>
+                <span class="tag">Microsoft Office Specialist: Excel Associate — Microsoft (Nov 2025, expires Nov 2030)</span>
+            </div>
+            <div class="tags" style="margin-top:.5rem;">
+                <span class="tag">Google AI Essentials Specialization — Google Career Certificates (Sep 2025)</span>
+            </div>
+            <div class="tags" style="margin-top:.5rem;">
+                <span class="tag">Generative AI for Everyone — DeepLearning.AI (Feb 2025)</span>
+            </div>
+        </section>
+
+        <section id="languages">
+            <div class="section-eyebrow">05 / Communication</div>
+            <h2 class="section-title">Languages</h2>
+            <div class="tags">
+                <span class="tag gold">Tamil — Native/Bilingual</span>
+                <span class="tag gold">Telugu — Native/Bilingual</span>
+                <span class="tag">English — Full Professional</span>
+                <span class="tag">Hindi — Full Professional</span>
+                <span class="tag">Spanish — Elementary</span>
+                <span class="tag">German — Elementary</span>
             </div>
         </section>
 
         <section id="interests">
             <div class="section-eyebrow">06 / Off the Clock</div>
             <h2 class="section-title">Interests</h2>
-            <div class="interest-row">
+            <div class="tags">
                 <span class="tag">Video Editing &amp; Content Creation</span>
                 <span class="tag">South Asian Dance — Co-Dance Captain, Desi Performance</span>
                 <span class="tag">Ice Skating</span>
@@ -633,9 +555,7 @@
     </main>
 </div>
 
-<footer>
-    © 2026 Navya Neelamegam — <a href="#top">Back to top</a>
-</footer>
+<footer>© 2026 Navya Neelamegam — <a href="#top">Back to top</a></footer>
 
 <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
 <button onclick="topFunction()" id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
@@ -661,13 +581,10 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
-    }, {threshold: 0.08});
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, {threshold: 0.06});
     document.querySelectorAll('section').forEach(s => observer.observe(s));
 
-    // KPI count-up animation
     const counters = document.querySelectorAll('.counter');
     const kpiObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
